@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BarraChat:jar">
+    <output-path>$PROJECT_DIR$/BarraChat_jar</output-path>
+    <root id="archive" name="BarraChat.jar">
+      <element id="module-output" name="BarraChat" />
+    </root>
+  </artifact>
+</component>
