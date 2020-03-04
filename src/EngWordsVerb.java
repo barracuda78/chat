@@ -1,4 +1,22 @@
-package PACKAGE_NAME;
+public class EngWordsVerb extends EngWords {
+    private String secondForm;
+    private String thirdForm;
 
-public class EngWordsVerb {
+    public String getSecondForm() {
+        return secondForm;
+    }
+
+    public void setSecondForm(String secondForm) {
+        this.secondForm = secondForm;
+    }
+
+    public String getThirdForm() {
+        return thirdForm;
+    }
+
+    public void setThirdForm(String thirdForm) {
+        this.thirdForm = thirdForm;
+    }
+
+
 }

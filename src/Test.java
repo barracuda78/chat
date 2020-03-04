@@ -3,30 +3,55 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-//записывать в файл не отдельный объект класса Юзер, а масссив объектов класса юзер.
-//Все же придется записывать кол-во объектов в файл.
+//выяснить почему не все неотгаданные слова попадают в список слов для изучения.
+//записывать в файл неправильно названные слова (МАССИВ). И при запуске проги сразу добавлять их в список . Сделать игру только из этих слов.
+//юзеру сделать поле - список именно его неправильных слов. И для него формировать игру по угадыванию в первую очередь из этих слов.
+
+//сославить подклассы ГЛАГОЛ, СУЩЕСТВИТЕЛЬНОЕ и так далее с особыми полями - три формы у глагола и так далее.
 //написать универсальный exit
-//написать чтобы несколько объектов можно было хранить в файле. Несколько пользователей.
 //написать чат.
 
 public class Test implements Serializable {
+    protected static User user = new User();
     public static void main(String[] args) {
-        //тестирование: выведем в консоль всех юзеров из файла:
-        //usersToString("users01.bin");
-/*///////////////////////////запишем тестового юзера в файл users01.bin, чтобы файл  был чем-то наполнен.
-        ArrayList<User> oldUsersList = new ArrayList<>();
-        User user = new User();
-        user.setAge(111);
-        user.setName("Курдалы");
-        oldUsersList.add(user);
+
+///////////////////////////запишем тестового юзера в файл users01.bin, чтобы файл  был чем-то наполнен.
+/*        ArrayList<User> oldUsersList = new ArrayList<>();
+        ArrayList<EngWords> list = new ArrayList<>();
+
+        EngWords word001 = new EngWords();
+        word001.setEngWord1("ass");
+        word001.setEngWord2("bump");
+        word001.setEngWord3("-empty-");
+        word001.setEngWord4("-empty-");
+        word001.setEngWordPlural1("asses");
+        word001.setEngWordPlural2("bumps");
+        word001.setEngSinonim1("-empty-");
+        word001.setEngEtymology1("нет этимологии на английском");
+        word001.setRusWord1("попа");
+        word001.setRusWord2("жопа");
+        word001.setRusWord3("задница");
+        word001.setRusWord4("зад");
+        word001.setRusWordPlural1("попы");
+        word001.setRusWordPlural2("жопы");
+        word001.setRusSinonim1("задок");
+        word001.setRusEtymology1("нет этимологии на русском");
+        list.add(word001);
+
+        Test.user.setUsersListOfUnknownWords(list);
+        Test.user.setAge(111);
+        Test.user.setName("Курдалы");
+        Test.user.setLogin("111");
+        Test.user.setPassword("111");
+        oldUsersList.add(Test.user);
         try {
                 File file = new File("users01.bin");
                 FileOutputStream fos = new FileOutputStream(file, true);
-                ObjectOutputStream oos = new ObjectOutputStream(fos);     // пишем в файл объект юзера
-                oos.writeObject(oldUsersList);
+                ObjectOutputStream oos = new ObjectOutputStream(fos);
+                oos.writeObject(oldUsersList);                              // пишем в файл объект список юзеров
                 fos.close();
                 oos.close();
-            System.out.println("Пользователь " + user.toString() + " записан в файл.");
+            System.out.println("Список пользователей oldUsersList с одним пользователем  " + Test.user.toString() + " записан в файл.");
             ////////////////запишем в другой файл usersCount001.bin кол-во пользователей = 1
             File file02 = new File("usersCount001.bin");
             FileOutputStream fosCount = new FileOutputStream(file02, false);
@@ -36,7 +61,35 @@ public class Test implements Serializable {
             System.out.println("кол-во юзеров записано в файл.");
             oosCount.close();
             fosCount.close();
-        }
+
+
+            System.out.println("проверим, какие слова записались пользователю в список неизвестных слов:");
+
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            ArrayList<User> oldUsersListDeserialized = (ArrayList<User>)ois.readObject();
+            System.out.println("Вытащили из файла список юзеров с одним юзером Курдалы.");
+
+            ArrayList<EngWords> listOfUnknownWordsOld = new ArrayList<>();
+            for(User userSerialized : oldUsersListDeserialized){
+                if(Test.user.getName().equals(userSerialized.getName()) & Test.user.getAge() == (userSerialized.getAge())){
+                    listOfUnknownWordsOld = userSerialized.getUsersListOfUnknownWords();
+                    System.out.println("записали список слов нашего юзера в переменную listOfUnknownWordsOld");
+                    System.out.println("выведем прочитанный из файла список пользователей на экран: ");
+                    System.out.println(userSerialized.toString());
+                }
+
+                System.out.println("Выведем слова из списка слов юзера на экран: ");
+                for(EngWords word : userSerialized.getUsersListOfUnknownWords()){
+                    System.out.println(word.toString());
+                }
+            }
+
+
+            ois.close();
+            fis.close();
+
+         }
         catch(FileNotFoundException fnf){
             System.out.println("Файл не найден. Идем далее.");
         }
@@ -44,14 +97,19 @@ public class Test implements Serializable {
             System.out.println("Ошибка ввода-вывода");
             ioe.printStackTrace();
         }
-///////////////////////////Конец тестовой записи юзера и числа юзеров в файлы.*/
+        catch(ClassNotFoundException cnf){
+            System.out.println("Ошибка ClassNotFoundException в тестовой записи пользователя в main");
+        }*/
+///////////////////////////Конец тестовой записи юзера и числа юзеров в файлы.
+
 
         whatIsYourName();
         try {
+
             greeting();
             dealer();
-            exit();
-            return; //по идее это должен быть выход из программы....
+            exit("exit"); //по идее это должен быть выход из программы....
+            return;
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
@@ -86,10 +144,35 @@ public class Test implements Serializable {
 
     public static void greeting(){
         try{
-            User user = new User();
+            //User user = new User();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             String name = bufferedReader.readLine();
-            user.setName(name);
+
+            //инициализировали юзеру поле name
+            Test.user.setName(createGoodName(name));
+
+            //инициализировали юзеру поле usersListOfUnknownWords
+            ArrayList<EngWords> list = new ArrayList<>();
+            EngWords word001 = new EngWords();
+            word001.setEngWord1("ass");
+            word001.setEngWord2("bump");
+            word001.setEngWord3("-empty-");
+            word001.setEngWord4("-empty-");
+            word001.setEngWordPlural1("asses");
+            word001.setEngWordPlural2("bumps");
+            word001.setEngSinonim1("-empty-");
+            word001.setEngEtymology1("нет этимологии на английском");
+            word001.setRusWord1("попа");
+            word001.setRusWord2("жопа");
+            word001.setRusWord3("задница");
+            word001.setRusWord4("зад");
+            word001.setRusWordPlural1("попы");
+            word001.setRusWordPlural2("жопы");
+            word001.setRusSinonim1("задок");
+            word001.setRusEtymology1("нет этимологии на русском");
+            list.add(word001);
+            Test.user.setUsersListOfUnknownWords(list);
+
 
             int r = Test.randomize();
             switch (r) {
@@ -356,8 +439,11 @@ public class Test implements Serializable {
                 }
             }
 
-            int age = Integer.parseInt(bufferedReader.readLine());
-            user.setAge(age);                                                                    //присваиваем юзеру его возраст.
+            String ageOfUser = bufferedReader.readLine();
+
+
+            int age = createGoodAge(ageOfUser);      // метод createGoodAge() отсекает все символы кроме цифр из введеннных пользователем.
+            Test.user.setAge(age);      //присваиваем юзеру его возраст.
 
             ArrayList<User> oldUsersList = new ArrayList<>();
 
@@ -390,7 +476,7 @@ public class Test implements Serializable {
             int countNotNew = 0;
             for(int i = 0; i < oldUsersList.size(); i++){
                 User userOld = oldUsersList.get(i);
-                if(userOld.getName().equals(user.getName()) & userOld.getAge() == user.getAge()){
+                if(userOld.getName().equals(Test.user.getName()) & userOld.getAge() == Test.user.getAge()){
                     //юзер совпадает. И булеан переменная newUser остается false. Она и была.
                     countNotNew++;
                 }
@@ -404,11 +490,11 @@ public class Test implements Serializable {
             }
             else{
                 newUser = true;
-            //    seria(user); // теперь сериализацию нового юзера делаем только если юзера не было до этого.
+/*            //    seria(user); // теперь сериализацию нового юзера делаем только если юзера не было до этого.
                 //раньше мы просто сериализовывали юзера. Теперь нужно добавить юзера в массив и сериализовать весь массив.
-                oldUsersList.add(user); // добавили юзера в массив.
+                oldUsersList.add(Test.user); // добавили юзера в массив.
 
-                seria(oldUsersList); //серииализовали новый массив с новым пользователем. ЗАТЕРЕВ СТАРЫЙ МАССИВ!
+                seria(oldUsersList); //серииализовали новый массив с новым пользователем. ЗАТЕРЕВ СТАРЫЙ МАССИВ!*/
             }
 
             ageProof(age);
@@ -509,6 +595,41 @@ public class Test implements Serializable {
                         break;
                     }
                 }
+                ////////////////новый код с логином и паролем///////////////
+                for(int i = 3; i > 0; i-- ) {
+                    System.out.println("Введи свой логин:");
+                    String login = bufferedReader.readLine();                     //может быть ошибка! А не создать ли отдельный bufferedreader?
+                    System.out.println("Теперь пароль, пожалуйста:");
+                    String password = bufferedReader.readLine();
+
+                    File fileLogin = new File("users01.bin");
+                    FileInputStream fisLogin = new FileInputStream(fileLogin);
+                    ObjectInputStream oisLogin = new ObjectInputStream(fisLogin);
+                    ArrayList<User> userLoginList = (ArrayList<User>)oisLogin.readObject();
+                    User oldUser = new User();
+                    for(User user2 : userLoginList){
+                        if(user2.getName().equals(Test.user.getName()) & user2.getAge() == Test.user.getAge()){
+                            oldUser = user2;
+                        }
+                    }
+
+                    if (oldUser.getLogin().equals(login) & oldUser.getPassword().equals(password)) { //тут выскакивает ошибка. т.к. сперва тут нужно сделать десериализацию юзера и брать у него логин и пароль и сравнивать с ними.
+                        System.out.println("ОК. Ты прошел проверку на безопасность.");
+                        break;
+                    } else {
+                        System.out.println("Неправильный логин или пароль. Осталось попыток: " + i);
+                        if(i > 1) {
+                            System.out.println("Давай еще раз.");
+                        }
+                        else{
+                            System.out.println("Извините, не могу Вас идентифицировать.");
+                            System.out.println("На этом наш разговор окончен.");
+                            System.exit(0);
+                        }
+                    }
+                }
+                ///////////////конец нового кода с логином и паролем/////////
+
 
             }
             else {
@@ -576,6 +697,23 @@ public class Test implements Serializable {
                         break;
                     }
                 }
+
+                //////////////////////////////////новый  код с придумыванием пароля////////////////////////////////
+                System.out.println("Придумайте себе имя пользователя (login), чтобы в следующий раз его использовать для входа в чат:");
+                String newLogin = bufferedReader.readLine();
+                System.out.println("Теперь придумайте пароль:");
+                String newPassword = bufferedReader.readLine();
+                Test.user.setLogin(newLogin);
+                Test.user.setPassword(newPassword);
+                System.out.println("Спасибо!");
+
+
+                //    seria(user); // теперь сериализацию нового юзера делаем только если юзера не было до этого.
+                //раньше мы просто сериализовывали юзера. Теперь нужно добавить юзера в массив и сериализовать весь массив.
+                oldUsersList.add(Test.user); // добавили юзера в массив.
+
+                seria(oldUsersList); //серииализовали новый массив с новым пользователем. ЗАТЕРЕВ СТАРЫЙ МАССИВ!
+                //////////////////////////////////конец нового кода с придумыванием пароля////////////////////////////////
 
             }
             Thread.sleep(600);
@@ -706,6 +844,7 @@ public class Test implements Serializable {
                     Thread.sleep(600);
                     break;
                 }
+
             }
         }
         catch(InterruptedException ie){
@@ -719,7 +858,8 @@ public class Test implements Serializable {
             System.out.println("Опа... нет такого класса line412 seriaFromFile() method! Но мы продолжаем.");
         }
         catch(NullPointerException npe){
-            System.out.println("Опа... NullPointerException line 416! Но мы продолжаем.");
+            System.out.println("Опа... NullPointerException в методе greeting()! Но мы продолжаем.");
+            npe.printStackTrace();
         }
 
     }
@@ -781,8 +921,7 @@ public class Test implements Serializable {
             Chat.chat003english();
         }
         else if(deal.contains("exit") || deal.contains("выключ") || deal.contains("выход") || deal.contains("надоел")){
-            Thread.sleep(600);
-            System.out.println("Всё, всё. Пора заканчивать разговор. Пока!");
+            exit("deal");
             return;
         }
         else{
@@ -791,11 +930,19 @@ public class Test implements Serializable {
         }
     }
 
-
     public static int randomize(){
         //получаем целое произвольное число от 0 до 9
         int b = 10;
         int randomNumber = (int)(b*Math.random());
+        return randomNumber;
+    }
+
+    public static int randomize2(){
+        //получаем целое произвольное число от 0 до 9
+        int b = 10;
+        int randomNumber = (int)(b*Math.random());
+        //получаем либо 0, либо 1.
+        randomNumber = randomNumber%2;
         return randomNumber;
     }
 
@@ -1494,6 +1641,9 @@ public class Test implements Serializable {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String chatTheme = bufferedReader.readLine();
         chatTheme = chatTheme.toLowerCase();
+
+        exit(chatTheme); //выход, если напишет exit и тп.
+
         if(chatTheme.contains("учеб") || chatTheme.contains("школ")||chatTheme.contains("учеб")||chatTheme.contains("учит")||chatTheme.contains("инстит")){
             Chat.chat01school();
         } else if (chatTheme.contains("музык") || chatTheme.contains("music")||chatTheme.contains("песн")||chatTheme.contains("петь")||chatTheme.contains("пою")||chatTheme.contains("поёт")||chatTheme.contains("поет")){
@@ -1527,9 +1677,64 @@ public class Test implements Serializable {
         return false;
     }
 
-    public static void exit(){
+    public static String createGoodName(String name){
+        name = name.replaceAll("меня", "");
+        name = name.replaceAll("Меня", "");
+        name = name.replaceAll("МЕНЯ", "");
+        name = name.replaceAll("зовут", "");
+        name = name.replaceAll("ЗОВУТ", "");
+        name = name.replaceAll("мое", "");
+        name = name.replaceAll("Мое", "");
+        name = name.replaceAll("МОЕ", "");
+        name = name.replaceAll("моё", "");
+        name = name.replaceAll("МОЁ", "");
+        name = name.replaceAll("Моё", "");
+        name = name.replaceAll("имя", "");
+        name = name.replaceAll("Имя", "");
+        name = name.replaceAll("ИМЯ", "");
+        name = name.replaceAll("моя", "");
+        name = name.replaceAll("Моя", "");
+        name = name.replaceAll("МОЯ", "");
+        name = name.replaceAll("фамилия", "");
+        name = name.replaceAll("Фамилия", "");
+        name = name.replaceAll("ФАМИЛИЯ", "");
+        name = name.replaceAll("My ", "");
+        name = name.replaceAll("my ", "");
+        name = name.replaceAll("MY ", "");
+        name = name.replaceAll("Name ", "");
+        name = name.replaceAll("name ", "");
+        name = name.replaceAll("NAME ", "");
+        name = name.replaceAll("is ", "");
+        name = name.replaceAll("IS ", "");
+        name = name.replaceAll("Is ", "");
+        name = name.replaceAll(" ", "");
+        name = name.replaceAll("\\.", "");
+        name = name.replaceAll("!", "");
+        name = name.replaceAll("-", "");
+        name = name.replaceAll("Я ", "");
+        name = name.replaceAll("я ", "");
 
-        return;
+        return name;
+    }
+
+    public static int createGoodAge(String ageString){
+        String numberOnly = ageString.replaceAll("[^0-9]", "");
+        int age = Integer.parseInt(numberOnly);
+        return age;
+    }
+
+    public static void exit(String answer){
+        try {
+            if (answer.contains("exit") || answer.contains("выключ") || answer.contains("выход") || answer.contains("надоел")) {
+                Thread.sleep(600);
+                System.out.println("Всё, всё. Пора заканчивать разговор. Пока!");
+                System.exit(0);
+                return;
+            }
+        }
+        catch(InterruptedException ie){
+            System.out.println("Это InterruptedException в методе exit(String answer). Но мы идем дальше.");
+        }
 }
 
     //этот метод - для проверки данных о пользователях записанных в файл.

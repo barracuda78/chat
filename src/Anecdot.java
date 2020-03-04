@@ -126,7 +126,7 @@ public class Anecdot implements Serializable {
     }
 
     public static void exit(){
-        Test.exit();
+        Test.exit("exit");
         return;
     }
 

@@ -849,7 +849,7 @@ public String toString(){
 }
 
 public static void exit(){
-        Test.exit();
+        Test.exit("exit");
         return;
     }
 }

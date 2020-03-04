@@ -127,7 +127,7 @@ public class Fairytale implements Serializable {
     }
 
     public static void exit(){
-        Test.exit();
+        Test.exit("exit");
         return;
     }
 }
