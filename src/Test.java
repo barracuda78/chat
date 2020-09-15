@@ -20,21 +20,21 @@ public class Test implements Serializable {
         ArrayList<EngWords> list = new ArrayList<>();
 
         EngWords word001 = new EngWords();
-        word001.setEngWord1("ass");
-        word001.setEngWord2("bump");
+        word001.setEngWord1("friend");
+        word001.setEngWord2("fellow");
         word001.setEngWord3("-empty-");
         word001.setEngWord4("-empty-");
-        word001.setEngWordPlural1("asses");
-        word001.setEngWordPlural2("bumps");
+        word001.setEngWordPlural1("friends");
+        word001.setEngWordPlural2("fellows");
         word001.setEngSinonim1("-empty-");
         word001.setEngEtymology1("нет этимологии на английском");
-        word001.setRusWord1("попа");
-        word001.setRusWord2("жопа");
-        word001.setRusWord3("задница");
-        word001.setRusWord4("зад");
-        word001.setRusWordPlural1("попы");
-        word001.setRusWordPlural2("жопы");
-        word001.setRusSinonim1("задок");
+        word001.setRusWord1("друг");
+        word001.setRusWord2("приятель");
+        word001.setRusWord3("-empty-");
+        word001.setRusWord4("товарищ");
+        word001.setRusWordPlural1("друзья");
+        word001.setRusWordPlural2("приятели");
+        word001.setRusSinonim1("бро");
         word001.setRusEtymology1("нет этимологии на русском");
         list.add(word001);
 
@@ -154,21 +154,21 @@ public class Test implements Serializable {
             //инициализировали юзеру поле usersListOfUnknownWords
             ArrayList<EngWords> list = new ArrayList<>();
             EngWords word001 = new EngWords();
-            word001.setEngWord1("ass");
-            word001.setEngWord2("bump");
+            word001.setEngWord1("friend");
+            word001.setEngWord2("fellow");
             word001.setEngWord3("-empty-");
             word001.setEngWord4("-empty-");
-            word001.setEngWordPlural1("asses");
-            word001.setEngWordPlural2("bumps");
+            word001.setEngWordPlural1("friends");
+            word001.setEngWordPlural2("fellows");
             word001.setEngSinonim1("-empty-");
             word001.setEngEtymology1("нет этимологии на английском");
-            word001.setRusWord1("попа");
-            word001.setRusWord2("жопа");
-            word001.setRusWord3("задница");
-            word001.setRusWord4("зад");
-            word001.setRusWordPlural1("попы");
-            word001.setRusWordPlural2("жопы");
-            word001.setRusSinonim1("задок");
+            word001.setRusWord1("друг");
+            word001.setRusWord2("приятель");
+            word001.setRusWord3("-empty-");
+            word001.setRusWord4("товарищ");
+            word001.setRusWordPlural1("друзья");
+            word001.setRusWordPlural2("приятели");
+            word001.setRusSinonim1("бро");
             word001.setRusEtymology1("нет этимологии на русском");
             list.add(word001);
             Test.user.setUsersListOfUnknownWords(list);
@@ -1735,7 +1735,7 @@ public class Test implements Serializable {
         catch(InterruptedException ie){
             System.out.println("Это InterruptedException в методе exit(String answer). Но мы идем дальше.");
         }
-}
+    }
 
     //этот метод - для проверки данных о пользователях записанных в файл.
     public static void usersToString(String filePath){
