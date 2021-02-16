@@ -95,8 +95,9 @@ public class Fairytale implements Serializable {
                 }
             }
 
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            String answer = bufferedReader.readLine();
+            //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            String answer = ConsoleHelper.readString();
+            answer = answer.trim().toLowerCase();
             if (answer.equals("да") || answer.equals("ага") || answer.equals("угу") || answer.equals("конечно") || answer.equals("давай") || answer.equals("погнали")||answer.equals("сказку")||answer.equals("сказочку")) {
                 return true;
             } else if (answer.equals("yes") || answer.equals("yeah") || answer.equals("yep")) {

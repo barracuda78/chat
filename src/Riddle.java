@@ -121,9 +121,9 @@ public class Riddle implements Serializable {
                 return;
             }
 
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            String riddleAnswer = bufferedReader.readLine();
-            riddleAnswer = riddleAnswer.toLowerCase();
+            //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            String riddleAnswer = ConsoleHelper.readString();
+            riddleAnswer = riddleAnswer.trim().toLowerCase();
 ////////////////////////приведение ответов riddleAnswer////////////////////////////////////////////////
             if (riddleAnswer.contains("пять") || riddleAnswer.contains("5") || riddleAnswer.contains("пятак") || riddleAnswer.contains("пятерка")) {
                 riddleAnswer = "5";
@@ -719,8 +719,9 @@ public class Riddle implements Serializable {
             }
         }
 
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String answer = bufferedReader.readLine();
+        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String answer = ConsoleHelper.readString();
+        answer = answer.trim().toLowerCase();
         if (answer.equals("да") || answer.equals("ага") || answer.equals("угу") || answer.equals("конечно") || answer.equals("давай") || answer.equals("погнали")|| answer.equals("загадку")|| answer.equals("загадочку")) {
             return true;
         } else if (answer.equals("yes") || answer.equals("yeah") || answer.equals("yep")) {
@@ -751,7 +752,7 @@ public class Riddle implements Serializable {
     }
     public void wasEasy(){
 
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         try {
 
@@ -819,8 +820,8 @@ public class Riddle implements Serializable {
                 }
             }
 
-            String itWasEasy = bufferedReader.readLine();
-            itWasEasy = itWasEasy.toLowerCase();
+            String itWasEasy = ConsoleHelper.readString();
+            itWasEasy = itWasEasy.trim().toLowerCase();
             if (itWasEasy.contains("не") || itWasEasy.contains("нет") || itWasEasy.contains("Не") || itWasEasy.contains("Нет") || itWasEasy.contains("неочень") || itWasEasy.contains("Неочень") || itWasEasy.contains("No") || itWasEasy.contains("no")) {
                 Thread.sleep(600);
                 ConsoleHelper.writeMessage(this.getTwo());

@@ -144,8 +144,8 @@ public class Test implements Serializable {
     public static void greeting(){
         try{
             //User user = new User();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            String name = bufferedReader.readLine();
+            //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            String name = ConsoleHelper.readString();
 
             //инициализировали юзеру поле name
             Test.user.setName(createGoodName(name));
@@ -444,7 +444,7 @@ public class Test implements Serializable {
                 }
             }
 
-            String ageOfUser = bufferedReader.readLine();
+            String ageOfUser = ConsoleHelper.readString();
 
 
             int age = createGoodAge(ageOfUser);      // метод createGoodAge() отсекает все символы кроме цифр из введеннных пользователем.
@@ -603,9 +603,9 @@ public class Test implements Serializable {
                 ////////////////новый код с логином и паролем///////////////
                 for(int i = 3; i > 0; i-- ) {
                     ConsoleHelper.writeMessage("Введи свой логин:");
-                    String login = bufferedReader.readLine();                     //может быть ошибка! А не создать ли отдельный bufferedreader?
+                    String login = ConsoleHelper.readString();
                     ConsoleHelper.writeMessage("Теперь пароль, пожалуйста:");
-                    String password = bufferedReader.readLine();
+                    String password = ConsoleHelper.readString();
 
                     File fileLogin = new File("users01.bin");
                     FileInputStream fisLogin = new FileInputStream(fileLogin);
@@ -705,9 +705,9 @@ public class Test implements Serializable {
 
                 //////////////////////////////////новый  код с придумыванием пароля////////////////////////////////
                 ConsoleHelper.writeMessage("Придумайте себе имя пользователя (login), чтобы в следующий раз его использовать для входа в чат:");
-                String newLogin = bufferedReader.readLine();
+                String newLogin = ConsoleHelper.readString();
                 ConsoleHelper.writeMessage("Теперь придумайте пароль:");
-                String newPassword = bufferedReader.readLine();
+                String newPassword = ConsoleHelper.readString();
                 Test.user.setLogin(newLogin);
                 Test.user.setPassword(newPassword);
                 ConsoleHelper.writeMessage("Спасибо!");
@@ -871,10 +871,10 @@ public class Test implements Serializable {
 
     public static void dealer() throws IOException, InterruptedException{
         ConsoleHelper.writeMessage("Выбирай, чем займемся?");
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        String deal = bufferedReader.readLine();
-        deal = deal.toLowerCase();
+        String deal = ConsoleHelper.readString();
+        deal = deal.trim().toLowerCase();
         if (deal.contains("спать")){
             Thread.sleep(600);
             ConsoleHelper.writeMessage("Тогда выключай компьютер, спокойной ночи!");
@@ -1613,8 +1613,8 @@ public class Test implements Serializable {
         ConsoleHelper.writeMessage("загадай любое целое число.");
         Thread.sleep(1000);
         ConsoleHelper.writeMessage("Введи это число с клавиатуры. Нажми ENTER.");
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int x = Integer.parseInt(bufferedReader.readLine());
+        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int x = Integer.parseInt(ConsoleHelper.readString());
         int y = x + 2;
         ConsoleHelper.writeMessage("мда... А я загадал число " + y + " !");
         ConsoleHelper.writeMessage("Тебе все ясно? В цифрах мне нет равных. Тут я всегда... ПОБЕДЮ.");
@@ -1643,9 +1643,9 @@ public class Test implements Serializable {
         //метод является входным для чата и далее вызывает chat001 chat002 chat003 и так далее в рандомном порядке.
         Thread.sleep(600);
         ConsoleHelper.writeMessage("Задавай любую тему. Я, правда, не всё на свете знаю, но... Можем про учебу... Или про музыку... Или про отпуск!");
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String chatTheme = bufferedReader.readLine();
-        chatTheme = chatTheme.toLowerCase();
+        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String chatTheme = ConsoleHelper.readString();
+        chatTheme = chatTheme.trim().toLowerCase();
 
         exit(chatTheme); //выход, если напишет exit и тп.
 
