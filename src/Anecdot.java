@@ -29,7 +29,7 @@ public class Anecdot implements Serializable {
 
         try {
 
-            int r = Test.randomize();
+            int r = Util.randomize();
             switch (r) {
                 case 0: {
                     Thread.sleep(3000);
@@ -109,9 +109,9 @@ public class Anecdot implements Serializable {
             } else if (answer.contains("no") || answer.contains("not") || answer.contains("nop") || answer.contains("не") || answer.equals("не надо") || answer.equals("не хочу") || answer.contains("достал") || answer.contains("задолбал") || answer.contains("надоел") || answer.contains("заткнись")) {
                 return "нет";
             } else if (answer.contains("сказку") || answer.contains("сказк") || answer.contains("сказочк") || answer.contains("сказание") || answer.equals("fairytale") || answer.equals("tsle") ) {
-                Test.fairytaleNew();
+                Main.fairytaleNew();
             } else if (answer.contains("загадк") || answer.contains("загадочк") || answer.contains("riddle") || answer.equals("загадку") || answer.equals("загадочку") ) {
-                Test.riddleNew();
+                Riddle.riddleNew();
             } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
                 Anecdot.exit();
             } else return "нет";
@@ -128,7 +128,7 @@ public class Anecdot implements Serializable {
     }
 
     public static void exit(){
-        Test.exit("exit");
+        Main.exit("exit");
         return;
     }
 

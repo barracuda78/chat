@@ -7,10 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/Anecdot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/Anecdot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/Chat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/Fairytale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/Fairytale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/Greeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/Greeting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/Riddle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/Riddle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Anecdot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Anecdot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fairytale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fairytale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Riddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Riddle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,13 +65,53 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Test.java">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="141" column="5" lean-forward="true" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+            <state relative-caret-position="740">
+              <caret line="184" selection-start-line="184" selection-end-line="184" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#886#5127#0" />
+                <element signature="method#dealer#0;class#Test#0" />
+                <element signature="method#randomize2#0;class#Test#0" />
+                <element signature="method#randomize100#0;class#Test#0" />
+                <element signature="method#fairytaleNew#0;class#Test#0" />
+                <element signature="method#anecdoteNew#0;class#Test#0" />
+                <element signature="method#game001#0;class#Test#0" />
+                <element signature="method#game000#0;class#Test#0" />
+                <element signature="method#chat00#0;class#Test#0" />
+                <element signature="method#yesNo#0;class#Test#0" />
+                <element signature="method#exit#0;class#Test#0" />
+                <element signature="method#usersToString#0;class#Test#0" />
+                <element signature="method#seriaFromFile#0;class#Test#0" />
+                <element signature="method#usersCountFromFile#0;class#Test#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1254">
+              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#seria#0;class#Util#0" />
+                <element signature="method#randomize#0;class#Util#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1921">
+              <caret line="169" column="23" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="37" />
+              <folding>
+                <element signature="e#82971#82972#0" expanded="true" />
+                <element signature="e#83020#83021#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/src/EngWordsVerb.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
                 <element signature="e#141#142#0" expanded="true" />
                 <element signature="e#174#175#0" expanded="true" />
@@ -98,41 +151,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ConsoleHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#175#176#0" expanded="true" />
-                <element signature="e#218#219#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Anecdot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="97" column="44" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Riddle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="754" column="54" selection-start-line="754" selection-start-column="46" selection-end-line="754" selection-end-column="54" />
+            <state relative-caret-position="850">
+              <caret line="298" column="39" selection-start-line="298" selection-start-column="39" selection-end-line="298" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1832#1833#0" expanded="true" />
                 <element signature="e#1864#1865#0" expanded="true" />
+                <element signature="e#1979#13545#0" />
+                <element signature="method#readFromFile#0;class#Riddle#0" />
+                <element signature="method#otgadka#0;class#Riddle#0" />
+                <element signature="e#19682#24378#0" />
+                <element signature="e#24383#29259#0" />
+                <element signature="e#29264#34420#0" />
+                <element signature="e#34425#34702#0" />
+                <element signature="e#34707#38927#0" />
+                <element signature="e#38932#43310#0" />
+                <element signature="e#43315#47055#0" />
                 <element signature="method#toString#0;class#Riddle#0" />
+                <element signature="method#exit#0;class#Riddle#0" />
               </folding>
             </state>
           </provider>
@@ -141,8 +179,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Greeting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="-322">
+              <caret line="705" column="13" lean-forward="true" selection-start-line="705" selection-start-column="13" selection-end-line="705" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,7 +192,7 @@
         <entry file="file://$PROJECT_DIR$/src/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-14">
-              <caret line="1" column="27" lean-forward="true" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#447#448#0" expanded="true" />
@@ -197,9 +238,11 @@
       <find>BufferedReader</find>
       <find>System.out.println</find>
       <find>Buffered</find>
+      <find>Main.randomize()</find>
     </findStrings>
     <replaceStrings>
       <replace>ConsoleHelper.writeMessage</replace>
+      <replace>Util.randomize()</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -248,12 +291,14 @@
         <option value="$PROJECT_DIR$/usersCount001.bin" />
         <option value="$PROJECT_DIR$/users01.bin" />
         <option value="$PROJECT_DIR$/src/ConsoleHelper.java" />
-        <option value="$PROJECT_DIR$/src/Greeting.java" />
         <option value="$PROJECT_DIR$/src/Anecdot.java" />
         <option value="$PROJECT_DIR$/src/Chat.java" />
         <option value="$PROJECT_DIR$/src/Fairytale.java" />
-        <option value="$PROJECT_DIR$/src/Riddle.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/src/Util.java" />
+        <option value="$PROJECT_DIR$/src/Greeting.java" />
+        <option value="$PROJECT_DIR$/src/Riddle.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -300,6 +345,36 @@
               <item name="BarraChat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BarraChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="BarraChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="BarraChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BarraChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BarraChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -332,8 +407,15 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="BarraChat" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="BarraChat" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -341,7 +423,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +453,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1607717" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -422,13 +505,6 @@
     <SUITE FILE_PATH="coverage/BarraChat$Test.ic" NAME="Test Coverage Results" MODIFIED="1581863321227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/riddle002">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/riddle003">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -520,16 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="1874" column="16" selection-start-line="1874" selection-start-column="16" selection-end-line="1874" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2132" selection-start-line="2132" selection-end-line="2132" />
-          <folding>
-            <element signature="e#83020#83021#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -689,7 +755,7 @@
     <entry file="file://$PROJECT_DIR$/src/EngWordsVerb.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="e#141#142#0" expanded="true" />
             <element signature="e#174#175#0" expanded="true" />
@@ -715,30 +781,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Greeting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Riddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="754" column="54" selection-start-line="754" selection-start-column="46" selection-end-line="754" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#1864#1865#0" expanded="true" />
-            <element signature="method#toString#0;class#Riddle#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14">
-          <caret line="1" column="27" lean-forward="true" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#447#448#0" expanded="true" />
@@ -757,6 +803,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1921">
+          <caret line="169" column="23" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="37" />
+          <folding>
+            <element signature="e#82971#82972#0" expanded="true" />
+            <element signature="e#83020#83021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/UserName.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -764,13 +821,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="141" column="5" lean-forward="true" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+        <state relative-caret-position="-1254">
+          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#seria#0;class#Util#0" />
+            <element signature="method#randomize#0;class#Util#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Greeting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-322">
+          <caret line="705" column="13" lean-forward="true" selection-start-line="705" selection-start-column="13" selection-end-line="705" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Riddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="298" column="39" selection-start-line="298" selection-start-column="39" selection-end-line="298" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1832#1833#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1979#13545#0" />
+            <element signature="method#readFromFile#0;class#Riddle#0" />
+            <element signature="method#otgadka#0;class#Riddle#0" />
+            <element signature="e#19682#24378#0" />
+            <element signature="e#24383#29259#0" />
+            <element signature="e#29264#34420#0" />
+            <element signature="e#34425#34702#0" />
+            <element signature="e#34707#38927#0" />
+            <element signature="e#38932#43310#0" />
+            <element signature="e#43315#47055#0" />
+            <element signature="method#toString#0;class#Riddle#0" />
+            <element signature="method#exit#0;class#Riddle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#886#5127#0" />
+            <element signature="method#dealer#0;class#Test#0" />
+            <element signature="method#randomize2#0;class#Test#0" />
+            <element signature="method#randomize100#0;class#Test#0" />
+            <element signature="method#fairytaleNew#0;class#Test#0" />
+            <element signature="method#anecdoteNew#0;class#Test#0" />
+            <element signature="method#game001#0;class#Test#0" />
+            <element signature="method#game000#0;class#Test#0" />
+            <element signature="method#chat00#0;class#Test#0" />
+            <element signature="method#yesNo#0;class#Test#0" />
+            <element signature="method#exit#0;class#Test#0" />
+            <element signature="method#usersToString#0;class#Test#0" />
+            <element signature="method#seriaFromFile#0;class#Test#0" />
+            <element signature="method#usersCountFromFile#0;class#Test#0" />
           </folding>
         </state>
       </provider>
