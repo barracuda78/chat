@@ -40,8 +40,9 @@ public class Chat implements Serializable {
             Thread.sleep(600);
             ConsoleHelper.writeMessage("Я люблю музыку. При том очень разную. А тебе какая музыка нравится?");
             Thread.sleep(600);
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            String answerWhatMusic = bufferedReader.readLine();
+            //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            //String answerWhatMusic = ConsoleHelper.readString();
+            String answerWhatMusic = ConsoleHelper.readString();
             if(answerWhatMusic.contains("рэп")){
                 ConsoleHelper.writeMessage("О! Круто! А какие рэп-исполнители тебе нравятся? Я имею ввиду российских рэперов!");
             }
@@ -80,8 +81,9 @@ public class Chat implements Serializable {
             ConsoleHelper.writeMessage("Если в итоге ты набираешь +3 баллов - твоя победа! Если набираешь минус 3 баллов - моя!");
             Thread.sleep(1000);
             ConsoleHelper.writeMessage("Ну что, поиграем?");
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            String answer = bufferedReader.readLine();
+            //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            //String answer = ConsoleHelper.readString();
+            String answer =ConsoleHelper.readString();
             answer = answer.toLowerCase();
 
             Test.exit(answer);//выход, если напишет exit и т.п.
@@ -289,8 +291,9 @@ public class Chat implements Serializable {
                     countWords++;
 
                     //пользователь вводит свой ответ
-                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                    String answer = bufferedReader.readLine();
+                    //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                    //String answer = ConsoleHelper.readString();
+                    String answer = ConsoleHelper.readString();
                     answer = answer.toLowerCase();
 
                     //сравниваем ответ:
@@ -460,13 +463,13 @@ public class Chat implements Serializable {
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("Еще попытку хочешь? Да или нет?");
                         Thread.sleep(600);
-                        String answerYesNo = bufferedReader.readLine();
+                        String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
                         if (Test.yesNo(answerYesNo)) {
                             Thread.sleep(600);
                             ConsoleHelper.writeMessage("переведи слово: " + key);
                             Thread.sleep(600);
-                            String answer2 = bufferedReader.readLine();
+                            String answer2 = ConsoleHelper.readString();
                             if (answer2.equals(value)) {
                                 Thread.sleep(600);
                                 ConsoleHelper.writeMessage("Ура! Теперь правильно!");
@@ -515,7 +518,7 @@ public class Chat implements Serializable {
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("Ну что, хочешь еще одно слово перевести?");
                         Thread.sleep(600);
-                        String answerYesNo = bufferedReader.readLine();
+                        String answerYesNo = = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
                         if (Test.yesNo(answerYesNo)) {
                             wantMore = true;
@@ -529,8 +532,8 @@ public class Chat implements Serializable {
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                         Thread.sleep(600);
-                        BufferedReader bufferedReader01 = new BufferedReader(new InputStreamReader(System.in));
-                        String answerYesNo01 = bufferedReader01.readLine();
+                        //BufferedReader bufferedReader01 = new BufferedReader(new InputStreamReader(System.in));
+                        String answerYesNo01 = ConsoleHelper.readString();
                         answerYesNo01 = answerYesNo01.toLowerCase();
                         if (Test.yesNo(answerYesNo01)) {
                             gameEngWords();
@@ -545,8 +548,8 @@ public class Chat implements Serializable {
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                         Thread.sleep(600);
-                        BufferedReader bufferedReader02 = new BufferedReader(new InputStreamReader(System.in));
-                        String answerYesNo02 = bufferedReader02.readLine();
+                        //BufferedReader bufferedReader02 = new BufferedReader(new InputStreamReader(System.in));
+                        String answerYesNo02 = ConsoleHelper.readString();
                         answerYesNo02 = answerYesNo02.toLowerCase();
                         if (Test.yesNo(answerYesNo02)) {
                             gameEngWords();
@@ -564,8 +567,8 @@ public class Chat implements Serializable {
                 Thread.sleep(600);
                 ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                 Thread.sleep(600);
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                String answerYesNo = bufferedReader.readLine();
+                //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                String answerYesNo = ConsoleHelper.readString();
                 answerYesNo = answerYesNo.toLowerCase();
                 if (Test.yesNo(answerYesNo)) {
                     gameEngWords();
@@ -579,8 +582,8 @@ public class Chat implements Serializable {
                 Thread.sleep(600);
                 ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                 Thread.sleep(600);
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                String answerYesNo = bufferedReader.readLine();
+                //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                String answerYesNo = ConsoleHelper.readString();
                 answerYesNo = answerYesNo.toLowerCase();
                 if (Test.yesNo(answerYesNo)) {
                     gameEngWords();
@@ -976,8 +979,8 @@ public class Chat implements Serializable {
                     countWords++;
 
                     //пользователь вводит свой ответ
-                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                    String answer = bufferedReader.readLine();
+                    //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                    String answer = ConsoleHelper.readString();
                     answer = answer.toLowerCase();
 
                     Test.exit(answer);//выход, если напишет exit и т.п.
@@ -1354,8 +1357,8 @@ public class Chat implements Serializable {
             Thread.sleep(600);
             ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
             Thread.sleep(600);
-            BufferedReader bufferedReader01 = new BufferedReader(new InputStreamReader(System.in));
-            String answerYesNo01 = bufferedReader01.readLine();
+            //BufferedReader bufferedReader01 = new BufferedReader(new InputStreamReader(System.in));
+            String answerYesNo01 = ConsoleHelper.readString();
             answerYesNo01 = answerYesNo01.toLowerCase();
             if (Test.yesNo(answerYesNo01)) {
                 gameEngWords2();
@@ -1381,8 +1384,8 @@ public class Chat implements Serializable {
             Thread.sleep(600);
             ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
             Thread.sleep(600);
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            String answerYesNo = bufferedReader.readLine();
+            //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            String answerYesNo = ConsoleHelper.readString();
             answerYesNo = answerYesNo.toLowerCase();
             if (Test.yesNo(answerYesNo)) {
                 gameEngWords2();
@@ -1455,8 +1458,8 @@ public class Chat implements Serializable {
 
                     if(countOfWords < listOfUnknownWords.size()) {
                         ConsoleHelper.writeMessage("Еще слово?");
-                        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                        String answer = bufferedReader.readLine();
+                        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                        String answer = ConsoleHelper.readString();
                         answer = answer.toLowerCase();
                         if (Test.yesNo(answer)) {
                             continue;                                               //может быть тут ошибка?
@@ -1469,8 +1472,8 @@ public class Chat implements Serializable {
                 }
                 Thread.sleep(600);
                 ConsoleHelper.writeMessage("Ну что, позагадывать тебе еще английские слова?");
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                String answer = bufferedReader.readLine();
+                //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                String answer = ConsoleHelper.readString();
                 answer = answer.toLowerCase();
                 if(Test.yesNo(answer)){
                     gameEngWords2();
@@ -1584,8 +1587,8 @@ public class Chat implements Serializable {
                 countWords++;
 
                 //пользователь вводит свой ответ
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                String answer = bufferedReader.readLine();
+                //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                String answer = ConsoleHelper.readString();
                 answer = answer.toLowerCase();
 
                 Test.exit(answer);//выход, если напишет exit и т.п.
@@ -1668,7 +1671,7 @@ public class Chat implements Serializable {
                         gameEngWordsWin();
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
-                        String answerYesNo = bufferedReader.readLine();
+                        String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
 
                         Test.exit(answerYesNo);//выход, если напишет exit и т.п.
@@ -1682,7 +1685,7 @@ public class Chat implements Serializable {
                         gameEngWordsLoose();
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
-                        String answerYesNo = bufferedReader.readLine();
+                        String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
 
                         Test.exit(answerYesNo);//выход, если напишет exit и т.п.
@@ -1773,7 +1776,7 @@ public class Chat implements Serializable {
                         gameEngWordsWin();
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
-                        String answerYesNo = bufferedReader.readLine();
+                        String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
 
                         Test.exit(answerYesNo);//выход, если напишет exit и т.п.
@@ -1787,7 +1790,7 @@ public class Chat implements Serializable {
                         gameEngWordsLoose();
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
-                        String answerYesNo = bufferedReader.readLine();
+                        String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
 
                         Test.exit(answerYesNo);//выход, если напишет exit и т.п.
@@ -1801,7 +1804,7 @@ public class Chat implements Serializable {
                     Thread.sleep(600);
                     ConsoleHelper.writeMessage("Еще попытку хочешь? Да или нет?");
                     Thread.sleep(600);
-                    String answerYesNo = bufferedReader.readLine();
+                    String answerYesNo = ConsoleHelper.readString();
                     answerYesNo = answerYesNo.toLowerCase();
 
                     Test.exit(answerYesNo);//выход, если напишет exit и т.п.
@@ -1811,7 +1814,7 @@ public class Chat implements Serializable {
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
                         Thread.sleep(600);
-                        String answer2 = bufferedReader.readLine();
+                        String answer2 = ConsoleHelper.readString();
                         answer2 = answer2.toLowerCase();
                         if (answer2.equals(word.getRusWord1()) || answer2.equals(word.getRusWord2()) || answer2.equals(word.getRusWord3()) || answer2.equals(word.getRusWord4()) || answer2.equals(word.getRusWordPlural1()) || answer2.equals(word.getRusWordPlural2()) || answer2.equals(word.getRusSinonim1()) || answer2.contains(word.getRusWord1()) || answer2.contains(word.getRusWord2()) || answer2.contains(word.getRusWord3()) || answer2.contains(word.getRusWord4()) || answer2.contains(word.getRusWordPlural1()) || answer2.contains(word.getRusWordPlural2()) || answer2.contains(word.getRusSinonim1())) {
                             Thread.sleep(600);
@@ -1825,7 +1828,7 @@ public class Chat implements Serializable {
                                 gameEngWordsWin();
                                 Thread.sleep(600);
                                 ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
-                                String answer3 = bufferedReader.readLine();
+                                String answer3 = ConsoleHelper.readString();
                                 answer3 = answer3.toLowerCase();
 
                                 if (Test.yesNo(answer3)) {
@@ -1837,7 +1840,7 @@ public class Chat implements Serializable {
                                 gameEngWordsLoose();
                                 Thread.sleep(600);
                                 ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
-                                String answer4 = bufferedReader.readLine();
+                                String answer4 = ConsoleHelper.readString();
                                 answer4 = answer4.toLowerCase();
 
                                 if (Test.yesNo(answer4)) {
@@ -1862,7 +1865,7 @@ public class Chat implements Serializable {
                                 gameEngWordsWin();
                                 Thread.sleep(600);
                                 ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
-                                String answer5 = bufferedReader.readLine();
+                                String answer5 = ConsoleHelper.readString();
                                 answer5 = answer5.toLowerCase();
 
                                 Test.exit(answer5);//выход, если напишет exit и т.п.
@@ -1876,7 +1879,7 @@ public class Chat implements Serializable {
                                 gameEngWordsLoose();
                                 Thread.sleep(600);
                                 ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
-                                String answer6 = bufferedReader.readLine();
+                                String answer6 = ConsoleHelper.readString();
                                 answer6 = answer6.toLowerCase();
 
                                 Test.exit(answer6);//выход, если напишет exit и т.п.
@@ -1992,8 +1995,8 @@ public class Chat implements Serializable {
                 countWords++;
 
                 //пользователь вводит свой ответ
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                String answer = bufferedReader.readLine();
+                //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                String answer = ConsoleHelper.readString();
                 answer = answer.toLowerCase();
 
                 Test.exit(answer);//выход, если напишет exit и т.п.
@@ -2167,7 +2170,7 @@ public class Chat implements Serializable {
                     Thread.sleep(600);
                     ConsoleHelper.writeMessage("Еще попытку хочешь? Да или нет?");
                     Thread.sleep(600);
-                    String answerYesNo = bufferedReader.readLine();
+                    String answerYesNo = ConsoleHelper.readString();
                     answerYesNo = answerYesNo.toLowerCase();
 
                     Test.exit(answerYesNo);//выход, если напишет exit и т.п.
@@ -2177,7 +2180,7 @@ public class Chat implements Serializable {
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
                         Thread.sleep(600);
-                        String answer2 = bufferedReader.readLine();
+                        String answer2 = ConsoleHelper.readString();
                         answer2 = answer2.toLowerCase();
                         if (answer2.equals(word.getRusWord1()) || answer2.equals(word.getRusWord2()) || answer2.equals(word.getRusWord3()) || answer2.equals(word.getRusWord4()) || answer2.equals(word.getRusWordPlural1()) || answer2.equals(word.getRusWordPlural2()) || answer2.equals(word.getRusSinonim1()) || answer2.contains(word.getRusWord1()) || answer2.contains(word.getRusWord2()) || answer2.contains(word.getRusWord3()) || answer2.contains(word.getRusWord4()) || answer2.contains(word.getRusWordPlural1()) || answer2.contains(word.getRusWordPlural2()) || answer2.contains(word.getRusSinonim1())) {
                             Thread.sleep(600);
