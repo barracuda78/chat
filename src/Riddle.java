@@ -1,8 +1,9 @@
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Riddle implements Serializable {
-    public static int globalCount; //счетчик добавления новых загадок в лист. Используется в методе riddleNew() в Test
+    public static int globalCount; //счетчик добавления новых загадок в лист. Используется в методе riddleNew() в Main
     public int count;              //счетчик количества загаданной конкретной загадки при неправильном ответе. Не более трех раз. Тогда сообщаем правильный ответ юзеру.
     public final static String NAME = "загадку";
     String path;
@@ -77,9 +78,192 @@ public class Riddle implements Serializable {
     }
     public String getName(){ return NAME;}
 
+    public static void riddleNew(){
+        try {
+            Riddle.globalCount++;
+            ArrayList<Riddle> listOfRiddles = new ArrayList<>();
+            if (Riddle.globalCount == 1) {
+
+                Riddle riddle01 = new Riddle("riddle001");
+                riddle01.setPath2("riddle001_02");
+                riddle01.setAnswer("5");
+                riddle01.setAnswerEng("five");
+                riddle01.setFinalAnswer("Правильный ответ: ТРИ плюс ДВА равно ПЯТЬ!");
+                riddle01.setOne("Ну ладно. А я таким вот образом попался в первый раз,\nкогда мне загадали эту загадку хакеры из звездной системы Альфа-Центавра. \nКстати, в Альфа-Центавре - три Солнца, вместо одного!!!");
+                riddle01.setTwo("Хе-хе...\nА вот для меня - не легко, я сам так попался в первый раз,\nкогда мне загадали эту загадку хакеры из звездной системы Альфа-Центавра.\nКстати,я тебе уже говорил, что в Альфа-Центавре - три Солнца, вместо одного??? Нет? Ну так знай!");
+                riddle01.setThree("Ладно, не обижайся. Проехали. Погнали дальше!");
+                riddle01.setFour("");
+                riddle01.setFive("");
+                riddle01.count = 0;
+
+                listOfRiddles.add(0, riddle01);
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+                Riddle riddle02 = new Riddle("riddle002");
+                riddle02.setPath2("riddle002");
+                riddle02.setAnswer("хлеб");
+                riddle02.setAnswerEng("bread");
+                riddle02.setFinalAnswer("Правильный ответ: ХЛЕБ!");
+                riddle02.setOne("Молодца... Что сказать! Супер!\nА я вот хлеб не ем. Мне, понимаешь, электроны подавай. Я их и с маслом могу, и без масла!"); // легко
+                riddle02.setTwo("Ну ладно. Хлеб - всему голова!"); //не легко
+                riddle02.setThree("Ладно, не обижайся на меня. Я всего лишь железяка. Ну и пластмасска тоже. Давай дальше!"); //не ясно легко или нет
+                riddle02.setFour(""); //резерв
+                riddle02.setFive(""); //резерв
+                riddle02.count = 0;
+
+                listOfRiddles.add(0, riddle02);
+///////////////////////////////////////////////////////////////////////////////////////////////
+                Riddle riddle03 = new Riddle("riddle003");
+                riddle03.setPath2("riddle003");
+                riddle03.setAnswer("ю");
+                riddle03.setAnswerEng("u");
+                riddle03.setFinalAnswer("Правильный ответ: БУКВА Ю");
+                riddle03.setOne("А вот для меня - не легко, я сам еще пока что не очень разобрался в русском алфавите и всех этих буквах ЙУ или ЙО. Все время в Гугл подсматриваю )"); // легко
+                riddle03.setTwo("Ну ладно. Я сам еще не очень хорошо знаю земной алфавит. Хотя на русском могу более или менее сносно писать."); //не легко
+                riddle03.setThree("Понял, понял...  Я - старый, тупой компьютер... Давай дальше!"); //не ясно легко или нет
+                riddle03.setFour(""); //резерв
+                riddle03.setFive(""); //резерв
+                riddle03.count = 0;
+
+                listOfRiddles.add(0, riddle03);
+///////////////////////////////////////////////////////////////////////////////////////////////
+                Riddle riddle04 = new Riddle("riddle004");
+                riddle04.setPath2("riddle004");
+                riddle04.setAnswer("перец");
+                riddle04.setAnswerEng("pepper");
+                riddle04.setFinalAnswer("Правильный ответ: ПЕРЕЦ!");
+                riddle04.setOne("Я в тебе не сомневался. Кстати, некоторые виды перца настолько жгучие,\nчто одно прикосновение к ним может повредить кожу или даже вызвать химический ожог."); // легко
+                riddle04.setTwo("Да. В следующий раз не отгадаешь - заставлю тебя съесть 25 горошин перца. Шутка!"); //не легко
+                riddle04.setThree("Да-да. Ты - умница, а я - ржавое ведро с гвоздями. Все ясно. Погнали дальше.!"); //не ясно легко или нет
+                riddle04.setFour(""); //резерв
+                riddle04.setFive(""); //резерв
+                riddle04.count = 0;
+
+                listOfRiddles.add(0, riddle04);
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+                Riddle riddle05 = new Riddle("riddle005");
+                riddle05.setPath2("riddle005");
+                riddle05.setAnswer("чай");
+                riddle05.setAnswerEng("tea");
+                riddle05.setFinalAnswer("Правильный ответ: ЧАЙ!");
+                riddle05.setOne("Ну значит ты - молодец!!!\n Кстати, после воды, чай является вторым самым употребляемым напитком в мире"); // легко
+                riddle05.setTwo("И мне. Кстати, В США кофе остаётся более популярным напитком, чем чай.\n В целом американцы потребляют примерно в 25 раз меньше чая, чем кофе."); //не легко
+                riddle05.setThree("Все. Все. Молчу-молчу. В тряпочку!"); //не ясно легко или нет
+                riddle05.setFour(""); //резерв
+                riddle05.setFive(""); //резерв
+                riddle05.count = 0;
+
+                listOfRiddles.add(0, riddle05);
+///////////////////////////////////////////////////////////////////////////////////////////////
+                Riddle riddle06 = new Riddle("riddle006");
+                riddle06.setPath2("riddle006");
+                riddle06.setAnswer("сырник");
+                riddle06.setAnswerEng("cheesecake");
+                riddle06.setFinalAnswer("Правильный ответ: СЫРНИК!");
+                riddle06.setOne("Мне тоже\n Кстати, в Древней Руси вначале не было слова творог.\nИ в народе творог также называли «сир»"); // легко
+                riddle06.setTwo("Да уж!!! Тут рецептуру нужно знать!\n И еще... Людям, следящим за своим весом, следует осторожно подходить к употреблению сырников!\n Но это я не про тебя, конечно..."); //не легко
+                riddle06.setThree("Я громко хлопнул крышкой унитаза, поэтому, будем считать, не слышал этого твоего ответа..."); //не ясно легко или нет
+                riddle06.setFour(""); //резерв
+                riddle06.setFive(""); //резерв
+                riddle06.count = 0;
+
+                listOfRiddles.add(0, riddle06);
+///////////////////////////////////////////////////////////////////////////////////////////////
+                Riddle riddle07 = new Riddle("riddle007");
+                riddle07.setPath2("riddle007");
+                riddle07.setAnswer("бутерброд");
+                riddle07.setAnswerEng("sandwich");
+                riddle07.setFinalAnswer("Правильный ответ: БУТЕРБРОД!");
+                riddle07.setOne("Ну ты - крутышка!!!\n Кстати, по правилу бутерброда, следующую загадку ты не отгадаешь."); // легко
+                riddle07.setTwo("Да. И этот закон лучше бы не работал..."); //не легко
+                riddle07.setThree("Даже не знаю, что и сказать!"); //не ясно легко или нет
+                riddle07.setFour(""); //резерв
+                riddle07.setFive(""); //резерв
+                riddle07.count = 0;
+
+                listOfRiddles.add(0, riddle07);
+///////////////////////////////////////////////////////////////////////////////////////////////
+                Riddle riddle08 = new Riddle("riddle008");
+                riddle08.setPath2("riddle008");
+                riddle08.setAnswer("масло");
+                riddle08.setAnswerEng("butter");
+                riddle08.setFinalAnswer("Правильный ответ: МАСЛО!");
+                riddle08.setOne("Ну я просто рад за тебя!\n Кстати, при взбивании масла из сливок или сметаны образуется кисловатая жидкость – пахта.\n В древности это слово употребляли для обозначения процесса взбивания сливочного масла."); // легко
+                riddle08.setTwo("Ну ладно, ладно. Так и быть. Эта - была сложной."); //не легко
+                riddle08.setThree("Я аж чуть со стола не упал от таких ответов."); //не ясно легко или нет
+                riddle08.setFour(""); //резерв
+                riddle08.setFive(""); //резерв
+                riddle08.count = 0;
+
+                listOfRiddles.add(0, riddle08);
+///////////////////////////////////////////////////////////////////////////////////////////////
+                Riddle riddle09 = new Riddle("riddle009");
+                riddle09.setPath2("riddle009");
+                riddle09.setAnswer("мед");
+                riddle09.setAnswerEng("honey");
+                riddle09.setFinalAnswer("Правильный ответ: МЕД");
+                riddle09.setOne("Ты золото моё!!!\n Кстати, натуральный мёд пчёл содержит практически все микроэлементы \nи по своему составу близок к плазме крови человека."); // легко
+                riddle09.setTwo("Не, ну ты же не профессор!"); //не легко
+                riddle09.setThree("Ладно. У меня уже клавиатура болит от твоих пальцев. Полегче там жми..."); //не ясно легко или нет
+                riddle09.setFour(""); //резерв
+                riddle09.setFive(""); //резерв
+                riddle09.count = 0;
+
+                listOfRiddles.add(0, riddle09);
+///////////////////////////////////////////////////////////////////////////////////////////////
+                Riddle riddle10 = new Riddle("riddle010");
+                riddle10.setPath2("riddle010");
+                riddle10.setAnswer("пельмени");
+                riddle10.setAnswerEng("dumplings");
+                riddle10.setFinalAnswer("Правильный ответ: ПЕЛЬМЕНИ!");
+                riddle10.setOne("Это очень хорошо!\n Кстати, пельмени так называются потому, что имеют форму уха,\nв переводе с коми-пермяцкого «пэль» - это ухо, а «нянь» - хлеб."); // легко
+                riddle10.setTwo("Кутузову тоже было нелегко..."); //не легко
+                riddle10.setThree("Все ясно. Я тут лишний..."); //не ясно легко или нет
+                riddle10.setFour(""); //резерв
+                riddle10.setFive(""); //резерв
+                riddle10.count = 0;
+
+                listOfRiddles.add(0, riddle10);
+//продолжить для всех моих загадок
+            }
+            ArrayList<Integer> listOfRandoms = new ArrayList<>(); //для сбора уже выскакивавших рандомных значений.
+            Thread.sleep(600);
+
+            for (int j = 0; j < listOfRiddles.size(); j++) {
+                //это цикл для того, чтобы загадать все загадки. Или сколько их будет в аррейлисте.
+                int r = Util.randomize();
+
+                //загадки удаляются по одной, с каждым разом их всё меньше 10. А рандомное число может быть и 9, и тогда IndexOutOfBoundsException. А так - нет.
+                if (r >= listOfRiddles.size()) {
+                    r = listOfRiddles.size() - 1;
+                } else {
+                    r = r;
+                }
+
+
+                boolean rAlreadyWas = listOfRandoms.contains(r);
+                if (rAlreadyWas) {
+                    continue;
+                } else {
+                    listOfRandoms.add(r);                                       //добавить r  в список.
+                    listOfRiddles.get(r).readFromFile(listOfRiddles.get(r));   //загадать загадку.
+                    listOfRiddles.get(r).otgadka(listOfRiddles.get(r));       //прочитать ответ. Оценить ответ. Если неправильно - дать правильнй ответ. Спросить, хочет ли еще загадку.
+                    listOfRiddles.remove(r);                                 //удалисть из списка б/у-шную загадку.
+                }
+            }
+            //riddleNew();
+        }
+        catch(InterruptedException ie){
+            ConsoleHelper.writeMessage("ошибка InterruptedException в методе riddleNew(). Но мы можем продолжать!");
+        }
+
+    }
+
     public void readFromFile(Riddle riddle){
 
-        int r = Test.randomize();
+        int r = Util.randomize();
         r = r%2;
         switch(r){
             case 0: {
@@ -187,9 +371,9 @@ public class Riddle implements Serializable {
             }
             //потом спросить, хочет ли еще загадку.
             if (wantMore()) {
-                Test.riddleNew();           //здесь ошибка. Он не учитывает загаданную загадку и может загадать ту же. Нужно удалять загаданную загадку из массива. Массив загадок создавать в другом методе.
+                riddleNew();           //здесь ошибка. Он не учитывает загаданную загадку и может загадать ту же. Нужно удалять загаданную загадку из массива. Массив загадок создавать в другом методе.
             } else {
-                Test.dealer();
+                Main.dealer();
             }
 
         }
@@ -208,7 +392,7 @@ public class Riddle implements Serializable {
 
         try {
 
-            int r = Test.randomize();
+            int r = Util.randomize();
             switch (r) {
                 case 0: {
                     Thread.sleep(1000);
@@ -322,7 +506,7 @@ public class Riddle implements Serializable {
 
         try {
 
-            int r = Test.randomize();
+            int r = Util.randomize();
             switch (r) {
                 case 0: {
                     Thread.sleep(1000);
@@ -436,7 +620,7 @@ public class Riddle implements Serializable {
 
 
         try {
-            int r = Test.randomize();
+            int r = Util.randomize();
                  switch (r) {
                     case 0: {
                         Thread.sleep(1000);
@@ -558,7 +742,7 @@ public class Riddle implements Serializable {
 
         try {
 
-            int r = Test.randomize();
+            int r = Util.randomize();
             switch (r) {
                 case 0: {
                     Thread.sleep(1000);
@@ -655,7 +839,7 @@ public class Riddle implements Serializable {
     }
     public static boolean wantMore(){
     try {
-        int r = Test.randomize();
+        int r = Util.randomize();
         switch (r) {
             case 0: {
                 Thread.sleep(1000);
@@ -735,9 +919,9 @@ public class Riddle implements Serializable {
         } else if (answer.contains("не надо") || answer.contains("не хочу") || answer.contains("неа") || answer.contains("достал") || answer.contains("надоел") || answer.contains("задолбал") || answer.contains("скучно")) {
             return false;
         } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
-            Test.anecdoteNew();
+            Main.anecdoteNew();
         } else if (answer.contains("сказк") || answer.contains("fairytale") || answer.contains("сказочк")) {
-            Test.fairytaleNew();
+            Main.fairytaleNew();
         } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
             Riddle.exit();
         } else return false;
@@ -756,7 +940,7 @@ public class Riddle implements Serializable {
 
         try {
 
-            int r = Test.randomize();
+            int r = Util.randomize();
             switch(r){
                 case 0: {
                     Thread.sleep(1000);
@@ -850,7 +1034,7 @@ public String toString(){
 }
 
 public static void exit(){
-        Test.exit("exit");
+        Main.exit("exit");
         return;
     }
 }

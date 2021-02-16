@@ -86,15 +86,15 @@ public class Chat implements Serializable {
             String answer =ConsoleHelper.readString();
             answer = answer.toLowerCase();
 
-            Test.exit(answer);//выход, если напишет exit и т.п.
+            Main.exit(answer);//выход, если напишет exit и т.п.
 
-            if(Test.yesNo(answer)){
+            if(Main.yesNo(answer)){
                 //запускаем игру в англ слова - отдельный метод.
                 gameEngWords2();
             }
             else{
                 //не запускаем игру и возвращаемся в чат
-                Test.chat00();
+                Main.chat00();
             }
         }
         catch(InterruptedException ie){
@@ -228,7 +228,7 @@ public class Chat implements Serializable {
                     }
 
                     //генерируем слово для вопроса (для перевода на русский)
-                    int r = Test.randomize100();
+                    int r = Main.randomize100();
                     String key = listOfEngWords.get(r);
 
                     //получаем по этому слову (ключу) значение из мапы:
@@ -301,7 +301,7 @@ public class Chat implements Serializable {
                         Thread.sleep(600);
 
 
-                        int random = Test.randomize();
+                        int random = Util.randomize();
                         switch (random) {
                             case 0: {
                                 Thread.sleep(1000);
@@ -382,7 +382,7 @@ public class Chat implements Serializable {
 
                     } else {
 
-                        int ran = Test.randomize();
+                        int ran = Util.randomize();
                         switch (ran) {
                             case 0: {
                                 Thread.sleep(1000);
@@ -465,7 +465,7 @@ public class Chat implements Serializable {
                         Thread.sleep(600);
                         String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
-                        if (Test.yesNo(answerYesNo)) {
+                        if (Main.yesNo(answerYesNo)) {
                             Thread.sleep(600);
                             ConsoleHelper.writeMessage("переведи слово: " + key);
                             Thread.sleep(600);
@@ -520,7 +520,7 @@ public class Chat implements Serializable {
                         Thread.sleep(600);
                         String answerYesNo = = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
-                        if (Test.yesNo(answerYesNo)) {
+                        if (Main.yesNo(answerYesNo)) {
                             wantMore = true;
                         } else {
                             wantMore = false;
@@ -535,10 +535,10 @@ public class Chat implements Serializable {
                         //BufferedReader bufferedReader01 = new BufferedReader(new InputStreamReader(System.in));
                         String answerYesNo01 = ConsoleHelper.readString();
                         answerYesNo01 = answerYesNo01.toLowerCase();
-                        if (Test.yesNo(answerYesNo01)) {
+                        if (Main.yesNo(answerYesNo01)) {
                             gameEngWords();
                         } else {
-                            Test.chat00();
+                            Main.chat00();
                         }
                     }
 
@@ -551,10 +551,10 @@ public class Chat implements Serializable {
                         //BufferedReader bufferedReader02 = new BufferedReader(new InputStreamReader(System.in));
                         String answerYesNo02 = ConsoleHelper.readString();
                         answerYesNo02 = answerYesNo02.toLowerCase();
-                        if (Test.yesNo(answerYesNo02)) {
+                        if (Main.yesNo(answerYesNo02)) {
                             gameEngWords();
                         } else {
-                            Test.chat00();
+                            Main.chat00();
                         }
 
                     }*/
@@ -570,10 +570,10 @@ public class Chat implements Serializable {
                 //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String answerYesNo = ConsoleHelper.readString();
                 answerYesNo = answerYesNo.toLowerCase();
-                if (Test.yesNo(answerYesNo)) {
+                if (Main.yesNo(answerYesNo)) {
                     gameEngWords();
                 } else {
-                    Test.chat00();
+                    Main.chat00();
                 }
             }
             else if(countWrightAnswers == -5){
@@ -585,18 +585,18 @@ public class Chat implements Serializable {
                 //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String answerYesNo = ConsoleHelper.readString();
                 answerYesNo = answerYesNo.toLowerCase();
-                if (Test.yesNo(answerYesNo)) {
+                if (Main.yesNo(answerYesNo)) {
                     gameEngWords();
                 } else {
-                    Test.chat00();
+                    Main.chat00();
                 }
             }*/
             else{
                 ConsoleHelper.writeMessage("Что-то мне надоело играть...");
-                Test.chat00();
+                Main.chat00();
             }
 
-            Test.chat00(); //если вышли из цикла while , то переходим в самый верхний чат.
+            Main.chat00(); //если вышли из цикла while , то переходим в самый верхний чат.
 
         }
         catch(InterruptedException ie){
@@ -874,7 +874,7 @@ public class Chat implements Serializable {
 
             //проитерируемся по списку десериализованных юзеров, чтобы сравнить с текущим юзером и если совпал, записать его в переменную userSerialized01
             for(User userSerialized : oldUsersListDeserialized){
-                if(Test.user.getName().equals(userSerialized.getName()) & Test.user.getAge() == (userSerialized.getAge())){
+                if(Main.user.getName().equals(userSerialized.getName()) & Main.user.getAge() == (userSerialized.getAge())){
                     userSerialized01 = userSerialized;
                 }
             }
@@ -917,7 +917,7 @@ public class Chat implements Serializable {
 /////////////////////////начало старого кода, без метода wordsGuess();
 /*
                 while (wantMore) {
-                    int r = Test.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
+                    int r = Util.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
                     //ConsoleHelper.writeMessage("рандомное число = " + r); // это проверка, что за рандомное число мы получаем.
 
                     //этот блок кода нужен чтобы не было ArrayOutOfBounds Exception.
@@ -983,14 +983,14 @@ public class Chat implements Serializable {
                     String answer = ConsoleHelper.readString();
                     answer = answer.toLowerCase();
 
-                    Test.exit(answer);//выход, если напишет exit и т.п.
+                    Main.exit(answer);//выход, если напишет exit и т.п.
 
                     //сравниваем ответ:
                     if (answer.equals(word.getRusWord1()) || answer.equals(word.getRusWord2()) || answer.equals(word.getRusWord3()) || answer.equals(word.getRusWord4()) || answer.equals(word.getRusWordPlural1()) || answer.equals(word.getRusWordPlural2()) || answer.equals(word.getRusSinonim1()) || answer.contains(word.getRusWord1()) || answer.contains(word.getRusWord2()) || answer.contains(word.getRusWord3()) || answer.contains(word.getRusWord4()) || answer.contains(word.getRusWordPlural1()) || answer.contains(word.getRusWordPlural2()) || answer.contains(word.getRusSinonim1())) {
                         Thread.sleep(600);
 
 
-                        int random = Test.randomize();
+                        int random = Util.randomize();
                         switch (random) {                                    //говорим пользователю Ура! Правильно!
                             case 0: {
                                 Thread.sleep(1000);
@@ -1066,9 +1066,9 @@ public class Chat implements Serializable {
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
-                            Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                            Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
-                            if (Test.yesNo(answerYesNo)) {
+                            if (Main.yesNo(answerYesNo)) {
                                 learnUnknownWords(listOfUnknownWords);
                             }
                             break;
@@ -1080,10 +1080,10 @@ public class Chat implements Serializable {
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
-                            Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                            Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
 
-                            if (Test.yesNo(answerYesNo)) {
+                            if (Main.yesNo(answerYesNo)) {
                                 learnUnknownWords(listOfUnknownWords);
                             }
 
@@ -1092,7 +1092,7 @@ public class Chat implements Serializable {
 
                     } else {
 
-                        int ran = Test.randomize();
+                        int ran = Util.randomize();
                         switch (ran) {                   //говорим пользователю: Нет... не правильно. Минус очко тебе
                             case 0: {
                                 Thread.sleep(1000);
@@ -1168,9 +1168,9 @@ public class Chat implements Serializable {
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
-                            Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                            Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
-                            if (Test.yesNo(answerYesNo)) {
+                            if (Main.yesNo(answerYesNo)) {
                                 learnUnknownWords(listOfUnknownWords);
                             }
                             break;
@@ -1182,9 +1182,9 @@ public class Chat implements Serializable {
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
-                            Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                            Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
-                            if (Test.yesNo(answerYesNo)) {
+                            if (Main.yesNo(answerYesNo)) {
                                 learnUnknownWords(listOfUnknownWords);
                             }
                             break;
@@ -1196,10 +1196,10 @@ public class Chat implements Serializable {
                         String answerYesNo = bufferedReader.readLine();
                         answerYesNo = answerYesNo.toLowerCase();
 
-                        Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                        Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
 
-                        if (Test.yesNo(answerYesNo)) {
+                        if (Main.yesNo(answerYesNo)) {
                             Thread.sleep(600);
                             ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
                             Thread.sleep(600);
@@ -1220,7 +1220,7 @@ public class Chat implements Serializable {
                                     String answer3 = bufferedReader.readLine();
                                     answer3 = answer3.toLowerCase();
 
-                                    if (Test.yesNo(answer3)) {
+                                    if (Main.yesNo(answer3)) {
                                         learnUnknownWords(listOfUnknownWords);
                                     }
                                     break;
@@ -1232,7 +1232,7 @@ public class Chat implements Serializable {
                                     String answer4 = bufferedReader.readLine();
                                     answer4 = answer4.toLowerCase();
 
-                                    if (Test.yesNo(answer4)) {
+                                    if (Main.yesNo(answer4)) {
                                         learnUnknownWords(listOfUnknownWords);
                                     }
                                     break;
@@ -1243,7 +1243,7 @@ public class Chat implements Serializable {
                                 ConsoleHelper.writeMessage("Нет. Не то. Еще минус одно очко.");
                                 countWrightAnswers--;
                                 listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                                Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                                Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                                 Thread.sleep(600);
                                 ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                                 Thread.sleep(600);
@@ -1257,9 +1257,9 @@ public class Chat implements Serializable {
                                     String answer5 = bufferedReader.readLine();
                                     answer5 = answer5.toLowerCase();
 
-                                    Test.exit(answer5);//выход, если напишет exit и т.п.
+                                    Main.exit(answer5);//выход, если напишет exit и т.п.
 
-                                    if (Test.yesNo(answer5)) {
+                                    if (Main.yesNo(answer5)) {
                                         learnUnknownWords(listOfUnknownWords);
                                     }
                                     break;
@@ -1271,10 +1271,10 @@ public class Chat implements Serializable {
                                     String answer6 = bufferedReader.readLine();
                                     answer6 = answer6.toLowerCase();
 
-                                    Test.exit(answer6);//выход, если напишет exit и т.п.
+                                    Main.exit(answer6);//выход, если напишет exit и т.п.
 
 
-                                    if (Test.yesNo(answer6)) {
+                                    if (Main.yesNo(answer6)) {
                                         learnUnknownWords(listOfUnknownWords);
                                     }
                                     break;
@@ -1288,13 +1288,13 @@ public class Chat implements Serializable {
                                 Thread.sleep(600);
                                 ConsoleHelper.writeMessage("Три формы глагола: " + word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
                                 listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                                Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                                Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                                 Thread.sleep(600);
                             } else {
                                 Thread.sleep(600);
                                 ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                                 listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                                Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                                Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                                 Thread.sleep(600);
                             }
 
@@ -1307,7 +1307,7 @@ public class Chat implements Serializable {
             */
 /////////////////////////конец старого кода, без метода wordsGuess();
 
-            Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+            Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
 
 //////////////////////////////////////!!!!!!!!!!!!Тут нужно добавить сериализацию!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //1. Вытащить из файла list юзеров.
@@ -1319,13 +1319,13 @@ public class Chat implements Serializable {
 //2. Удалить из этого листа нашего юзера.
             for(int i = 0; i < oldUsersList.size(); i++){
                 User tempUser = oldUsersList.get(i);
-                if(tempUser.getName().equals(Test.user.getName()) & tempUser.getAge() == Test.user.getAge()){
+                if(tempUser.getName().equals(Main.user.getName()) & tempUser.getAge() == Main.user.getAge()){
                     oldUsersList.remove(i);
                 }
             }
 
 //3. Добавить в этот лист нашего юзера с обновленным полем usersListOfUnknownWords
-            oldUsersList.add(Test.user);
+            oldUsersList.add(Main.user);
 
 //4. Обновленный лист сериализовать в файл , затерев старый список юзеров.
             FileOutputStream fos = new FileOutputStream(fileUsers01, false);
@@ -1335,7 +1335,7 @@ public class Chat implements Serializable {
             oos.close();
 
 /////////////////////////////////////!!!!конец сериализации////////////////////////////////////////////////
-            Test.chat00(); //если вышли из цикла while , то переходим в самый верхний чат.
+            Main.chat00(); //если вышли из цикла while , то переходим в самый верхний чат.
 
         }
         catch(InterruptedException ie){
@@ -1360,11 +1360,11 @@ public class Chat implements Serializable {
             //BufferedReader bufferedReader01 = new BufferedReader(new InputStreamReader(System.in));
             String answerYesNo01 = ConsoleHelper.readString();
             answerYesNo01 = answerYesNo01.toLowerCase();
-            if (Test.yesNo(answerYesNo01)) {
+            if (Main.yesNo(answerYesNo01)) {
                 gameEngWords2();
             } else {
                 ConsoleHelper.writeMessage("Ладно. Тогда...");
-                //Test.chat00();
+                //Main.chat00();
                 return;
             }
         }
@@ -1387,10 +1387,10 @@ public class Chat implements Serializable {
             //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             String answerYesNo = ConsoleHelper.readString();
             answerYesNo = answerYesNo.toLowerCase();
-            if (Test.yesNo(answerYesNo)) {
+            if (Main.yesNo(answerYesNo)) {
                 gameEngWords2();
             } else {
-                //Test.chat00();
+                //Main.chat00();
                 return;
             }
         }
@@ -1461,7 +1461,7 @@ public class Chat implements Serializable {
                         //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                         String answer = ConsoleHelper.readString();
                         answer = answer.toLowerCase();
-                        if (Test.yesNo(answer)) {
+                        if (Main.yesNo(answer)) {
                             continue;                                               //может быть тут ошибка?
                         } else {
 
@@ -1475,12 +1475,12 @@ public class Chat implements Serializable {
                 //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String answer = ConsoleHelper.readString();
                 answer = answer.toLowerCase();
-                if(Test.yesNo(answer)){
+                if(Main.yesNo(answer)){
                     gameEngWords2();
                 }
                 else{
                     ConsoleHelper.writeMessage("Ну тогда...");
-                    Test.chat00();
+                    Main.chat00();
                 }
             }
             else{
@@ -1527,7 +1527,7 @@ public class Chat implements Serializable {
             int countWrightAnswers = 0;     //счетчик количества правильных ответов
             boolean wantMore = true;
             while (wantMore) {
-                int r = Test.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
+                int r = Util.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
 
                 //этот блок кода нужен чтобы не было ArrayOutOfBounds Exception.
                 if (r >= listOfEngWords.size()) {
@@ -1591,14 +1591,14 @@ public class Chat implements Serializable {
                 String answer = ConsoleHelper.readString();
                 answer = answer.toLowerCase();
 
-                Test.exit(answer);//выход, если напишет exit и т.п.
+                Main.exit(answer);//выход, если напишет exit и т.п.
 
                 //сравниваем ответ:
                 if (answer.equals(word.getRusWord1()) || answer.equals(word.getRusWord2()) || answer.equals(word.getRusWord3()) || answer.equals(word.getRusWord4()) || answer.equals(word.getRusWordPlural1()) || answer.equals(word.getRusWordPlural2()) || answer.equals(word.getRusSinonim1()) || answer.contains(word.getRusWord1()) || answer.contains(word.getRusWord2()) || answer.contains(word.getRusWord3()) || answer.contains(word.getRusWord4()) || answer.contains(word.getRusWordPlural1()) || answer.contains(word.getRusWordPlural2()) || answer.contains(word.getRusSinonim1())) {
                     Thread.sleep(600);
 
 
-                    int random = Test.randomize();
+                    int random = Util.randomize();
                     switch (random) {                                    //говорим пользователю Ура! Правильно!
                         case 0: {
                             Thread.sleep(1000);
@@ -1674,9 +1674,9 @@ public class Chat implements Serializable {
                         String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
 
-                        Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                        Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
-                        if (Test.yesNo(answerYesNo)) {
+                        if (Main.yesNo(answerYesNo)) {
                             learnUnknownWords(listOfUnknownWords);
                         }
                         break;
@@ -1688,10 +1688,10 @@ public class Chat implements Serializable {
                         String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
 
-                        Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                        Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
 
-                        if (Test.yesNo(answerYesNo)) {
+                        if (Main.yesNo(answerYesNo)) {
                             learnUnknownWords(listOfUnknownWords);
                         }
 
@@ -1700,7 +1700,7 @@ public class Chat implements Serializable {
 
                 } else {
 
-                    int ran = Test.randomize();
+                    int ran = Util.randomize();
                     switch (ran) {                   //говорим пользователю: Нет... не правильно. Минус очко тебе
                         case 0: {
                             Thread.sleep(1000);
@@ -1769,7 +1769,7 @@ public class Chat implements Serializable {
                     Thread.sleep(600);
                     ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                     listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                    Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                    Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
 
 
                     if (countWrightAnswers == 3) {
@@ -1779,9 +1779,9 @@ public class Chat implements Serializable {
                         String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
 
-                        Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                        Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
-                        if (Test.yesNo(answerYesNo)) {
+                        if (Main.yesNo(answerYesNo)) {
                             learnUnknownWords(listOfUnknownWords);
                         }
                         break;
@@ -1793,9 +1793,9 @@ public class Chat implements Serializable {
                         String answerYesNo = ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
 
-                        Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                        Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
-                        if (Test.yesNo(answerYesNo)) {
+                        if (Main.yesNo(answerYesNo)) {
                             learnUnknownWords(listOfUnknownWords);
                         }
                         break;
@@ -1807,10 +1807,10 @@ public class Chat implements Serializable {
                     String answerYesNo = ConsoleHelper.readString();
                     answerYesNo = answerYesNo.toLowerCase();
 
-                    Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                    Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
 
-                    if (Test.yesNo(answerYesNo)) {
+                    if (Main.yesNo(answerYesNo)) {
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
                         Thread.sleep(600);
@@ -1831,7 +1831,7 @@ public class Chat implements Serializable {
                                 String answer3 = ConsoleHelper.readString();
                                 answer3 = answer3.toLowerCase();
 
-                                if (Test.yesNo(answer3)) {
+                                if (Main.yesNo(answer3)) {
                                     learnUnknownWords(listOfUnknownWords);
                                 }
                                 break;
@@ -1843,7 +1843,7 @@ public class Chat implements Serializable {
                                 String answer4 = ConsoleHelper.readString();
                                 answer4 = answer4.toLowerCase();
 
-                                if (Test.yesNo(answer4)) {
+                                if (Main.yesNo(answer4)) {
                                     learnUnknownWords(listOfUnknownWords);
                                 }
                                 break;
@@ -1854,7 +1854,7 @@ public class Chat implements Serializable {
                             ConsoleHelper.writeMessage("Нет. Не то. Еще минус одно очко.");
                             countWrightAnswers--;
                             listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                            Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                            Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                             Thread.sleep(600);
                             ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                             Thread.sleep(600);
@@ -1868,9 +1868,9 @@ public class Chat implements Serializable {
                                 String answer5 = ConsoleHelper.readString();
                                 answer5 = answer5.toLowerCase();
 
-                                Test.exit(answer5);//выход, если напишет exit и т.п.
+                                Main.exit(answer5);//выход, если напишет exit и т.п.
 
-                                if (Test.yesNo(answer5)) {
+                                if (Main.yesNo(answer5)) {
                                     learnUnknownWords(listOfUnknownWords);
                                 }
                                 break;
@@ -1882,10 +1882,10 @@ public class Chat implements Serializable {
                                 String answer6 = ConsoleHelper.readString();
                                 answer6 = answer6.toLowerCase();
 
-                                Test.exit(answer6);//выход, если напишет exit и т.п.
+                                Main.exit(answer6);//выход, если напишет exit и т.п.
 
 
-                                if (Test.yesNo(answer6)) {
+                                if (Main.yesNo(answer6)) {
                                     learnUnknownWords(listOfUnknownWords);
                                 }
                                 break;
@@ -1899,13 +1899,13 @@ public class Chat implements Serializable {
                             Thread.sleep(600);
                             ConsoleHelper.writeMessage("Три формы глагола: " + word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
                             listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                            Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                            Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                             Thread.sleep(600);
                         } else {
                             Thread.sleep(600);
                             ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                             listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                            Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                            Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                             Thread.sleep(600);
                         }
 
@@ -1935,7 +1935,7 @@ public class Chat implements Serializable {
             int countWrightAnswers = 0;     //счетчик количества правильных ответов
             boolean wantMore = true;
             while (wantMore) {
-                int r = Test.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
+                int r = Util.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
 
                 //этот блок кода нужен чтобы не было ArrayOutOfBounds Exception.
                 if (r >= listOfEngWords.size()) {
@@ -1999,14 +1999,14 @@ public class Chat implements Serializable {
                 String answer = ConsoleHelper.readString();
                 answer = answer.toLowerCase();
 
-                Test.exit(answer);//выход, если напишет exit и т.п.
+                Main.exit(answer);//выход, если напишет exit и т.п.
 
                 //сравниваем ответ:
                 if (answer.equals(word.getRusWord1()) || answer.equals(word.getRusWord2()) || answer.equals(word.getRusWord3()) || answer.equals(word.getRusWord4()) || answer.equals(word.getRusWordPlural1()) || answer.equals(word.getRusWordPlural2()) || answer.equals(word.getRusSinonim1()) || answer.contains(word.getRusWord1()) || answer.contains(word.getRusWord2()) || answer.contains(word.getRusWord3()) || answer.contains(word.getRusWord4()) || answer.contains(word.getRusWordPlural1()) || answer.contains(word.getRusWordPlural2()) || answer.contains(word.getRusSinonim1())) {
 
 
 
-                    int random = Test.randomize();
+                    int random = Util.randomize();
                     switch (random) {                                    //говорим пользователю Ура! Правильно!
                         case 0: {
                             Thread.sleep(1000);
@@ -2088,7 +2088,7 @@ public class Chat implements Serializable {
 
                 } else {
 
-                    int ran = Test.randomize();
+                    int ran = Util.randomize();
                     switch (ran) {                   //говорим пользователю: Нет... не правильно. Минус очко тебе
                         case 0: {
                             Thread.sleep(1000);
@@ -2173,10 +2173,10 @@ public class Chat implements Serializable {
                     String answerYesNo = ConsoleHelper.readString();
                     answerYesNo = answerYesNo.toLowerCase();
 
-                    Test.exit(answerYesNo);//выход, если напишет exit и т.п.
+                    Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
 
-                    if (Test.yesNo(answerYesNo)) {
+                    if (Main.yesNo(answerYesNo)) {
                         Thread.sleep(600);
                         ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
                         Thread.sleep(600);

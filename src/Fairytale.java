@@ -31,7 +31,7 @@ public class Fairytale implements Serializable {
 
     public static boolean wantMore(){
         try {
-            int r = Test.randomize();
+            int r = Util.randomize();
             switch (r) {
                 case 0: {
                     Thread.sleep(1000);
@@ -111,9 +111,9 @@ public class Fairytale implements Serializable {
             } else if (answer.contains("не надо") || answer.contains("не хочу") || answer.contains("неа") || answer.contains("достал") || answer.contains("надоел") || answer.contains("задолбал") || answer.contains("скучно")) {
                 return false;
             } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
-                Test.anecdoteNew();
+                Main.anecdoteNew();
             } else if (answer.contains("загадк") || answer.contains("загадочк") || answer.contains("riddle") || answer.equals("загадку") || answer.equals("загадочку") ) {
-                Test.riddleNew();
+                Riddle.riddleNew();
             } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
                 Fairytale.exit();
             } else return false;
@@ -128,7 +128,7 @@ public class Fairytale implements Serializable {
     }
 
     public static void exit(){
-        Test.exit("exit");
+        Main.exit("exit");
         return;
     }
 }
