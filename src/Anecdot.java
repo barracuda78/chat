@@ -94,8 +94,10 @@ public class Anecdot implements Serializable {
             }
 
 
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            String answer = bufferedReader.readLine();
+            //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            //String answer = bufferedReader.readLine();
+            String answer = ConsoleHelper.readString();
+
             if (answer.equals("да") || answer.equals("ага") || answer.equals("угу") || answer.equals("конечно") || answer.equals("давай")|| answer.equals("без базара")|| answer.equals("анекдот")|| answer.equals("еще")|| answer.equals("ещё")|| answer.equals("анегдот")|| answer.contains("анек")) {
                 return "да";
             } else if (answer.equals("yes") || answer.equals("yeah") || answer.equals("yep")) {
