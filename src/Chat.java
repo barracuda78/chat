@@ -53,7 +53,10 @@ public class Chat implements Serializable {
             }
             else if(answerWhatMusic.contains("метал")||answerWhatMusic.contains("metal")||answerWhatMusic.contains("dark")||answerWhatMusic.contains("black")||answerWhatMusic.contains("doom")){
                 System.out.println("О! Круто! А какие металлические коллективы тебе нравятся?");
+            }else{
+                System.out.println("Ой! я такого не знаю...");
             }
+
         }
         catch(InterruptedException ie){
             System.out.println("Очень-очень-очень долго тебя ждать...");

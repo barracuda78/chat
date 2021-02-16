@@ -105,7 +105,6 @@ public class Test implements Serializable {
 
         whatIsYourName();
         try {
-
             greeting();
             dealer();
             exit("exit"); //по идее это должен быть выход из программы....
