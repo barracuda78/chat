@@ -51,37 +51,37 @@ public class Test implements Serializable {
                 oos.writeObject(oldUsersList);                              // пишем в файл объект список юзеров
                 fos.close();
                 oos.close();
-            System.out.println("Список пользователей oldUsersList с одним пользователем  " + Test.user.toString() + " записан в файл.");
+            ConsoleHelper.writeMessage("Список пользователей oldUsersList с одним пользователем  " + Test.user.toString() + " записан в файл.");
             ////////////////запишем в другой файл usersCount001.bin кол-во пользователей = 1
             File file02 = new File("usersCount001.bin");
             FileOutputStream fosCount = new FileOutputStream(file02, false);
             ObjectOutputStream oosCount = new ObjectOutputStream(fosCount);     // пишем в файл кол-во юзеров
             int countUsers = 1; //Запишем единичку в файл подсчета пользователей, т.к. до этого мы записала в файл одного (первого) пользователя
             oosCount.writeInt(countUsers);   //запишем в файл количество пользователей = 1.
-            System.out.println("кол-во юзеров записано в файл.");
+            ConsoleHelper.writeMessage("кол-во юзеров записано в файл.");
             oosCount.close();
             fosCount.close();
 
 
-            System.out.println("проверим, какие слова записались пользователю в список неизвестных слов:");
+            ConsoleHelper.writeMessage("проверим, какие слова записались пользователю в список неизвестных слов:");
 
             FileInputStream fis = new FileInputStream(file);
             ObjectInputStream ois = new ObjectInputStream(fis);
             ArrayList<User> oldUsersListDeserialized = (ArrayList<User>)ois.readObject();
-            System.out.println("Вытащили из файла список юзеров с одним юзером Курдалы.");
+            ConsoleHelper.writeMessage("Вытащили из файла список юзеров с одним юзером Курдалы.");
 
             ArrayList<EngWords> listOfUnknownWordsOld = new ArrayList<>();
             for(User userSerialized : oldUsersListDeserialized){
                 if(Test.user.getName().equals(userSerialized.getName()) & Test.user.getAge() == (userSerialized.getAge())){
                     listOfUnknownWordsOld = userSerialized.getUsersListOfUnknownWords();
-                    System.out.println("записали список слов нашего юзера в переменную listOfUnknownWordsOld");
-                    System.out.println("выведем прочитанный из файла список пользователей на экран: ");
-                    System.out.println(userSerialized.toString());
+                    ConsoleHelper.writeMessage("записали список слов нашего юзера в переменную listOfUnknownWordsOld");
+                    ConsoleHelper.writeMessage("выведем прочитанный из файла список пользователей на экран: ");
+                    ConsoleHelper.writeMessage(userSerialized.toString());
                 }
 
-                System.out.println("Выведем слова из списка слов юзера на экран: ");
+                ConsoleHelper.writeMessage("Выведем слова из списка слов юзера на экран: ");
                 for(EngWords word : userSerialized.getUsersListOfUnknownWords()){
-                    System.out.println(word.toString());
+                    ConsoleHelper.writeMessage(word.toString());
                 }
             }
 
@@ -91,14 +91,14 @@ public class Test implements Serializable {
 
          }
         catch(FileNotFoundException fnf){
-            System.out.println("Файл не найден. Идем далее.");
+            ConsoleHelper.writeMessage("Файл не найден. Идем далее.");
         }
         catch (IOException ioe) {
-            System.out.println("Ошибка ввода-вывода");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода");
             ioe.printStackTrace();
         }
         catch(ClassNotFoundException cnf){
-            System.out.println("Ошибка ClassNotFoundException в тестовой записи пользователя в main");
+            ConsoleHelper.writeMessage("Ошибка ClassNotFoundException в тестовой записи пользователя в main");
         }*/
 ///////////////////////////Конец тестовой записи юзера и числа юзеров в файлы.
 
@@ -180,260 +180,266 @@ public class Test implements Serializable {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("Привет, " + user.getName() + ", доброй ночи!!!");
+                        ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброй ночи!!!");
+                        //ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброй ночи!!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("Привет, " + user.getName() + ", доброго утра!!!");
+                        ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго утра!!!");
+                        //ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго утра!!!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("Привет, " + user.getName() + ", доброго дня!!!");
+                        ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго дня!!!");
+                        //ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго дня!!!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("Привет, " + user.getName() + ", доброго вечера!!!");
+                        ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго вечера!!!");
+                        //ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго вечера!!!");
                         Thread.sleep(600);
                     }
                     Thread.sleep(600);
-                    System.out.println("Скажи мне, а сколько тебе лет, а?");
+                    ConsoleHelper.writeMessage("Скажи мне, а сколько тебе лет, а?");
+                    //ConsoleHelper.writeMessage("Скажи мне, а сколько тебе лет, а?");
                     Thread.sleep(1000);
-                    System.out.println("И чтобы без обмана! Введи целое число с клавиатуры:");
+                    ConsoleHelper.writeMessage("И чтобы без обмана! Введи целое число с клавиатуры:");
+                    ConsoleHelper.writeMessage("И чтобы без обмана! Введи целое число с клавиатуры:");
                     break;
                 }
                 case 1: {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("Здравствуй, " + user.getName() + ", доброй ночи!!!");
+                        ConsoleHelper.writeMessage("Здравствуй, " + user.getName() + ", доброй ночи!!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("Здравствуй, " + user.getName() + ", доброго утра!!!");
+                        ConsoleHelper.writeMessage("Здравствуй, " + user.getName() + ", доброго утра!!!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("Здравствуй, " + user.getName() + ", доброго дня!!!");
+                        ConsoleHelper.writeMessage("Здравствуй, " + user.getName() + ", доброго дня!!!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("Здравствуй, " + user.getName() + ", доброго вечера!!!");
+                        ConsoleHelper.writeMessage("Здравствуй, " + user.getName() + ", доброго вечера!!!");
                         Thread.sleep(600);
                     }
                     Thread.sleep(600);
-                    System.out.println("Скажи-ка, а сколько тебе лет?");
+                    ConsoleHelper.writeMessage("Скажи-ка, а сколько тебе лет?");
                     Thread.sleep(1000);
-                    System.out.println("Не обманывать! Введи целое число с клавиатуры");
+                    ConsoleHelper.writeMessage("Не обманывать! Введи целое число с клавиатуры");
                     break;
                 }
                 case 2: {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("Привет-привет, " + user.getName() + ", доброй ночи!!!");
+                        ConsoleHelper.writeMessage("Привет-привет, " + user.getName() + ", доброй ночи!!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("Привет-привет, " + user.getName() + ", доброе утро!!!");
+                        ConsoleHelper.writeMessage("Привет-привет, " + user.getName() + ", доброе утро!!!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("Привет-привет, " + user.getName() + ", добрый день!!!");
+                        ConsoleHelper.writeMessage("Привет-привет, " + user.getName() + ", добрый день!!!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("Привет-привет, " + user.getName() + ", добрый вечер!!!");
+                        ConsoleHelper.writeMessage("Привет-привет, " + user.getName() + ", добрый вечер!!!");
                         Thread.sleep(600);
                     }
                     Thread.sleep(600);
-                    System.out.println("Слушай-ка, а сколько тебе лет, а?");
+                    ConsoleHelper.writeMessage("Слушай-ка, а сколько тебе лет, а?");
                     Thread.sleep(1000);
-                    System.out.println("Чур не обманывать! Введи целое число с клавиатуры");
+                    ConsoleHelper.writeMessage("Чур не обманывать! Введи целое число с клавиатуры");
                     break;
                 }
                 case 3: {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("Рад видеть, " + user.getName() + ", доброй ночи!!!");
+                        ConsoleHelper.writeMessage("Рад видеть, " + user.getName() + ", доброй ночи!!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("Рад видеть, " + user.getName() + ", доброе утро!!!");
+                        ConsoleHelper.writeMessage("Рад видеть, " + user.getName() + ", доброе утро!!!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("Рад видеть, " + user.getName() + ", добрый день!!!");
+                        ConsoleHelper.writeMessage("Рад видеть, " + user.getName() + ", добрый день!!!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("Рад видеть, " + user.getName() + ", добрый вечер!!!");
+                        ConsoleHelper.writeMessage("Рад видеть, " + user.getName() + ", добрый вечер!!!");
                         Thread.sleep(600);
                     }
                     Thread.sleep(600);
-                    System.out.println("Скажи мне, сколько тебе лет, а?");
+                    ConsoleHelper.writeMessage("Скажи мне, сколько тебе лет, а?");
                     Thread.sleep(1000);
-                    System.out.println("И давай-ка без обмана! Введи целое число с клавиатуры");
+                    ConsoleHelper.writeMessage("И давай-ка без обмана! Введи целое число с клавиатуры");
                     break;
                 }
                 case 4: {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("" + user.getName() + ", доброй ночи!!!");
+                        ConsoleHelper.writeMessage("" + user.getName() + ", доброй ночи!!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("" + user.getName() + ", доброе утро!!!");
+                        ConsoleHelper.writeMessage("" + user.getName() + ", доброе утро!!!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("" + user.getName() + ", добрый день!!!");
+                        ConsoleHelper.writeMessage("" + user.getName() + ", добрый день!!!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("" + user.getName() + ", добрый вечер!!!");
+                        ConsoleHelper.writeMessage("" + user.getName() + ", добрый вечер!!!");
                         Thread.sleep(600);
                     }
 
-                    System.out.println("Скажи-ка, пожалуйста, сколько тебе лет?");
+                    ConsoleHelper.writeMessage("Скажи-ка, пожалуйста, сколько тебе лет?");
                     Thread.sleep(1000);
-                    System.out.println("И, пожалуйста, почестнее! Введи целое число с клавиатуры");
+                    ConsoleHelper.writeMessage("И, пожалуйста, почестнее! Введи целое число с клавиатуры");
                     break;
                 }
                 case 5: {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("Хэллоу, " + user.getName() + ", доброй ночи!");
+                        ConsoleHelper.writeMessage("Хэллоу, " + user.getName() + ", доброй ночи!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("Хэллоу, " + user.getName() + ", доброе утро!");
+                        ConsoleHelper.writeMessage("Хэллоу, " + user.getName() + ", доброе утро!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("Хэллоу, " + user.getName() + ", добрый день!");
+                        ConsoleHelper.writeMessage("Хэллоу, " + user.getName() + ", добрый день!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("Хэллоу, " + user.getName() + ", добрый вечер!");
+                        ConsoleHelper.writeMessage("Хэллоу, " + user.getName() + ", добрый вечер!");
                         Thread.sleep(600);
                     }
 
-                    System.out.println("Скажи-ка мне, пожалуйста, сколько тебе годиков?");
+                    ConsoleHelper.writeMessage("Скажи-ка мне, пожалуйста, сколько тебе годиков?");
                     Thread.sleep(1000);
-                    System.out.println("И, пожалуйста, без обмана! Введи целое число с клавиатуры:");
+                    ConsoleHelper.writeMessage("И, пожалуйста, без обмана! Введи целое число с клавиатуры:");
                     break;
                 }
                 case 6: {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("Хэлло, " + user.getName() + ", доброй ночи!!");
+                        ConsoleHelper.writeMessage("Хэлло, " + user.getName() + ", доброй ночи!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("Хэлло, " + user.getName() + ", доброе утро!");
+                        ConsoleHelper.writeMessage("Хэлло, " + user.getName() + ", доброе утро!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("Хэлло, " + user.getName() + ", добрый день!");
+                        ConsoleHelper.writeMessage("Хэлло, " + user.getName() + ", добрый день!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("Хэлло, " + user.getName() + ", добрый вечер!");
+                        ConsoleHelper.writeMessage("Хэлло, " + user.getName() + ", добрый вечер!");
                         Thread.sleep(600);
                     }
 
-                    System.out.println("Будь добр, назови свой возраст!");
+                    ConsoleHelper.writeMessage("Будь добр, назови свой возраст!");
                     Thread.sleep(1000);
-                    System.out.println("Только без обмана! Введи целое число с клавиатуры:");
+                    ConsoleHelper.writeMessage("Только без обмана! Введи целое число с клавиатуры:");
                     break;
                 }
                 case 7: {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("Здравствуй, " + user.getName() + ", доброй ночи!!");
+                        ConsoleHelper.writeMessage("Здравствуй, " + user.getName() + ", доброй ночи!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("Здравствуй, " + user.getName() + ", доброе утро!!");
+                        ConsoleHelper.writeMessage("Здравствуй, " + user.getName() + ", доброе утро!!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("Здравствуй, " + user.getName() + ", добрый день!!");
+                        ConsoleHelper.writeMessage("Здравствуй, " + user.getName() + ", добрый день!!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("Здравствуй, " + user.getName() + ", добрый вечер!!");
+                        ConsoleHelper.writeMessage("Здравствуй, " + user.getName() + ", добрый вечер!!");
                         Thread.sleep(600);
                     }
 
-                    System.out.println("Пожалуйста, напиши, сколько тебе лет!");
+                    ConsoleHelper.writeMessage("Пожалуйста, напиши, сколько тебе лет!");
                     Thread.sleep(1000);
-                    System.out.println("Только по-чесноку! Введи целое число с клавиатуры:");
+                    ConsoleHelper.writeMessage("Только по-чесноку! Введи целое число с клавиатуры:");
                     break;
                 }
                 case 8: {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("О, " + user.getName() + ", доброй ночи!!");
+                        ConsoleHelper.writeMessage("О, " + user.getName() + ", доброй ночи!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("О, " + user.getName() + ", доброе утро!!");
+                        ConsoleHelper.writeMessage("О, " + user.getName() + ", доброе утро!!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("О, " + user.getName() + ", добрый день!!");
+                        ConsoleHelper.writeMessage("О, " + user.getName() + ", добрый день!!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("О, " + user.getName() + ", добрый вечер!!");
+                        ConsoleHelper.writeMessage("О, " + user.getName() + ", добрый вечер!!");
                         Thread.sleep(600);
                     }
 
-                    System.out.println("Прошу, скажи мне, сколько тебе лет!");
+                    ConsoleHelper.writeMessage("Прошу, скажи мне, сколько тебе лет!");
                     Thread.sleep(1000);
-                    System.out.println("Только по-честному!!! Введи целое число с клавиатуры:");
+                    ConsoleHelper.writeMessage("Только по-честному!!! Введи целое число с клавиатуры:");
                     break;
                 }
                 case 9: {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //System.out.println(dateFormat.format(date));
+                    //ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
-                        System.out.println("" + user.getName() + ", доброй ночи!!");
+                        ConsoleHelper.writeMessage("" + user.getName() + ", доброй ночи!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
-                        System.out.println("" + user.getName() + ", доброе утро!!");
+                        ConsoleHelper.writeMessage("" + user.getName() + ", доброе утро!!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
-                        System.out.println("" + user.getName() + ", добрый день!!");
+                        ConsoleHelper.writeMessage("" + user.getName() + ", добрый день!!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
-                        System.out.println("" + user.getName() + ", добрый вечер!!");
+                        ConsoleHelper.writeMessage("" + user.getName() + ", добрый вечер!!");
                         Thread.sleep(600);
                     }
 
-                    System.out.println("Расскажи-ка мне, сколько тебе годков, а?!");
+                    ConsoleHelper.writeMessage("Расскажи-ка мне, сколько тебе годков, а?!");
                     Thread.sleep(1000);
-                    System.out.println("Только честно! Не обманывать! Введи целое число с клавиатуры:");
+                    ConsoleHelper.writeMessage("Только честно! Не обманывать! Введи целое число с клавиатуры:");
                     break;
                 }
             }
@@ -504,101 +510,101 @@ public class Test implements Serializable {
                 switch (rr) {
                     case 0: {
                         Thread.sleep(600);
-                        System.out.println("Так-так...");
+                        ConsoleHelper.writeMessage("Так-так...");
                         Thread.sleep(600);
-                        System.out.println( user.getName() + ", а я тебя, кажется, знаю!");
+                        ConsoleHelper.writeMessage( user.getName() + ", а я тебя, кажется, знаю!");
                         Thread.sleep(600);
-                        System.out.println("Мы с тобой недавно общались...  Что ж, приятно снова увидеться! ");
+                        ConsoleHelper.writeMessage("Мы с тобой недавно общались...  Что ж, приятно снова увидеться! ");
                         Thread.sleep(600);
                         break;
                     }
                     case 1: {
                         Thread.sleep(1000);
-                        System.out.println("Слу-у-у-ушай!");
+                        ConsoleHelper.writeMessage("Слу-у-у-ушай!");
                         Thread.sleep(1000);
-                        System.out.println(user.getName() + ", а Мы с тобой, кажется, недавно общались!");
+                        ConsoleHelper.writeMessage(user.getName() + ", а Мы с тобой, кажется, недавно общались!");
                         Thread.sleep(1000);
-                        System.out.println("Приятно снова увидеться!");
+                        ConsoleHelper.writeMessage("Приятно снова увидеться!");
                         break;
                     }
                     case 2: {
                         Thread.sleep(1000);
-                        System.out.println("Стой-стой!");
+                        ConsoleHelper.writeMessage("Стой-стой!");
                         Thread.sleep(1000);
-                        System.out.println(user.getName() + ", а мы с тобой разве недавно уже не переписывались?");
+                        ConsoleHelper.writeMessage(user.getName() + ", а мы с тобой разве недавно уже не переписывались?");
                         Thread.sleep(1000);
-                        System.out.println("Приятно видеть тебя в чате снова!");
+                        ConsoleHelper.writeMessage("Приятно видеть тебя в чате снова!");
                         break;
                     }
                     case 3: {
                         Thread.sleep(1000);
-                        System.out.println("Стоп! Стоп! Стоп!");
+                        ConsoleHelper.writeMessage("Стоп! Стоп! Стоп!");
                         Thread.sleep(1000);
-                        System.out.println(user.getName() + " , мы, кажется, с тобой недавно уже виделись в чате!");
+                        ConsoleHelper.writeMessage(user.getName() + " , мы, кажется, с тобой недавно уже виделись в чате!");
                         Thread.sleep(1000);
-                        System.out.println("Рад тебя видеть снова!");
+                        ConsoleHelper.writeMessage("Рад тебя видеть снова!");
                         break;
                     }
                     case 4: {
                         Thread.sleep(1000);
-                        System.out.println("Тааааак...");
+                        ConsoleHelper.writeMessage("Тааааак...");
                         Thread.sleep(1000);
-                        System.out.println(user.getName() + " , а мы ведь недавно с тобой переписывались!");
+                        ConsoleHelper.writeMessage(user.getName() + " , а мы ведь недавно с тобой переписывались!");
                         Thread.sleep(1000);
-                        System.out.println("Я рад тебя снова приветствовать в моём чате!");
+                        ConsoleHelper.writeMessage("Я рад тебя снова приветствовать в моём чате!");
                         break;
                     }
                     case 5: {
                         Thread.sleep(1000);
-                        System.out.println("Подожди-ка...");
+                        ConsoleHelper.writeMessage("Подожди-ка...");
                         Thread.sleep(1000);
-                        System.out.println(user.getName() + " , а я тебя уже знаю!");
+                        ConsoleHelper.writeMessage(user.getName() + " , а я тебя уже знаю!");
                         Thread.sleep(1000);
-                        System.out.println("Рад снова приветствовать тебя в моём чате!");
+                        ConsoleHelper.writeMessage("Рад снова приветствовать тебя в моём чате!");
                         break;
                     }
                     case 6: {
                         Thread.sleep(1000);
-                        System.out.println("Опаньки!");
+                        ConsoleHelper.writeMessage("Опаньки!");
                         Thread.sleep(1000);
-                        System.out.println(user.getName() + " , а я тебя, кажется, знаю!");
+                        ConsoleHelper.writeMessage(user.getName() + " , а я тебя, кажется, знаю!");
                         Thread.sleep(1000);
-                        System.out.println("Рад видеть тебя снова!");
+                        ConsoleHelper.writeMessage("Рад видеть тебя снова!");
                         break;
                     }
                     case 7: {
                         Thread.sleep(1000);
-                        System.out.println("Тааааак.... Погоди-ка!");
+                        ConsoleHelper.writeMessage("Тааааак.... Погоди-ка!");
                         Thread.sleep(1000);
-                        System.out.println(user.getName() + " , кажется я тебя уже видел тут в чате недавно!");
+                        ConsoleHelper.writeMessage(user.getName() + " , кажется я тебя уже видел тут в чате недавно!");
                         Thread.sleep(1000);
-                        System.out.println("Рад попереписываться с тобой снова!");
+                        ConsoleHelper.writeMessage("Рад попереписываться с тобой снова!");
                         break;
                     }
                     case 8: {
                         Thread.sleep(1000);
-                        System.out.println("Слушай, а я тебя вспомнил!");
+                        ConsoleHelper.writeMessage("Слушай, а я тебя вспомнил!");
                         Thread.sleep(1000);
-                        System.out.println(user.getName() + " , мы же с тобой тут чатились недавно? Точно!");
+                        ConsoleHelper.writeMessage(user.getName() + " , мы же с тобой тут чатились недавно? Точно!");
                         Thread.sleep(1000);
-                        System.out.println("Рад початиться с тобой снова!");
+                        ConsoleHelper.writeMessage("Рад початиться с тобой снова!");
                         break;
                     }
                     case 9: {
                         Thread.sleep(1000);
-                        System.out.println("Слушай, а ведь тебя знаю!");
+                        ConsoleHelper.writeMessage("Слушай, а ведь тебя знаю!");
                         Thread.sleep(1000);
-                        System.out.println(user.getName() + " , мы с тобой недавно переписывались.");
+                        ConsoleHelper.writeMessage(user.getName() + " , мы с тобой недавно переписывались.");
                         Thread.sleep(1000);
-                        System.out.println("Рад снова с тобой пообщаться!");
+                        ConsoleHelper.writeMessage("Рад снова с тобой пообщаться!");
                         break;
                     }
                 }
                 ////////////////новый код с логином и паролем///////////////
                 for(int i = 3; i > 0; i-- ) {
-                    System.out.println("Введи свой логин:");
+                    ConsoleHelper.writeMessage("Введи свой логин:");
                     String login = bufferedReader.readLine();                     //может быть ошибка! А не создать ли отдельный bufferedreader?
-                    System.out.println("Теперь пароль, пожалуйста:");
+                    ConsoleHelper.writeMessage("Теперь пароль, пожалуйста:");
                     String password = bufferedReader.readLine();
 
                     File fileLogin = new File("users01.bin");
@@ -613,16 +619,16 @@ public class Test implements Serializable {
                     }
 
                     if (oldUser.getLogin().equals(login) & oldUser.getPassword().equals(password)) { //тут выскакивает ошибка. т.к. сперва тут нужно сделать десериализацию юзера и брать у него логин и пароль и сравнивать с ними.
-                        System.out.println("ОК. Ты прошел проверку на безопасность.");
+                        ConsoleHelper.writeMessage("ОК. Ты прошел проверку на безопасность.");
                         break;
                     } else {
-                        System.out.println("Неправильный логин или пароль. Осталось попыток: " + i);
+                        ConsoleHelper.writeMessage("Неправильный логин или пароль. Осталось попыток: " + i);
                         if(i > 1) {
-                            System.out.println("Давай еще раз.");
+                            ConsoleHelper.writeMessage("Давай еще раз.");
                         }
                         else{
-                            System.out.println("Извините, не могу Вас идентифицировать.");
-                            System.out.println("На этом наш разговор окончен.");
+                            ConsoleHelper.writeMessage("Извините, не могу Вас идентифицировать.");
+                            ConsoleHelper.writeMessage("На этом наш разговор окончен.");
                             System.exit(0);
                         }
                     }
@@ -637,74 +643,74 @@ public class Test implements Serializable {
                 switch(rrr){
                     case 0: {
                         Thread.sleep(600);
-                        System.out.println("А мне 8 лет! Да, я старый ноутбук.");
+                        ConsoleHelper.writeMessage("А мне 8 лет! Да, я старый ноутбук.");
                         Thread.sleep(600);
                         break;
                     }
                     case 1:{
                         Thread.sleep(600);
-                        System.out.println("А мне уже 8 лет! Да, я старая железяка.");
+                        ConsoleHelper.writeMessage("А мне уже 8 лет! Да, я старая железяка.");
                         Thread.sleep(600);
                         break;
                     }
                     case 2:{
                         Thread.sleep(600);
-                        System.out.println("А вот мне - 8 годков! Да, я просто ведро с гвоздями.");
+                        ConsoleHelper.writeMessage("А вот мне - 8 годков! Да, я просто ведро с гвоздями.");
                         Thread.sleep(600);
                         break;
                     }
                     case 3: {
                         Thread.sleep(600);
-                        System.out.println("Ну а мне 8 лет уже. Я старый и немного глуховатый компьютер.");
+                        ConsoleHelper.writeMessage("Ну а мне 8 лет уже. Я старый и немного глуховатый компьютер.");
                         Thread.sleep(600);
                         break;
                     }
                     case 4: {
                         Thread.sleep(600);
-                        System.out.println("А мне 8 лет. Для ноутбука это много.");
+                        ConsoleHelper.writeMessage("А мне 8 лет. Для ноутбука это много.");
                         Thread.sleep(600);
                         break;
                     }
                     case 5: {
                         Thread.sleep(600);
-                        System.out.println("А мне целых 8 годиков! Некоторые ноутбуки не доживают до моего возраста.");
+                        ConsoleHelper.writeMessage("А мне целых 8 годиков! Некоторые ноутбуки не доживают до моего возраста.");
                         Thread.sleep(600);
                         break;
                     }
                     case 6: {
                         Thread.sleep(600);
-                        System.out.println("А мне 8!! Представляешь? 8 лет!!! Я еще даже бы в институт не ходил, если бы был человеком.");
+                        ConsoleHelper.writeMessage("А мне 8!! Представляешь? 8 лет!!! Я еще даже бы в институт не ходил, если бы был человеком.");
                         Thread.sleep(600);
                         break;
                     }
                     case 7: {
                         Thread.sleep(600);
-                        System.out.println("А мне 8 лет, прикинь! Я старый, и из меня песок сыпется.");
+                        ConsoleHelper.writeMessage("А мне 8 лет, прикинь! Я старый, и из меня песок сыпется.");
                         Thread.sleep(600);
                         break;
                     }
                     case 8: {
                         Thread.sleep(600);
-                        System.out.println("А мне вчера стукнуло 8 лет, прикинь! Я старый и вредный компьютер.");
+                        ConsoleHelper.writeMessage("А мне вчера стукнуло 8 лет, прикинь! Я старый и вредный компьютер.");
                         Thread.sleep(600);
                         break;
                     }
                     case 9: {
                         Thread.sleep(600);
-                        System.out.println("А мне 8 лет! Многие ноутбуки столько не живут. Вдумайся.");
+                        ConsoleHelper.writeMessage("А мне 8 лет! Многие ноутбуки столько не живут. Вдумайся.");
                         Thread.sleep(600);
                         break;
                     }
                 }
 
                 //////////////////////////////////новый  код с придумыванием пароля////////////////////////////////
-                System.out.println("Придумайте себе имя пользователя (login), чтобы в следующий раз его использовать для входа в чат:");
+                ConsoleHelper.writeMessage("Придумайте себе имя пользователя (login), чтобы в следующий раз его использовать для входа в чат:");
                 String newLogin = bufferedReader.readLine();
-                System.out.println("Теперь придумайте пароль:");
+                ConsoleHelper.writeMessage("Теперь придумайте пароль:");
                 String newPassword = bufferedReader.readLine();
                 Test.user.setLogin(newLogin);
                 Test.user.setPassword(newPassword);
-                System.out.println("Спасибо!");
+                ConsoleHelper.writeMessage("Спасибо!");
 
 
                 //    seria(user); // теперь сериализацию нового юзера делаем только если юзера не было до этого.
@@ -721,61 +727,61 @@ public class Test implements Serializable {
             switch(rrr){
                 case 0: {
                     Thread.sleep(600);
-                    System.out.println("Чем ты хочешь сейчас заняться?");
+                    ConsoleHelper.writeMessage("Чем ты хочешь сейчас заняться?");
                     Thread.sleep(600);
                     break;
                 }
                 case 1:{
                     Thread.sleep(600);
-                    System.out.println("Чем займемся?");
+                    ConsoleHelper.writeMessage("Чем займемся?");
                     Thread.sleep(600);
                     break;
                 }
                 case 2:{
                     Thread.sleep(600);
-                    System.out.println("Что будем делать?");
+                    ConsoleHelper.writeMessage("Что будем делать?");
                     Thread.sleep(600);
                     break;
                 }
                 case 3: {
                     Thread.sleep(600);
-                    System.out.println("Как будем развлекаться?");
+                    ConsoleHelper.writeMessage("Как будем развлекаться?");
                     Thread.sleep(600);
                     break;
                 }
                 case 4: {
                     Thread.sleep(600);
-                    System.out.println("Чего ты хочешь поделать?");
+                    ConsoleHelper.writeMessage("Чего ты хочешь поделать?");
                     Thread.sleep(600);
                     break;
                 }
                 case 5: {
                     Thread.sleep(600);
-                    System.out.println("Чем с тобой займемся?");
+                    ConsoleHelper.writeMessage("Чем с тобой займемся?");
                     Thread.sleep(600);
                     break;
                 }
                 case 6: {
                     Thread.sleep(600);
-                    System.out.println("Что будем делать? Чем заниматься?");
+                    ConsoleHelper.writeMessage("Что будем делать? Чем заниматься?");
                     Thread.sleep(600);
                     break;
                 }
                 case 7: {
                     Thread.sleep(600);
-                    System.out.println("Ну, что поделаем?");
+                    ConsoleHelper.writeMessage("Ну, что поделаем?");
                     Thread.sleep(600);
                     break;
                 }
                 case 8: {
                     Thread.sleep(600);
-                    System.out.println("Чем хочешь заняться?");
+                    ConsoleHelper.writeMessage("Чем хочешь заняться?");
                     Thread.sleep(600);
                     break;
                 }
                 case 9: {
                     Thread.sleep(600);
-                    System.out.println("Чем будем с тобой заниматься?");
+                    ConsoleHelper.writeMessage("Чем будем с тобой заниматься?");
                     Thread.sleep(600);
                     break;
                 }
@@ -785,61 +791,61 @@ public class Test implements Serializable {
             switch(rrrr){
                 case 0: {
                     Thread.sleep(600);
-                    System.out.println("Мы можем, например, поиграть, или позагадывать загадки, или я могу рассказать тебе анекдот... или даже сказку! Выбирай!");
+                    ConsoleHelper.writeMessage("Мы можем, например, поиграть, или позагадывать загадки, или я могу рассказать тебе анекдот... или даже сказку! Выбирай!");
                     Thread.sleep(600);
                     break;
                 }
                 case 1:{
                     Thread.sleep(600);
-                    System.out.println("Хочешь, например, поиграть, или позагадывать загадки, или хочешь анекдот... или может быть сказку! Выбирай!");
+                    ConsoleHelper.writeMessage("Хочешь, например, поиграть, или позагадывать загадки, или хочешь анекдот... или может быть сказку! Выбирай!");
                     Thread.sleep(600);
                     break;
                 }
                 case 2:{
                     Thread.sleep(600);
-                    System.out.println("Можем поиграть, или  поболтать, позагадывать загадки, я могу рассказать анекдот... Да хоть сказку! Выбирай!");
+                    ConsoleHelper.writeMessage("Можем поиграть, или  поболтать, позагадывать загадки, я могу рассказать анекдот... Да хоть сказку! Выбирай!");
                     Thread.sleep(600);
                     break;
                 }
                 case 3: {
                     Thread.sleep(600);
-                    System.out.println("Можно поиграть, или  потрещать, позагадывать загадки, я могу рассказать тебе анекдот... или сказку! Выбирай!");
+                    ConsoleHelper.writeMessage("Можно поиграть, или  потрещать, позагадывать загадки, я могу рассказать тебе анекдот... или сказку! Выбирай!");
                     Thread.sleep(600);
                     break;
                 }
                 case 4: {
                     Thread.sleep(600);
-                    System.out.println("Могу рассказать анекдот, сказку. Могу загадать загадку. Можем просто поболтать! Выбирай!");
+                    ConsoleHelper.writeMessage("Могу рассказать анекдот, сказку. Могу загадать загадку. Можем просто поболтать! Выбирай!");
                     Thread.sleep(600);
                     break;
                 }
                 case 5: {
                     Thread.sleep(600);
-                    System.out.println("Выбирай, что хочешь: Могу рассказать анекдот, сказку. Могу загадать загадку. Можем просто поболтать!");
+                    ConsoleHelper.writeMessage("Выбирай, что хочешь: Могу рассказать анекдот, сказку. Могу загадать загадку. Можем просто поболтать!");
                     Thread.sleep(600);
                     break;
                 }
                 case 6: {
                     Thread.sleep(600);
-                    System.out.println("Можешь выбрать, что ты хочешь: я могу рассказать анекдот, сказку. Могу загадать загадку. Можем просто поболтать!");
+                    ConsoleHelper.writeMessage("Можешь выбрать, что ты хочешь: я могу рассказать анекдот, сказку. Могу загадать загадку. Можем просто поболтать!");
                     Thread.sleep(600);
                     break;
                 }
                 case 7: {
                     Thread.sleep(600);
-                    System.out.println("Выбирай, что тебе больше по-душе: я могу рассказать анекдот или сказку. Могу загадать загадку. Можем просто поболтать!");
+                    ConsoleHelper.writeMessage("Выбирай, что тебе больше по-душе: я могу рассказать анекдот или сказку. Могу загадать загадку. Можем просто поболтать!");
                     Thread.sleep(600);
                     break;
                 }
                 case 8: {
                     Thread.sleep(600);
-                    System.out.println("Выбирай, что нравится: я могу загадать загадку, могу рассказать анекдот или сказку... Можем просто поболтать!");
+                    ConsoleHelper.writeMessage("Выбирай, что нравится: я могу загадать загадку, могу рассказать анекдот или сказку... Можем просто поболтать!");
                     Thread.sleep(600);
                     break;
                 }
                 case 9: {
                     Thread.sleep(600);
-                    System.out.println("Ты можешь выбрать любую тему, что тебе больше нравится: я могу загадать загадку, могу рассказать анекдот или сказку... Можем просто поболтать!");
+                    ConsoleHelper.writeMessage("Ты можешь выбрать любую тему, что тебе больше нравится: я могу загадать загадку, могу рассказать анекдот или сказку... Можем просто поболтать!");
                     Thread.sleep(600);
                     break;
                 }
@@ -847,47 +853,47 @@ public class Test implements Serializable {
             }
         }
         catch(InterruptedException ie){
-            System.out.println("Вау. Это реально долго было.");
+            ConsoleHelper.writeMessage("Вау. Это реально долго было.");
         }
         catch(IOException io){
-            System.out.println("Ошибочка. Вводика-выводика. Так мне сказали. Но мы идем дальше!");
+            ConsoleHelper.writeMessage("Ошибочка. Вводика-выводика. Так мне сказали. Но мы идем дальше!");
             io.printStackTrace();
         }
         catch(ClassNotFoundException cnf){
-            System.out.println("Опа... нет такого класса line412 seriaFromFile() method! Но мы продолжаем.");
+            ConsoleHelper.writeMessage("Опа... нет такого класса line412 seriaFromFile() method! Но мы продолжаем.");
         }
         catch(NullPointerException npe){
-            System.out.println("Опа... NullPointerException в методе greeting()! Но мы продолжаем.");
+            ConsoleHelper.writeMessage("Опа... NullPointerException в методе greeting()! Но мы продолжаем.");
             npe.printStackTrace();
         }
 
     }
 
     public static void dealer() throws IOException, InterruptedException{
-        System.out.println("Выбирай, чем займемся?");
+        ConsoleHelper.writeMessage("Выбирай, чем займемся?");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         String deal = bufferedReader.readLine();
         deal = deal.toLowerCase();
         if (deal.contains("спать")){
             Thread.sleep(600);
-            System.out.println("Тогда выключай компьютер, спокойной ночи!");
+            ConsoleHelper.writeMessage("Тогда выключай компьютер, спокойной ночи!");
             Thread.sleep(600);
-            System.out.println("Или...");
+            ConsoleHelper.writeMessage("Или...");
             dealer();
         }
         else if(deal.contains("есть") || deal.contains("кушать")  || deal.contains("жрать") || deal.contains("мороженого") || deal.contains("мороженое")){
             Thread.sleep(600);
-            System.out.println("Тогда приятного аппетита!");
+            ConsoleHelper.writeMessage("Тогда приятного аппетита!");
             Thread.sleep(600);
-            System.out.println("Или...");
+            ConsoleHelper.writeMessage("Или...");
             dealer();
         }
         else if(deal.contains("играть") || deal.contains("игру") || deal.contains("игрой") || deal.contains("игры") || deal.contains("игр")){
             Thread.sleep(600);
-            System.out.println("О! Круто! Давай поиграем!");
+            ConsoleHelper.writeMessage("О! Круто! Давай поиграем!");
             game001();
-            System.out.println("Так и быть. Еще игра: ");
+            ConsoleHelper.writeMessage("Так и быть. Еще игра: ");
             game000();
             dealer();
         }
@@ -899,20 +905,20 @@ public class Test implements Serializable {
         }
         else if(deal.contains("загадку") || deal.contains("загадки") || deal.contains("загадка") || deal.contains("загадкой") || deal.contains("Загадку") || deal.contains("Загадки") || deal.contains("Загадка") || deal.contains("Загадкой")){
             Thread.sleep(600);
-            System.out.println("Давай тогда я загадаю тебе одну: ");
+            ConsoleHelper.writeMessage("Давай тогда я загадаю тебе одну: ");
             Thread.sleep(600);
 
             riddleNew();
         }
         else if(deal.contains("не знаю") || deal.contains("не решил") || deal.contains("пофиг") || deal.contains("фиг")){
             Thread.sleep(600);
-            System.out.println("Хорошо, раз ты не в курсе, я загадаю загадку!");
+            ConsoleHelper.writeMessage("Хорошо, раз ты не в курсе, я загадаю загадку!");
 
             riddleNew();
         }
         else if(deal.contains("болтать") || deal.contains("чат") || deal.contains("разговор") || deal.contains("говорить")|| deal.contains("поболтать") || deal.contains("поговорим") || deal.contains("початимся")|| deal.contains("поболтаем")|| deal.contains("переписываемся")|| deal.contains("переписываться")){
             Thread.sleep(600);
-            System.out.println("Хорошо. Давай немного поговорим...");
+            ConsoleHelper.writeMessage("Хорошо. Давай немного поговорим...");
             chat00();
 
         }
@@ -924,7 +930,7 @@ public class Test implements Serializable {
             return;
         }
         else{
-            System.out.println("Я на этой планете недавно. Не все понимаю. Напиши что-нибудь другое, пожалуйста!");
+            ConsoleHelper.writeMessage("Я на этой планете недавно. Не все понимаю. Напиши что-нибудь другое, пожалуйста!");
             dealer();
         }
     }
@@ -956,7 +962,7 @@ public class Test implements Serializable {
         try {
 
             if (age < 7 & age > 0) {
-                System.out.println("О, да ты еще , наверное, в детский садик ходишь!");
+                ConsoleHelper.writeMessage("О, да ты еще , наверное, в детский садик ходишь!");
             } else if (age >= 7 & age <= 18) {
 
 
@@ -964,61 +970,61 @@ public class Test implements Serializable {
                 switch (r) {
                     case 0: {
                         Thread.sleep(1000);
-                        System.out.println("О! Ты, видимо, учишься в школе! Это здорово!");
+                        ConsoleHelper.writeMessage("О! Ты, видимо, учишься в школе! Это здорово!");
                         Thread.sleep(1000);
                         break;
                     }
                     case 1: {
                         Thread.sleep(1000);
-                        System.out.println("В школу ходишь... Молодец...");
+                        ConsoleHelper.writeMessage("В школу ходишь... Молодец...");
                         Thread.sleep(1000);
                         break;
                     }
                     case 2: {
                         Thread.sleep(1000);
-                        System.out.println("Что ж... Видимо, ты любишь учиться. В школе. Как и я...");
+                        ConsoleHelper.writeMessage("Что ж... Видимо, ты любишь учиться. В школе. Как и я...");
                         Thread.sleep(1000);
                         break;
                     }
                     case 3: {
                         Thread.sleep(1000);
-                        System.out.println("О! Да ты, видать, в школу ходишь? Совсем большой. Похвально.");
+                        ConsoleHelper.writeMessage("О! Да ты, видать, в школу ходишь? Совсем большой. Похвально.");
                         Thread.sleep(1000);
                         break;
                     }
                     case 4: {
                         Thread.sleep(1000);
-                        System.out.println("Мдас... Думаю, ты ходишь в школу. Как и я... Шутка!");
+                        ConsoleHelper.writeMessage("Мдас... Думаю, ты ходишь в школу. Как и я... Шутка!");
                         Thread.sleep(1000);
                         break;
                     }
                     case 5: {
                         Thread.sleep(1000);
-                        System.out.println("Да уж. В школу ходишь, наверное. Молодец.");
+                        ConsoleHelper.writeMessage("Да уж. В школу ходишь, наверное. Молодец.");
                         Thread.sleep(1000);
                         break;
                     }
                     case 6: {
                         Thread.sleep(1000);
-                        System.out.println("О, так ты в самом расцвете сил, как Карлсон! Точнее нет. Как Малыш! В школу уже ходишь!");
+                        ConsoleHelper.writeMessage("О, так ты в самом расцвете сил, как Карлсон! Точнее нет. Как Малыш! В школу уже ходишь!");
                         Thread.sleep(1000);
                         break;
                     }
                     case 7: {
                         Thread.sleep(1000);
-                        System.out.println("Хе-хе... Юный возраст, юные проблемы: Школа... Двойки... Ремень по-вечерам... Мне это знакомо.");
+                        ConsoleHelper.writeMessage("Хе-хе... Юный возраст, юные проблемы: Школа... Двойки... Ремень по-вечерам... Мне это знакомо.");
                         Thread.sleep(1000);
                         break;
                     }
                     case 8: {
                         Thread.sleep(1000);
-                        System.out.println("Ясно. Наверное, ты уже в школу ходишь. Знания получаешь. Молодец!");
+                        ConsoleHelper.writeMessage("Ясно. Наверное, ты уже в школу ходишь. Знания получаешь. Молодец!");
                         Thread.sleep(1000);
                         break;
                     }
                     case 9: {
                         Thread.sleep(1000);
-                        System.out.println("Хе-хе. В школу ходишь, наверное! Молодец!");
+                        ConsoleHelper.writeMessage("Хе-хе. В школу ходишь, наверное! Молодец!");
                         Thread.sleep(1000);
                         break;
                     }
@@ -1026,68 +1032,68 @@ public class Test implements Serializable {
 
 
             } else if (age >= 19 & age <= 23) {
-                System.out.println("Ясно! Ты, видимо, учишься в институте? Или в колледже? Или в армии служишь??? Это здорово!");
+                ConsoleHelper.writeMessage("Ясно! Ты, видимо, учишься в институте? Или в колледже? Или в армии служишь??? Это здорово!");
             } else if (age >= 24 & age <= 64) {
 
                 int r = Test.randomize();
                 switch (r) {
                     case 0: {
                         Thread.sleep(1000);
-                        System.out.println("Сочувствую... Тебе, наверное, приходится много работать. Как и мне...");
+                        ConsoleHelper.writeMessage("Сочувствую... Тебе, наверное, приходится много работать. Как и мне...");
                         Thread.sleep(1000);
                         break;
                     }
                     case 1: {
                         Thread.sleep(1000);
-                        System.out.println("Значит, ты, наверное, уже на работу ходишь. Молодец...");
+                        ConsoleHelper.writeMessage("Значит, ты, наверное, уже на работу ходишь. Молодец...");
                         Thread.sleep(1000);
                         break;
                     }
                     case 2: {
                         Thread.sleep(1000);
-                        System.out.println("Что ж... Видимо, ты тоже много работаешь. Как и я...");
+                        ConsoleHelper.writeMessage("Что ж... Видимо, ты тоже много работаешь. Как и я...");
                         Thread.sleep(1000);
                         break;
                     }
                     case 3: {
                         Thread.sleep(1000);
-                        System.out.println("О! Да ты, видать, уже на работу ходишь? Совсем большой. Похвально.");
+                        ConsoleHelper.writeMessage("О! Да ты, видать, уже на работу ходишь? Совсем большой. Похвально.");
                         Thread.sleep(1000);
                         break;
                     }
                     case 4: {
                         Thread.sleep(1000);
-                        System.out.println("Мдас... Думаю, ты много работаешь. Как и я...");
+                        ConsoleHelper.writeMessage("Мдас... Думаю, ты много работаешь. Как и я...");
                         Thread.sleep(1000);
                         break;
                     }
                     case 5: {
                         Thread.sleep(1000);
-                        System.out.println("Да уж. На работу ходишь, наверное. Молодец.");
+                        ConsoleHelper.writeMessage("Да уж. На работу ходишь, наверное. Молодец.");
                         Thread.sleep(1000);
                         break;
                     }
                     case 6: {
                         Thread.sleep(1000);
-                        System.out.println("О, так ты в самом расцвете сил, как Карлсон! НА работу уже ходишь!");
+                        ConsoleHelper.writeMessage("О, так ты в самом расцвете сил, как Карлсон! НА работу уже ходишь!");
                         Thread.sleep(1000);
                         break;
                     }
                     case 7: {
                         Thread.sleep(1000);
-                        System.out.println("Хе-хе... Зрелый возраст, взрослые проблемы: Работа... Ипотека... Жилье... Мне это знакомо.");
+                        ConsoleHelper.writeMessage("Хе-хе... Зрелый возраст, взрослые проблемы: Работа... Ипотека... Жилье... Мне это знакомо.");
                         Thread.sleep(1000);
                         break;
                     }
                     case 8: {
                         Thread.sleep(1000);
-                        System.out.println("Ясно. Наверное, ты уже работаешь. Деньги зарабатываешь. Молодец!");
+                        ConsoleHelper.writeMessage("Ясно. Наверное, ты уже работаешь. Деньги зарабатываешь. Молодец!");
                         Thread.sleep(1000);
                         break;
                     }
                     case 9: {
                         Thread.sleep(1000);
-                        System.out.println("Хе-хе. На работу ходишь, наверное, трудяга! Молодец!");
+                        ConsoleHelper.writeMessage("Хе-хе. На работу ходишь, наверное, трудяга! Молодец!");
                         Thread.sleep(1000);
                         break;
                     }
@@ -1095,24 +1101,24 @@ public class Test implements Serializable {
 
 
             } else if (age >= 65 & age <= 100) {
-                System.out.println("Самый веселый возраст: ты - пенсионер!!!");
+                ConsoleHelper.writeMessage("Самый веселый возраст: ты - пенсионер!!!");
             } else if (age > 100) {
-                System.out.println("Мда... ноутбуки столько не живут...");
+                ConsoleHelper.writeMessage("Мда... ноутбуки столько не живут...");
                 Thread.sleep(1000);
-                System.out.println("Пройди-ка дополнительный квест: ");
+                ConsoleHelper.writeMessage("Пройди-ка дополнительный квест: ");
                 Thread.sleep(600);
-                System.out.println("В каком году правил Царь Горох???");
+                ConsoleHelper.writeMessage("В каком году правил Царь Горох???");
                 Thread.sleep(800);
-                System.out.println("Шутка. Я и сам не знаю. Меня тогда еще не было )))");
+                ConsoleHelper.writeMessage("Шутка. Я и сам не знаю. Меня тогда еще не было )))");
 
             } else if (age == 0) {
-                System.out.println("О! Ты только что родился! Поздравляю! Ори громче, чтобы мама от тебя компьютер убрала подальне. Еще написаешь не меня, щенок!");
+                ConsoleHelper.writeMessage("О! Ты только что родился! Поздравляю! Ори громче, чтобы мама от тебя компьютер убрала подальне. Еще написаешь не меня, щенок!");
             } else {
-                System.out.println("Ну такое даже я не могу себе представить. Фантазер, блин.");
+                ConsoleHelper.writeMessage("Ну такое даже я не могу себе представить. Фантазер, блин.");
             }
         }
         catch(InterruptedException ie){
-            System.out.println("Интерраптед ошибка в методе ageProof(int age). Но мы продолжаем...");
+            ConsoleHelper.writeMessage("Интерраптед ошибка в методе ageProof(int age). Но мы продолжаем...");
         }
     }
 
@@ -1149,10 +1155,10 @@ public class Test implements Serializable {
 
         }
         catch(FileNotFoundException fnf){
-            System.out.println("Файл не найден. Идем далее.");
+            ConsoleHelper.writeMessage("Файл не найден. Идем далее.");
         }
         catch (IOException ioe) {
-        System.out.println("Ошибка ввода-вывода");
+        ConsoleHelper.writeMessage("Ошибка ввода-вывода");
         }
 
     }
@@ -1188,61 +1194,61 @@ public class Test implements Serializable {
             switch (r) {
                 case 0: {
                     Thread.sleep(600);
-                    System.out.println("Давай расскажу тебе сказку!");
+                    ConsoleHelper.writeMessage("Давай расскажу тебе сказку!");
                     Thread.sleep(600);
                     break;
                 }
                 case 1: {
                     Thread.sleep(1000);
-                    System.out.println("Ну что? Рассказать сказку? Да как нечего делать. Лови!");
+                    ConsoleHelper.writeMessage("Ну что? Рассказать сказку? Да как нечего делать. Лови!");
                     Thread.sleep(1000);
                     break;
                 }
                 case 2: {
                     Thread.sleep(1000);
-                    System.out.println("Рассказать сказку? Хорошо!");
+                    ConsoleHelper.writeMessage("Рассказать сказку? Хорошо!");
                     Thread.sleep(1000);
                     break;
                 }
                 case 3: {
                     Thread.sleep(1000);
-                    System.out.println("Ну ладно, давай расскажу тебе сказку.");
+                    ConsoleHelper.writeMessage("Ну ладно, давай расскажу тебе сказку.");
                     Thread.sleep(1000);
                     break;
                 }
                 case 4: {
                     Thread.sleep(1000);
-                    System.out.println("Так и быть, расскажу сказку.");
+                    ConsoleHelper.writeMessage("Так и быть, расскажу сказку.");
                     Thread.sleep(1000);
                     break;
                 }
                 case 5: {
                     Thread.sleep(1000);
-                    System.out.println("Ну что ж... давай расскажу тебе сказку!");
+                    ConsoleHelper.writeMessage("Ну что ж... давай расскажу тебе сказку!");
                     Thread.sleep(1000);
                     break;
                 }
                 case 6: {
                     Thread.sleep(1000);
-                    System.out.println("Хорошо, я расскажу. Расскажу тебе сказку!");
+                    ConsoleHelper.writeMessage("Хорошо, я расскажу. Расскажу тебе сказку!");
                     Thread.sleep(1000);
                     break;
                 }
                 case 7: {
                     Thread.sleep(1000);
-                    System.out.println("Хорошо, расскажу. Слушай. Специально для тебя!");
+                    ConsoleHelper.writeMessage("Хорошо, расскажу. Слушай. Специально для тебя!");
                     Thread.sleep(1000);
                     break;
                 }
                 case 8: {
                     Thread.sleep(1000);
-                    System.out.println("Ладно. Рассказываю сказку. Слушай внимательно!");
+                    ConsoleHelper.writeMessage("Ладно. Рассказываю сказку. Слушай внимательно!");
                     Thread.sleep(1000);
                     break;
                 }
                 case 9: {
                     Thread.sleep(1000);
-                    System.out.println("Ладно, ладно. Давай расскажу.");
+                    ConsoleHelper.writeMessage("Ладно, ладно. Давай расскажу.");
                     Thread.sleep(1000);
                     break;
                 }
@@ -1281,10 +1287,10 @@ public class Test implements Serializable {
 
         }
         catch(InterruptedException ie){
-            System.out.println("Это было слишком... слишком долго, дружок!");
+            ConsoleHelper.writeMessage("Это было слишком... слишком долго, дружок!");
         }
         catch(IOException io){
-            System.out.println("Ошибка ввода-вывода. Но мы продолжаем.");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода. Но мы продолжаем.");
         }
 
 
@@ -1322,7 +1328,7 @@ public class Test implements Serializable {
             ArrayList<Integer> listOfRandoms = new ArrayList<>(); //для сбора уже выскакивавших рандомных значений.
 
             Thread.sleep(600);
-            System.out.println("Давай расскажу анекдот!!!");
+            ConsoleHelper.writeMessage("Давай расскажу анекдот!!!");
             Thread.sleep(600);
 
             for (int j = 0; j < listOfAnecdots.size(); j++) {
@@ -1346,61 +1352,61 @@ public class Test implements Serializable {
                         switch (ran) {
                             case 0: {
                                 Thread.sleep(1000);
-                                System.out.println("Как скажешь!");
+                                ConsoleHelper.writeMessage("Как скажешь!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 1: {
                                 Thread.sleep(1000);
-                                System.out.println("Хорошо!");
+                                ConsoleHelper.writeMessage("Хорошо!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 2: {
                                 Thread.sleep(1000);
-                                System.out.println("Ладно");
+                                ConsoleHelper.writeMessage("Ладно");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 3: {
                                 Thread.sleep(1000);
-                                System.out.println("Всё для тебя!");
+                                ConsoleHelper.writeMessage("Всё для тебя!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 4: {
                                 Thread.sleep(1000);
-                                System.out.println("Будь по-твоему");
+                                ConsoleHelper.writeMessage("Будь по-твоему");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 5: {
                                 Thread.sleep(1000);
-                                System.out.println("Ну так и быть!");
+                                ConsoleHelper.writeMessage("Ну так и быть!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 6: {
                                 Thread.sleep(1000);
-                                System.out.println("Ладно, ладно. Держи!");
+                                ConsoleHelper.writeMessage("Ладно, ладно. Держи!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 7: {
                                 Thread.sleep(1000);
-                                System.out.println("Тогда слушай!");
+                                ConsoleHelper.writeMessage("Тогда слушай!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 8: {
                                 Thread.sleep(1000);
-                                System.out.println("Тогда лови!");
+                                ConsoleHelper.writeMessage("Тогда лови!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 9: {
                                 Thread.sleep(1000);
-                                System.out.println("Хорошо. Как скажешь.");
+                                ConsoleHelper.writeMessage("Хорошо. Как скажешь.");
                                 Thread.sleep(1000);
                                 break;
                             }
@@ -1412,10 +1418,10 @@ public class Test implements Serializable {
             //anecdoteNew();
         }
         catch(IOException io){
-            System.out.println("Ошибка ввода-вывода в методе anecdoteNew(). Но мы можем продолжать...");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода в методе anecdoteNew(). Но мы можем продолжать...");
         }
         catch(InterruptedException ie){
-            System.out.println("Интерраптед ексепшн в методе anecdoteNew(), но мы можем идти дальше...");
+            ConsoleHelper.writeMessage("Интерраптед ексепшн в методе anecdoteNew(), но мы можем идти дальше...");
         }
 
     }   //анекдотики
@@ -1598,37 +1604,37 @@ public class Test implements Serializable {
             //riddleNew();
         }
         catch(InterruptedException ie){
-            System.out.println("ошибка InterruptedException в методе riddleNew(). Но мы можем продолжать!");
+            ConsoleHelper.writeMessage("ошибка InterruptedException в методе riddleNew(). Но мы можем продолжать!");
         }
 
     }
 
     public static void game001() throws IOException, InterruptedException{
-        System.out.println("загадай любое целое число.");
+        ConsoleHelper.writeMessage("загадай любое целое число.");
         Thread.sleep(1000);
-        System.out.println("Введи это число с клавиатуры. Нажми ENTER.");
+        ConsoleHelper.writeMessage("Введи это число с клавиатуры. Нажми ENTER.");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         int x = Integer.parseInt(bufferedReader.readLine());
         int y = x + 2;
-        System.out.println("мда... А я загадал число " + y + " !");
-        System.out.println("Тебе все ясно? В цифрах мне нет равных. Тут я всегда... ПОБЕДЮ.");
+        ConsoleHelper.writeMessage("мда... А я загадал число " + y + " !");
+        ConsoleHelper.writeMessage("Тебе все ясно? В цифрах мне нет равных. Тут я всегда... ПОБЕДЮ.");
     }
 
     public static void game000() throws IOException, InterruptedException{
         Thread.sleep(2000);
-        System.out.println("Сейчас я угадаю год твоего рождения.");
+        ConsoleHelper.writeMessage("Сейчас я угадаю год твоего рождения.");
         Thread.sleep(1000);
-        System.out.println("79 кружек пива...");
+        ConsoleHelper.writeMessage("79 кружек пива...");
         Thread.sleep(2000);
-        System.out.println("...минус твой возраст. Самостоятельно считай.");
+        ConsoleHelper.writeMessage("...минус твой возраст. Самостоятельно считай.");
         Thread.sleep(3000);
-        System.out.println("Не все же мне за тебя считать...");
+        ConsoleHelper.writeMessage("Не все же мне за тебя считать...");
         Thread.sleep(2000);
-        System.out.println("К этому числу прибавь 40!");
+        ConsoleHelper.writeMessage("К этому числу прибавь 40!");
         Thread.sleep(3000);
-        System.out.println("Ну вот. И получился твой год рождения!!!");
+        ConsoleHelper.writeMessage("Ну вот. И получился твой год рождения!!!");
         Thread.sleep(600);
-        System.out.println("Проверь еще раз...");
+        ConsoleHelper.writeMessage("Проверь еще раз...");
     }
 
     public static void chat00()throws IOException, InterruptedException{
@@ -1636,7 +1642,7 @@ public class Test implements Serializable {
         Chat chat = new Chat();
         //метод является входным для чата и далее вызывает chat001 chat002 chat003 и так далее в рандомном порядке.
         Thread.sleep(600);
-        System.out.println("Задавай любую тему. Я, правда, не всё на свете знаю, но... Можем про учебу... Или про музыку... Или про отпуск!");
+        ConsoleHelper.writeMessage("Задавай любую тему. Я, правда, не всё на свете знаю, но... Можем про учебу... Или про музыку... Или про отпуск!");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String chatTheme = bufferedReader.readLine();
         chatTheme = chatTheme.toLowerCase();
@@ -1726,13 +1732,13 @@ public class Test implements Serializable {
         try {
             if (answer.contains("exit") || answer.contains("выключ") || answer.contains("выход") || answer.contains("надоел")) {
                 Thread.sleep(600);
-                System.out.println("Всё, всё. Пора заканчивать разговор. Пока!");
+                ConsoleHelper.writeMessage("Всё, всё. Пора заканчивать разговор. Пока!");
                 System.exit(0);
                 return;
             }
         }
         catch(InterruptedException ie){
-            System.out.println("Это InterruptedException в методе exit(String answer). Но мы идем дальше.");
+            ConsoleHelper.writeMessage("Это InterruptedException в методе exit(String answer). Но мы идем дальше.");
         }
     }
 
@@ -1750,20 +1756,20 @@ public class Test implements Serializable {
             ois.close();
 
             for(User user : oldUsersList){
-                System.out.println(user.toString());
+                ConsoleHelper.writeMessage(user.toString());
             }
 
         }
         catch(FileNotFoundException f){
-            System.out.println("Файл не найден.");
+            ConsoleHelper.writeMessage("Файл не найден.");
             f.printStackTrace();
         }
         catch(IOException ioex){
-            System.out.println("Ошибка ввода-вывода");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода");
             ioex.printStackTrace();
         }
         catch(ClassNotFoundException c){
-            System.out.println("Нет такого класса");
+            ConsoleHelper.writeMessage("Нет такого класса");
             c.printStackTrace();
         }
     }
@@ -1798,10 +1804,10 @@ public class Test implements Serializable {
             //return countUsers;
         }
         catch(FileNotFoundException f){
-            System.out.println("Файл не найден в usersCountFromFile(). А мы идем дальше.");
+            ConsoleHelper.writeMessage("Файл не найден в usersCountFromFile(). А мы идем дальше.");
         }
         catch(IOException io){
-            System.out.println("Ошибка ввода-вывода в usersCountFromFile(). А мы идем дальше.");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода в usersCountFromFile(). А мы идем дальше.");
             io.printStackTrace();
         }
 

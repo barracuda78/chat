@@ -18,11 +18,11 @@ public class Anecdot implements Serializable {
         try {
             Scanner scanner = new Scanner(file);
             while(scanner.hasNextLine()){
-                System.out.println(scanner.nextLine());
+                ConsoleHelper.writeMessage(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.out.println("Закончились мои анекдоты, детка...");        }
+            ConsoleHelper.writeMessage("Закончились мои анекдоты, детка...");        }
     }
 
     public static String wantMoreAnecdot(){
@@ -33,61 +33,61 @@ public class Anecdot implements Serializable {
             switch (r) {
                 case 0: {
                     Thread.sleep(3000);
-                    System.out.println("Ну что, анекдот еще хочешь?");
+                    ConsoleHelper.writeMessage("Ну что, анекдот еще хочешь?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 1: {
                     Thread.sleep(3000);
-                    System.out.println("Ну что? Рассказать еще анекдот?");
+                    ConsoleHelper.writeMessage("Ну что? Рассказать еще анекдот?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 2: {
                     Thread.sleep(3000);
-                    System.out.println("давай еще анекдот?");
+                    ConsoleHelper.writeMessage("давай еще анекдот?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 3: {
                     Thread.sleep(3000);
-                    System.out.println("Рассказать еще один анекдот?");
+                    ConsoleHelper.writeMessage("Рассказать еще один анекдот?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 4: {
                     Thread.sleep(1000);
-                    System.out.println("Хочешь, еще один анекдот расскажу?");
+                    ConsoleHelper.writeMessage("Хочешь, еще один анекдот расскажу?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 5: {
                     Thread.sleep(1000);
-                    System.out.println("Давай еще один анекдот, а?");
+                    ConsoleHelper.writeMessage("Давай еще один анекдот, а?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 6: {
                     Thread.sleep(1000);
-                    System.out.println("Ну что, еще хочешь анекдот?");
+                    ConsoleHelper.writeMessage("Ну что, еще хочешь анекдот?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 7: {
                     Thread.sleep(1000);
-                    System.out.println("Давай еще анекдот расскажу, а?");
+                    ConsoleHelper.writeMessage("Давай еще анекдот расскажу, а?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 8: {
                     Thread.sleep(1000);
-                    System.out.println("Рассказать еще один анекдот?");
+                    ConsoleHelper.writeMessage("Рассказать еще один анекдот?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 9: {
                     Thread.sleep(1000);
-                    System.out.println("Рассказать тебе ещё анекдот, а?");
+                    ConsoleHelper.writeMessage("Рассказать тебе ещё анекдот, а?");
                     Thread.sleep(1000);
                     break;
                 }
@@ -116,10 +116,10 @@ public class Anecdot implements Serializable {
 
         }
         catch(InterruptedException ie){
-            System.out.println("Я ждал, ждал... и не дождался!");
+            ConsoleHelper.writeMessage("Я ждал, ждал... и не дождался!");
         }
         catch(IOException io){
-            System.out.println("Ошибочка. Ввода-вывода. Что делать. А мы дальше работаем.");
+            ConsoleHelper.writeMessage("Ошибочка. Ввода-вывода. Что делать. А мы дальше работаем.");
         }
 
         return "нет"; //Вот убрать это и убрать try-catch - и тогда все заработает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -87,11 +87,11 @@ public class Riddle implements Serializable {
                     File file = new File(riddle.getPath());
                     Scanner scanner = new Scanner(file);
                     while(scanner.hasNextLine()){
-                        System.out.println(scanner.nextLine());
+                        ConsoleHelper.writeMessage(scanner.nextLine());
                     }
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
-                    System.out.println("Закончились мои загадки, детка...");        }
+                    ConsoleHelper.writeMessage("Закончились мои загадки, детка...");        }
                 catch (NullPointerException n){
                     n.printStackTrace();
                 }
@@ -102,11 +102,11 @@ public class Riddle implements Serializable {
                 try {
                     Scanner scanner = new Scanner(file);
                     while(scanner.hasNextLine()){
-                        System.out.println(scanner.nextLine());
+                        ConsoleHelper.writeMessage(scanner.nextLine());
                     }
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
-                    System.out.println("Все, детка... Кина не будет. Электричество кончилось.");        }
+                    ConsoleHelper.writeMessage("Все, детка... Кина не будет. Электричество кончилось.");        }
                 break;
             }
         }
@@ -194,10 +194,10 @@ public class Riddle implements Serializable {
 
         }
         catch(IOException io){
-            System.out.println("Ну вот. Говорят, ошибка ввода-вывода. Идем дальше, пофиг.");
+            ConsoleHelper.writeMessage("Ну вот. Говорят, ошибка ввода-вывода. Идем дальше, пофиг.");
         }
         catch(InterruptedException ie){
-            System.out.println("Слишком долго. Это слишком долго, дружок!");
+            ConsoleHelper.writeMessage("Слишком долго. Это слишком долго, дружок!");
         }
 
 
@@ -212,101 +212,101 @@ public class Riddle implements Serializable {
             switch (r) {
                 case 0: {
                     Thread.sleep(1000);
-                    System.out.println("...");
+                    ConsoleHelper.writeMessage("...");
                     Thread.sleep(1000);
-                    System.out.println("...");
+                    ConsoleHelper.writeMessage("...");
                     Thread.sleep(1000);
-                    System.out.println("Молодчинка! Правильно!");
+                    ConsoleHelper.writeMessage("Молодчинка! Правильно!");
                     Thread.sleep(600);
                     break;
                 }
                 case 1: {
                     Thread.sleep(1000);
-                    System.out.println("что ж...");
+                    ConsoleHelper.writeMessage("что ж...");
                     Thread.sleep(1000);
-                    System.out.println("хм...");
+                    ConsoleHelper.writeMessage("хм...");
                     Thread.sleep(1000);
-                    System.out.println("ДААА!!! Это правильный ответ!");
+                    ConsoleHelper.writeMessage("ДААА!!! Это правильный ответ!");
                     Thread.sleep(600);
                     break;
                 }
                 case 2: {
                     Thread.sleep(1000);
-                    System.out.println("ну...");
+                    ConsoleHelper.writeMessage("ну...");
                     Thread.sleep(1000);
-                    System.out.println("домустим...");
+                    ConsoleHelper.writeMessage("домустим...");
                     Thread.sleep(1000);
-                    System.out.println("Да не домустим. А все правильно! ДА! Правильный ответ!");
+                    ConsoleHelper.writeMessage("Да не домустим. А все правильно! ДА! Правильный ответ!");
                     Thread.sleep(600);
                     break;
                 }
                 case 3: {
                     Thread.sleep(1000);
-                    System.out.println("...а-ха-ха!!!");
+                    ConsoleHelper.writeMessage("...а-ха-ха!!!");
                     Thread.sleep(1000);
-                    System.out.println("...о-хо-хо!!!");
+                    ConsoleHelper.writeMessage("...о-хо-хо!!!");
                     Thread.sleep(1000);
-                    System.out.println("Хотя, ничего смешного. Просто твой ответ - самый правильный из всех ответов!");
+                    ConsoleHelper.writeMessage("Хотя, ничего смешного. Просто твой ответ - самый правильный из всех ответов!");
                     Thread.sleep(600);
                     break;
                 }
                 case 4: {
                     Thread.sleep(1000);
-                    System.out.println("...");
+                    ConsoleHelper.writeMessage("...");
                     Thread.sleep(1000);
-                    System.out.println("...");
+                    ConsoleHelper.writeMessage("...");
                     Thread.sleep(1000);
-                    System.out.println("Да, ты угадал. Это правильно.");
+                    ConsoleHelper.writeMessage("Да, ты угадал. Это правильно.");
                     Thread.sleep(600);
                     break;
                 }
                 case 5: {
                     Thread.sleep(1000);
-                    System.out.println("ну...");
+                    ConsoleHelper.writeMessage("ну...");
                     Thread.sleep(1000);
-                    System.out.println("я не хочу тебя расстраивать...");
+                    ConsoleHelper.writeMessage("я не хочу тебя расстраивать...");
                     Thread.sleep(1000);
-                    System.out.println("И не буду! Ведь твой ответ - ПРАВИЛЬНЫЙ!");
+                    ConsoleHelper.writeMessage("И не буду! Ведь твой ответ - ПРАВИЛЬНЫЙ!");
                     Thread.sleep(600);
                     break;
                 }
                 case 6: {
                     Thread.sleep(1000);
-                    System.out.println("...");
+                    ConsoleHelper.writeMessage("...");
                     Thread.sleep(1000);
-                    System.out.println("да что ж ты будешь делать?");
+                    ConsoleHelper.writeMessage("да что ж ты будешь делать?");
                     Thread.sleep(1000);
-                    System.out.println("Ну, повезло тебе. Повезло. ПРАВИЛЬНО!");
+                    ConsoleHelper.writeMessage("Ну, повезло тебе. Повезло. ПРАВИЛЬНО!");
                     Thread.sleep(600);
                     break;
                 }
                 case 7: {
                     Thread.sleep(1000);
-                    System.out.println("да...");
+                    ConsoleHelper.writeMessage("да...");
                     Thread.sleep(1000);
-                    System.out.println("да...");
+                    ConsoleHelper.writeMessage("да...");
                     Thread.sleep(1000);
-                    System.out.println("...и еще раз ... ДА!!! ЭТО ПРАВИЛЬНО!!!");
+                    ConsoleHelper.writeMessage("...и еще раз ... ДА!!! ЭТО ПРАВИЛЬНО!!!");
                     Thread.sleep(600);
                     break;
                 }
                 case 8: {
                     Thread.sleep(1000);
-                    System.out.println("хе-хе");
+                    ConsoleHelper.writeMessage("хе-хе");
                     Thread.sleep(1000);
-                    System.out.println("кхе-кхе...");
+                    ConsoleHelper.writeMessage("кхе-кхе...");
                     Thread.sleep(1000);
-                    System.out.println("Угадал ты. Молодец. Правильно!");
+                    ConsoleHelper.writeMessage("Угадал ты. Молодец. Правильно!");
                     Thread.sleep(600);
                     break;
                 }
                 case 9: {
                     Thread.sleep(1000);
-                    System.out.println("ну, знаешь...");
+                    ConsoleHelper.writeMessage("ну, знаешь...");
                     Thread.sleep(1000);
-                    System.out.println("это уж слишком!");
+                    ConsoleHelper.writeMessage("это уж слишком!");
                     Thread.sleep(1000);
-                    System.out.println("Ты угадал! Молодец! Правильно!");
+                    ConsoleHelper.writeMessage("Ты угадал! Молодец! Правильно!");
                     Thread.sleep(600);
                     break;
                 }
@@ -315,7 +315,7 @@ public class Riddle implements Serializable {
 
         }
         catch(InterruptedException i){
-            System.out.println("Слишком, слишком долго я тебя ждал!!!");
+            ConsoleHelper.writeMessage("Слишком, слишком долго я тебя ждал!!!");
         }
     }
     public void correct002(){
@@ -326,101 +326,101 @@ public class Riddle implements Serializable {
             switch (r) {
                 case 0: {
                     Thread.sleep(1000);
-                    System.out.println("эээ...");
+                    ConsoleHelper.writeMessage("эээ...");
                     Thread.sleep(1000);
-                    System.out.println("мммм...");
+                    ConsoleHelper.writeMessage("мммм...");
                     Thread.sleep(1000);
-                    System.out.println("Oh! You speak English! Ты говоришь на английском! Круто!\n Твой ответ - правильный, молодец!");
+                    ConsoleHelper.writeMessage("Oh! You speak English! Ты говоришь на английском! Круто!\n Твой ответ - правильный, молодец!");
                     Thread.sleep(600);
                     break;
                 }
                 case 1: {
                     Thread.sleep(1000);
-                    System.out.println("что ж...");
+                    ConsoleHelper.writeMessage("что ж...");
                     Thread.sleep(1000);
-                    System.out.println("англичанин...");
+                    ConsoleHelper.writeMessage("англичанин...");
                     Thread.sleep(1000);
-                    System.out.println("ДААА!!! Это правильный ответ!");
+                    ConsoleHelper.writeMessage("ДААА!!! Это правильный ответ!");
                     Thread.sleep(600);
                     break;
                 }
                 case 2: {
                     Thread.sleep(1000);
-                    System.out.println("Oh yes!!!");
+                    ConsoleHelper.writeMessage("Oh yes!!!");
                     Thread.sleep(1000);
-                    System.out.println("ДА!!!");
+                    ConsoleHelper.writeMessage("ДА!!!");
                     Thread.sleep(1000);
-                    System.out.println("Ти давать очинь правильний ответ! Маладэс!");
+                    ConsoleHelper.writeMessage("Ти давать очинь правильний ответ! Маладэс!");
                     Thread.sleep(600);
                     break;
                 }
                 case 3: {
                     Thread.sleep(1000);
-                    System.out.println("...а-ха-ха!!!");
+                    ConsoleHelper.writeMessage("...а-ха-ха!!!");
                     Thread.sleep(1000);
-                    System.out.println("...о-хо-хо!!!");
+                    ConsoleHelper.writeMessage("...о-хо-хо!!!");
                     Thread.sleep(1000);
-                    System.out.println("Английский знаешь? Хорошо! И ответ твой - правильный!");
+                    ConsoleHelper.writeMessage("Английский знаешь? Хорошо! И ответ твой - правильный!");
                     Thread.sleep(600);
                     break;
                 }
                 case 4: {
                     Thread.sleep(1000);
-                    System.out.println("инглишь");
+                    ConsoleHelper.writeMessage("инглишь");
                     Thread.sleep(1000);
-                    System.out.println("это гуд...");
+                    ConsoleHelper.writeMessage("это гуд...");
                     Thread.sleep(1000);
-                    System.out.println("Ответ - правильный. Принимается.");
+                    ConsoleHelper.writeMessage("Ответ - правильный. Принимается.");
                     Thread.sleep(600);
                     break;
                 }
                 case 5: {
                     Thread.sleep(1000);
-                    System.out.println("ну...");
+                    ConsoleHelper.writeMessage("ну...");
                     Thread.sleep(1000);
-                    System.out.println("я не хочу тебя расстраивать...");
+                    ConsoleHelper.writeMessage("я не хочу тебя расстраивать...");
                     Thread.sleep(1000);
-                    System.out.println("Но твой английский - просто супер! И ответ - правильный!");
+                    ConsoleHelper.writeMessage("Но твой английский - просто супер! И ответ - правильный!");
                     Thread.sleep(600);
                     break;
                 }
                 case 6: {
                     Thread.sleep(1000);
-                    System.out.println("...");
+                    ConsoleHelper.writeMessage("...");
                     Thread.sleep(1000);
-                    System.out.println("да что ж ты будешь делать?");
+                    ConsoleHelper.writeMessage("да что ж ты будешь делать?");
                     Thread.sleep(1000);
-                    System.out.println("Английский? Молодец. И с ответом - тоже МОЛОДЕЦ! Правильный! )");
+                    ConsoleHelper.writeMessage("Английский? Молодец. И с ответом - тоже МОЛОДЕЦ! Правильный! )");
                     Thread.sleep(600);
                     break;
                 }
                 case 7: {
                     Thread.sleep(1000);
-                    System.out.println("да...");
+                    ConsoleHelper.writeMessage("да...");
                     Thread.sleep(1000);
-                    System.out.println("да...");
+                    ConsoleHelper.writeMessage("да...");
                     Thread.sleep(1000);
-                    System.out.println("...и еще раз ... YES!!! ЭТО ПРАВИЛЬНО!!! Кстати, отдельное спасибо за английский!");
+                    ConsoleHelper.writeMessage("...и еще раз ... YES!!! ЭТО ПРАВИЛЬНО!!! Кстати, отдельное спасибо за английский!");
                     Thread.sleep(600);
                     break;
                 }
                 case 8: {
                     Thread.sleep(1000);
-                    System.out.println("Oh yes!");
+                    ConsoleHelper.writeMessage("Oh yes!");
                     Thread.sleep(1000);
-                    System.out.println("My baby!");
+                    ConsoleHelper.writeMessage("My baby!");
                     Thread.sleep(1000);
-                    System.out.println("This is correct! Это правильный ответ!");
+                    ConsoleHelper.writeMessage("This is correct! Это правильный ответ!");
                     Thread.sleep(600);
                     break;
                 }
                 case 9: {
                     Thread.sleep(1000);
-                    System.out.println("ну, знаешь, мой френд...");
+                    ConsoleHelper.writeMessage("ну, знаешь, мой френд...");
                     Thread.sleep(1000);
-                    System.out.println("это уж ту матч!");
+                    ConsoleHelper.writeMessage("это уж ту матч!");
                     Thread.sleep(1000);
-                    System.out.println("Ты и английский знаешь!!! Молодец! Правильно!");
+                    ConsoleHelper.writeMessage("Ты и английский знаешь!!! Молодец! Правильно!");
                     Thread.sleep(600);
                     break;
                 }
@@ -429,7 +429,7 @@ public class Riddle implements Serializable {
 
         }
         catch(InterruptedException i){
-            System.out.println("Очень долго. Все это оооочень долго...");
+            ConsoleHelper.writeMessage("Очень долго. Все это оооочень долго...");
         }
     }
     public void uncorrect() {
@@ -440,118 +440,118 @@ public class Riddle implements Serializable {
                  switch (r) {
                     case 0: {
                         Thread.sleep(1000);
-                        System.out.println("что ж...");
+                        ConsoleHelper.writeMessage("что ж...");
                         Thread.sleep(1000);
-                        System.out.println("Знаешь что..?");
+                        ConsoleHelper.writeMessage("Знаешь что..?");
                         Thread.sleep(1000);
-                        System.out.println("Хе-хе... Твой ответ - неправильный!");
+                        ConsoleHelper.writeMessage("Хе-хе... Твой ответ - неправильный!");
                         Thread.sleep(600);
                         break;
                     }
                     case 1: {
                         Thread.sleep(1000);
-                        System.out.println("...");
+                        ConsoleHelper.writeMessage("...");
                         Thread.sleep(1000);
-                        System.out.println("...");
+                        ConsoleHelper.writeMessage("...");
                         Thread.sleep(1000);
-                        System.out.println("А вот и не угадал! Твой ответ - неправильный!");
+                        ConsoleHelper.writeMessage("А вот и не угадал! Твой ответ - неправильный!");
                         Thread.sleep(600);
                         break;
                     }
                     case 2: {
                         Thread.sleep(1000);
-                        System.out.println("Нет, дружище!");
+                        ConsoleHelper.writeMessage("Нет, дружище!");
                         Thread.sleep(1000);
-                        System.out.println("Так не пойдет...");
+                        ConsoleHelper.writeMessage("Так не пойдет...");
                         Thread.sleep(1000);
-                        System.out.println("И знаешь, почему? Потому что это неправильный ответ!");
+                        ConsoleHelper.writeMessage("И знаешь, почему? Потому что это неправильный ответ!");
                         Thread.sleep(600);
                         break;
                     }
                     case 3: {
                         Thread.sleep(1000);
-                        System.out.println("...а-ха-ха!!!");
+                        ConsoleHelper.writeMessage("...а-ха-ха!!!");
                         Thread.sleep(1000);
-                        System.out.println("...о-хо-хо!!!");
+                        ConsoleHelper.writeMessage("...о-хо-хо!!!");
                         Thread.sleep(1000);
-                        System.out.println("Нет. Нет. И еще раз: нет! Это неправильно!");
+                        ConsoleHelper.writeMessage("Нет. Нет. И еще раз: нет! Это неправильно!");
                         Thread.sleep(600);
                         break;
                     }
                     case 4: {
                         Thread.sleep(1000);
-                        System.out.println("...");
+                        ConsoleHelper.writeMessage("...");
                         Thread.sleep(1000);
-                        System.out.println("...");
+                        ConsoleHelper.writeMessage("...");
                         Thread.sleep(1000);
-                        System.out.println("А вот и не угадал!");
+                        ConsoleHelper.writeMessage("А вот и не угадал!");
                         Thread.sleep(600);
                         break;
                     }
                     case 5: {
                         Thread.sleep(1000);
-                        System.out.println("ну...");
+                        ConsoleHelper.writeMessage("ну...");
                         Thread.sleep(1000);
-                        System.out.println("я не хочу тебя расстраивать...");
+                        ConsoleHelper.writeMessage("я не хочу тебя расстраивать...");
                         Thread.sleep(1000);
-                        System.out.println("Но у меня тут записан совсем другой ответ...");
+                        ConsoleHelper.writeMessage("Но у меня тут записан совсем другой ответ...");
                         Thread.sleep(600);
                         break;
                     }
                     case 6: {
                         Thread.sleep(1000);
-                        System.out.println("...");
+                        ConsoleHelper.writeMessage("...");
                         Thread.sleep(1000);
-                        System.out.println("да что ж ты будешь делать?");
+                        ConsoleHelper.writeMessage("да что ж ты будешь делать?");
                         Thread.sleep(1000);
-                        System.out.println("Ну не везет тебе, и все тут! Неправильно!");
+                        ConsoleHelper.writeMessage("Ну не везет тебе, и все тут! Неправильно!");
                         Thread.sleep(600);
                         break;
                     }
                     case 7: {
                         Thread.sleep(1000);
-                        System.out.println("да...");
+                        ConsoleHelper.writeMessage("да...");
                         Thread.sleep(1000);
-                        System.out.println("да...");
+                        ConsoleHelper.writeMessage("да...");
                         Thread.sleep(1000);
-                        System.out.println("...и еще раз ... НЕТ! Потому что это неправильный ответ!");
+                        ConsoleHelper.writeMessage("...и еще раз ... НЕТ! Потому что это неправильный ответ!");
                         Thread.sleep(600);
                         break;
                     }
                     case 8: {
                         Thread.sleep(1000);
-                        System.out.println("хе-хе");
+                        ConsoleHelper.writeMessage("хе-хе");
                         Thread.sleep(1000);
-                        System.out.println("кхе-кхе...");
+                        ConsoleHelper.writeMessage("кхе-кхе...");
                         Thread.sleep(1000);
-                        System.out.println("а вот и не угадал! Это неверный ответ!");
+                        ConsoleHelper.writeMessage("а вот и не угадал! Это неверный ответ!");
                         Thread.sleep(600);
                         break;
                     }
                     case 9: {
                         Thread.sleep(1000);
-                        System.out.println("ну, знаешь...");
+                        ConsoleHelper.writeMessage("ну, знаешь...");
                         Thread.sleep(1000);
-                        System.out.println("это уж слишком!");
+                        ConsoleHelper.writeMessage("это уж слишком!");
                         Thread.sleep(1000);
-                        System.out.println("Я от тебя такого не ожидал! Это неверный ответ!");
+                        ConsoleHelper.writeMessage("Я от тебя такого не ожидал! Это неверный ответ!");
                         Thread.sleep(600);
                         break;
                     }
                  }
             }
         catch(InterruptedException i){
-                System.out.println("Слишком долго тебя ждать...");
+                ConsoleHelper.writeMessage("Слишком долго тебя ждать...");
         }
 
     }
     public void giveCorrectAnswer(){
         try {
             Thread.sleep(1000);
-            System.out.println(this.getFinalAnswer());
+            ConsoleHelper.writeMessage(this.getFinalAnswer());
         }
         catch(InterruptedException i){
-            System.out.println("Почему тебя так дого ждать?");
+            ConsoleHelper.writeMessage("Почему тебя так дого ждать?");
         }
     }
     public void oneMoreTime(){
@@ -562,94 +562,94 @@ public class Riddle implements Serializable {
             switch (r) {
                 case 0: {
                     Thread.sleep(1000);
-                    System.out.println("что ж...");
+                    ConsoleHelper.writeMessage("что ж...");
                     Thread.sleep(1000);
-                    System.out.println("Знаешь что..?");
+                    ConsoleHelper.writeMessage("Знаешь что..?");
                     Thread.sleep(1000);
-                    System.out.println("Попробуй-ка еще разок то же самое: ");
+                    ConsoleHelper.writeMessage("Попробуй-ка еще разок то же самое: ");
                     this.readFromFile(this);
                     break;
                 }
                 case 1: {
                     Thread.sleep(1000);
-                    System.out.println("ну вот...");
+                    ConsoleHelper.writeMessage("ну вот...");
                     Thread.sleep(1000);
-                    System.out.println("У меня просто нет слов...");
+                    ConsoleHelper.writeMessage("У меня просто нет слов...");
                     Thread.sleep(1000);
-                    System.out.println("Давай-ка еще разок то же самое тебе задам: ");
+                    ConsoleHelper.writeMessage("Давай-ка еще разок то же самое тебе задам: ");
                     this.readFromFile(this);
                     break;
                 }
                 case 2: {
                     Thread.sleep(1000);
-                    System.out.println("нет...");
+                    ConsoleHelper.writeMessage("нет...");
                     Thread.sleep(1000);
-                    System.out.println("Так дело не пойдет...");
+                    ConsoleHelper.writeMessage("Так дело не пойдет...");
                     Thread.sleep(1000);
-                    System.out.println("Ну давай, напряги мозги. В последний раз! А?");
+                    ConsoleHelper.writeMessage("Ну давай, напряги мозги. В последний раз! А?");
                     this.readFromFile(this);
                     break;
                 }
                 case 3: {
                     Thread.sleep(1000);
-                    System.out.println("Ну что ж ты будешь делать...");
+                    ConsoleHelper.writeMessage("Ну что ж ты будешь делать...");
                     Thread.sleep(1000);
-                    System.out.println("Хоть джигу пляши от таких ответов...");
+                    ConsoleHelper.writeMessage("Хоть джигу пляши от таких ответов...");
                     Thread.sleep(1000);
-                    System.out.println("Даю тебе еще один шанс: отвечай правильно!");
+                    ConsoleHelper.writeMessage("Даю тебе еще один шанс: отвечай правильно!");
                     this.readFromFile(this);
                     break;
                 }
                 case 4: {
                     Thread.sleep(1000);
-                    System.out.println("вот напасть-то...");
+                    ConsoleHelper.writeMessage("вот напасть-то...");
                     Thread.sleep(1000);
-                    System.out.println("не ожидал от тебя такого...");
+                    ConsoleHelper.writeMessage("не ожидал от тебя такого...");
                     Thread.sleep(1000);
-                    System.out.println("Подумай еще раз и отвечай:");
+                    ConsoleHelper.writeMessage("Подумай еще раз и отвечай:");
                     this.readFromFile(this);
                     break;
                 }
                 case 5: {
                     Thread.sleep(1000);
-                    System.out.println("не... совсем не то...");
+                    ConsoleHelper.writeMessage("не... совсем не то...");
                     Thread.sleep(1000);
-                    System.out.println("Загадаю еще раз, слушай внимательно:");
+                    ConsoleHelper.writeMessage("Загадаю еще раз, слушай внимательно:");
                     this.readFromFile(this);
                     break;
                 }
                 case 6: {
                     Thread.sleep(1000);
-                    System.out.println("Нет. Не то. Попробуй еще разок:");
+                    ConsoleHelper.writeMessage("Нет. Не то. Попробуй еще разок:");
                     this.readFromFile(this);
                     break;
                 }
                 case 7: {
                     Thread.sleep(1000);
-                    System.out.println("я не согласен с твоим ответом.");
+                    ConsoleHelper.writeMessage("я не согласен с твоим ответом.");
                     Thread.sleep(1000);
-                    System.out.println("Да и никто бы не согласился. Давай еще раз, а?");
+                    ConsoleHelper.writeMessage("Да и никто бы не согласился. Давай еще раз, а?");
                     this.readFromFile(this);
                     break;
                 }
                 case 8: {
                     Thread.sleep(1000);
-                    System.out.println("Совсем не то. Давай, отвечай по-нормальному! Еще раз загадаю то же самое:");
+                    ConsoleHelper.writeMessage("Совсем не то. Давай, отвечай по-нормальному! Еще раз загадаю то же самое:");
                     this.readFromFile(this);
                     break;
                 }
                 case 9: {
                     Thread.sleep(1000);
-                    System.out.println("ну вот... Приехали...");
+                    ConsoleHelper.writeMessage("ну вот... Приехали...");
                     Thread.sleep(1000);
-                    System.out.println("Попробуй, пожалуйста, еще разочек отгадать!");
+                    ConsoleHelper.writeMessage("Попробуй, пожалуйста, еще разочек отгадать!");
                     this.readFromFile(this);
                     break;
                 }
             }
         }
         catch(InterruptedException i){
-            System.out.println("Слишком долго я тебя ждал, друг...");
+            ConsoleHelper.writeMessage("Слишком долго я тебя ждал, друг...");
         }
 
     }
@@ -659,61 +659,61 @@ public class Riddle implements Serializable {
         switch (r) {
             case 0: {
                 Thread.sleep(1000);
-                System.out.println("Ну что, еще хочешь?");
+                ConsoleHelper.writeMessage("Ну что, еще хочешь?");
                 Thread.sleep(1000);
                 break;
             }
             case 1: {
                 Thread.sleep(1000);
-                System.out.println("Ещё?");
+                ConsoleHelper.writeMessage("Ещё?");
                 Thread.sleep(1000);
                 break;
             }
             case 2: {
                 Thread.sleep(1000);
-                System.out.println("Что, ещё?");
+                ConsoleHelper.writeMessage("Что, ещё?");
                 Thread.sleep(1000);
                 break;
             }
             case 3: {
                 Thread.sleep(1000);
-                System.out.println("Ну что, хочешь еще разок?");
+                ConsoleHelper.writeMessage("Ну что, хочешь еще разок?");
                 Thread.sleep(1000);
                 break;
             }
             case 4: {
                 Thread.sleep(1000);
-                System.out.println("Еще будешь?");
+                ConsoleHelper.writeMessage("Еще будешь?");
                 Thread.sleep(1000);
                 break;
             }
             case 5: {
                 Thread.sleep(1000);
-                System.out.println("Ну что, давай еще разочек?");
+                ConsoleHelper.writeMessage("Ну что, давай еще разочек?");
                 Thread.sleep(1000);
                 break;
             }
             case 6: {
                 Thread.sleep(1000);
-                System.out.println("Как ты смотришь на то, чтобы повторить? Еще раз?");
+                ConsoleHelper.writeMessage("Как ты смотришь на то, чтобы повторить? Еще раз?");
                 Thread.sleep(1000);
                 break;
             }
             case 7: {
                 Thread.sleep(1000);
-                System.out.println("Будешь еще?");
+                ConsoleHelper.writeMessage("Будешь еще?");
                 Thread.sleep(1000);
                 break;
             }
             case 8: {
                 Thread.sleep(1000);
-                System.out.println("Ну что, давай-ка ещё разок, а?");
+                ConsoleHelper.writeMessage("Ну что, давай-ка ещё разок, а?");
                 Thread.sleep(1000);
                 break;
             }
             case 9: {
                 Thread.sleep(1000);
-                System.out.println("Ну, что скажешь? Еще разок?");
+                ConsoleHelper.writeMessage("Ну, что скажешь? Еще разок?");
                 Thread.sleep(1000);
                 break;
             }
@@ -742,10 +742,10 @@ public class Riddle implements Serializable {
         } else return false;
     }
     catch(InterruptedException i){
-        System.out.println("Слишком уж долго тебя ждать...");
+        ConsoleHelper.writeMessage("Слишком уж долго тебя ждать...");
     }
     catch(IOException io){
-        System.out.println("Мне тут говорят, что ошибка ввода-вывода какая-то... Но мы продолжаем!");
+        ConsoleHelper.writeMessage("Мне тут говорят, что ошибка ввода-вывода какая-то... Но мы продолжаем!");
     }
         return false; ////////////////////////////////////////вот если ретерн фолс убрать, то это может быть поможет...
     }
@@ -759,61 +759,61 @@ public class Riddle implements Serializable {
             switch(r){
                 case 0: {
                     Thread.sleep(1000);
-                    System.out.println("что ж... Это было легко, правда?");
+                    ConsoleHelper.writeMessage("что ж... Это было легко, правда?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 1:{
                     Thread.sleep(1000);
-                    System.out.println("ну что? Легкотня?");
+                    ConsoleHelper.writeMessage("ну что? Легкотня?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 2:{
                     Thread.sleep(1000);
-                    System.out.println("Для детского садика? Не очень сложно, да?");
+                    ConsoleHelper.writeMessage("Для детского садика? Не очень сложно, да?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 3: {
                     Thread.sleep(1000);
-                    System.out.println("Я такие в детском садике разгадывал. Легкотня, правда?");
+                    ConsoleHelper.writeMessage("Я такие в детском садике разгадывал. Легкотня, правда?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 4: {
                     Thread.sleep(1000);
-                    System.out.println("Даже ребенок бы решил. Правда?");
+                    ConsoleHelper.writeMessage("Даже ребенок бы решил. Правда?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 5: {
                     Thread.sleep(1000);
-                    System.out.println("Загадочка - просто детский лепет. Правда?");
+                    ConsoleHelper.writeMessage("Загадочка - просто детский лепет. Правда?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 6: {
                     Thread.sleep(1000);
-                    System.out.println("Согласись, легкотня на постном масле?");
+                    ConsoleHelper.writeMessage("Согласись, легкотня на постном масле?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 7: {
                     Thread.sleep(1000);
-                    System.out.println("Такие бы загадки на ЕГЭ загадывали, да? Легкотня ведь?");
+                    ConsoleHelper.writeMessage("Такие бы загадки на ЕГЭ загадывали, да? Легкотня ведь?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 8: {
                     Thread.sleep(1000);
-                    System.out.println("Эта была совсем простая, согласись!?");
+                    ConsoleHelper.writeMessage("Эта была совсем простая, согласись!?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 9: {
                     Thread.sleep(1000);
-                    System.out.println("Таких простых загадок тебе еще в жизни не загадывали, да?");
+                    ConsoleHelper.writeMessage("Таких простых загадок тебе еще в жизни не загадывали, да?");
                     Thread.sleep(1000);
                     break;
                 }
@@ -823,16 +823,16 @@ public class Riddle implements Serializable {
             itWasEasy = itWasEasy.toLowerCase();
             if (itWasEasy.contains("не") || itWasEasy.contains("нет") || itWasEasy.contains("Не") || itWasEasy.contains("Нет") || itWasEasy.contains("неочень") || itWasEasy.contains("Неочень") || itWasEasy.contains("No") || itWasEasy.contains("no")) {
                 Thread.sleep(600);
-                System.out.println(this.getTwo());
+                ConsoleHelper.writeMessage(this.getTwo());
                 Thread.sleep(600);
             } else if (itWasEasy.contains("правда") || itWasEasy.contains("легко") || itWasEasy.contains("да") || itWasEasy.contains("точно")) {
                 Thread.sleep(600);
-                System.out.println(this.getOne());
+                ConsoleHelper.writeMessage(this.getOne());
                 Thread.sleep(600);
 
             } else {
                 Thread.sleep(600);
-                System.out.println(this.getThree());
+                ConsoleHelper.writeMessage(this.getThree());
                 Thread.sleep(600);
             }
         }catch(IOException i){
