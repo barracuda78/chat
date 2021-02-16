@@ -18,11 +18,11 @@ public class Fairytale implements Serializable {
         try {
             Scanner scanner = new Scanner(file);
             while(scanner.hasNextLine()){
-                System.out.println(scanner.nextLine());
+                ConsoleHelper.writeMessage(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.out.println("Закончились мои сказочки, детка...");        }
+            ConsoleHelper.writeMessage("Закончились мои сказочки, детка...");        }
     }
 
     public String toString(){
@@ -35,61 +35,61 @@ public class Fairytale implements Serializable {
             switch (r) {
                 case 0: {
                     Thread.sleep(1000);
-                    System.out.println("Ну что, еще хочешь сказочку?");
+                    ConsoleHelper.writeMessage("Ну что, еще хочешь сказочку?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 1: {
                     Thread.sleep(1000);
-                    System.out.println("Ещё сказку?");
+                    ConsoleHelper.writeMessage("Ещё сказку?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 2: {
                     Thread.sleep(1000);
-                    System.out.println("Что, ещё сказку?");
+                    ConsoleHelper.writeMessage("Что, ещё сказку?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 3: {
                     Thread.sleep(1000);
-                    System.out.println("Ну что, хочешь еще разок сказку?");
+                    ConsoleHelper.writeMessage("Ну что, хочешь еще разок сказку?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 4: {
                     Thread.sleep(1000);
-                    System.out.println("Еще будешь читать сказку?");
+                    ConsoleHelper.writeMessage("Еще будешь читать сказку?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 5: {
                     Thread.sleep(1000);
-                    System.out.println("Ну что, давай еще разочек расскажу сказку?");
+                    ConsoleHelper.writeMessage("Ну что, давай еще разочек расскажу сказку?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 6: {
                     Thread.sleep(1000);
-                    System.out.println("Как ты смотришь на то, чтобы повторить? Еще раз сказку?");
+                    ConsoleHelper.writeMessage("Как ты смотришь на то, чтобы повторить? Еще раз сказку?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 7: {
                     Thread.sleep(1000);
-                    System.out.println("Хочешь еще сказку?");
+                    ConsoleHelper.writeMessage("Хочешь еще сказку?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 8: {
                     Thread.sleep(1000);
-                    System.out.println("Ну что, давай-ка ещё разок сказочку, а?");
+                    ConsoleHelper.writeMessage("Ну что, давай-ка ещё разок сказочку, а?");
                     Thread.sleep(1000);
                     break;
                 }
                 case 9: {
                     Thread.sleep(1000);
-                    System.out.println("Ну, что скажешь? Еще разок сказочку рассказать?");
+                    ConsoleHelper.writeMessage("Ну, что скажешь? Еще разок сказочку рассказать?");
                     Thread.sleep(1000);
                     break;
                 }
@@ -118,10 +118,10 @@ public class Fairytale implements Serializable {
             } else return false;
         }
         catch(InterruptedException i){
-            System.out.println("Слишком уж долго тебя ждать...");
+            ConsoleHelper.writeMessage("Слишком уж долго тебя ждать...");
         }
         catch(IOException io){
-            System.out.println("Мне тут говорят, что ошибка ввода-вывода какая-то... Но мы продолжаем!");
+            ConsoleHelper.writeMessage("Мне тут говорят, что ошибка ввода-вывода какая-то... Но мы продолжаем!");
         }
         return false; ////////////////////////////////////////вот если ретерн фолс убрать, то это может быть поможет...
     }

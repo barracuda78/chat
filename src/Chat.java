@@ -27,56 +27,59 @@ public class Chat implements Serializable {
     public static void chat01school(){
         try {
             Thread.sleep(600);
-            System.out.println("Хе-хе... А тебе нравится учиться чему-то новому?");
+            ConsoleHelper.writeMessage("Хе-хе... А тебе нравится учиться чему-то новому?");
             Thread.sleep(600);
         }
         catch(InterruptedException ie){
-            System.out.println("Очень-очень-очень долго тебя ждать...");
+            ConsoleHelper.writeMessage("Очень-очень-очень долго тебя ждать...");
         }
     }
 
     public static void chat002music(){
         try {
             Thread.sleep(600);
-            System.out.println("Я люблю музыку. При том очень разную. А тебе какая музыка нравится?");
+            ConsoleHelper.writeMessage("Я люблю музыку. При том очень разную. А тебе какая музыка нравится?");
             Thread.sleep(600);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             String answerWhatMusic = bufferedReader.readLine();
             if(answerWhatMusic.contains("рэп")){
-                System.out.println("О! Круто! А какие рэп-исполнители тебе нравятся? Я имею ввиду российских рэперов!");
+                ConsoleHelper.writeMessage("О! Круто! А какие рэп-исполнители тебе нравятся? Я имею ввиду российских рэперов!");
             }
             else if(answerWhatMusic.contains("рок")){
-                System.out.println("О! Круто! А какие рок-исполнители тебе нравятся? Я имею ввиду российских рокеров!");
+                ConsoleHelper.writeMessage("О! Круто! А какие рок-исполнители тебе нравятся? Я имею ввиду российских рокеров!");
             }
             else if(answerWhatMusic.contains("поп")){
-                System.out.println("О! Круто! А какие поп-исполнители тебе нравятся? Я имею ввиду российских исполнителей!");
+                ConsoleHelper.writeMessage("О! Круто! А какие поп-исполнители тебе нравятся? Я имею ввиду российских исполнителей!");
             }
             else if(answerWhatMusic.contains("метал")||answerWhatMusic.contains("metal")||answerWhatMusic.contains("dark")||answerWhatMusic.contains("black")||answerWhatMusic.contains("doom")){
-                System.out.println("О! Круто! А какие металлические коллективы тебе нравятся?");
+                ConsoleHelper.writeMessage("О! Круто! А какие металлические коллективы тебе нравятся?");
+            }else{
+                ConsoleHelper.writeMessage("Ой! я такого не знаю...");
             }
+
         }
         catch(InterruptedException ie){
-            System.out.println("Очень-очень-очень долго тебя ждать...");
+            ConsoleHelper.writeMessage("Очень-очень-очень долго тебя ждать...");
         }
         catch(IOException io){
-            System.out.println("Это еще одна ошибка ввода-вывода в chat002music()");
+            ConsoleHelper.writeMessage("Это еще одна ошибка ввода-вывода в chat002music()");
         }
     }
 
     public static void chat003english(){
         try {
             Thread.sleep(600);
-            System.out.println("О! Я люблю английский язык! Давай поиграем с тобой в английские слова?");
+            ConsoleHelper.writeMessage("О! Я люблю английский язык! Давай поиграем с тобой в английские слова?");
             Thread.sleep(2500);
-            System.out.println("Я пишу слово на английском, а ты переводишь его на русский и пишешь мне!");
+            ConsoleHelper.writeMessage("Я пишу слово на английском, а ты переводишь его на русский и пишешь мне!");
             Thread.sleep(2000);
-            System.out.println("Если перевод правильный - ты получаешь один балл!");
+            ConsoleHelper.writeMessage("Если перевод правильный - ты получаешь один балл!");
             Thread.sleep(2000);
-            System.out.println("Если неправильный - ты получаешь МИНУС один балл...");
+            ConsoleHelper.writeMessage("Если неправильный - ты получаешь МИНУС один балл...");
             Thread.sleep(2500);
-            System.out.println("Если в итоге ты набираешь +3 баллов - твоя победа! Если набираешь минус 3 баллов - моя!");
+            ConsoleHelper.writeMessage("Если в итоге ты набираешь +3 баллов - твоя победа! Если набираешь минус 3 баллов - моя!");
             Thread.sleep(1000);
-            System.out.println("Ну что, поиграем?");
+            ConsoleHelper.writeMessage("Ну что, поиграем?");
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             String answer = bufferedReader.readLine();
             answer = answer.toLowerCase();
@@ -93,10 +96,10 @@ public class Chat implements Serializable {
             }
         }
         catch(InterruptedException ie){
-            System.out.println("Очень-очень-очень долго тебя ждать...");
+            ConsoleHelper.writeMessage("Очень-очень-очень долго тебя ждать...");
         }
         catch(IOException io){
-            System.out.println("Это еще одна ошибка ввода-вывода в chat002music()");
+            ConsoleHelper.writeMessage("Это еще одна ошибка ввода-вывода в chat002music()");
         }
     }
     public static void gameEngWords(){
@@ -240,49 +243,49 @@ public class Chat implements Serializable {
                     switch (countWords) {
                         case 0: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Начали. Переводи первое слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Начали. Переводи первое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 1: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи второе слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи второе слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 2: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи третье слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи третье слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 3: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи четвертое слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи четвертое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 4: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи пятое слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи пятое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 5: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи шестое слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи шестое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         default: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи " + (countWords + 1) + " слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи " + (countWords + 1) + " слово:");
                             Thread.sleep(600);
                             break;
                         }
                     } //хорошо. переводи 1-е, 2-е ... слово.
 
-                    System.out.println(key);
+                    ConsoleHelper.writeMessage(key);
                     countWords++;
 
                     //пользователь вводит свой ответ
@@ -299,61 +302,61 @@ public class Chat implements Serializable {
                         switch (random) {
                             case 0: {
                                 Thread.sleep(1000);
-                                System.out.println("Ура! Правильно!");
+                                ConsoleHelper.writeMessage("Ура! Правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 1: {
                                 Thread.sleep(1000);
-                                System.out.println("Да! Всё верно!");
+                                ConsoleHelper.writeMessage("Да! Всё верно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 2: {
                                 Thread.sleep(1000);
-                                System.out.println("Правильно! Молодец!");
+                                ConsoleHelper.writeMessage("Правильно! Молодец!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 3: {
                                 Thread.sleep(1000);
-                                System.out.println("Умница! Правильно!");
+                                ConsoleHelper.writeMessage("Умница! Правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 4: {
                                 Thread.sleep(1000);
-                                System.out.println("Ты мой золотой! Всё правильно!");
+                                ConsoleHelper.writeMessage("Ты мой золотой! Всё правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 5: {
                                 Thread.sleep(1000);
-                                System.out.println("Да! Да! Да! Все правильно!");
+                                ConsoleHelper.writeMessage("Да! Да! Да! Все правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 6: {
                                 Thread.sleep(1000);
-                                System.out.println("Ух-ты! Правильно!");
+                                ConsoleHelper.writeMessage("Ух-ты! Правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 7: {
                                 Thread.sleep(1000);
-                                System.out.println("Точно! Молодец!");
+                                ConsoleHelper.writeMessage("Точно! Молодец!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 8: {
                                 Thread.sleep(1000);
-                                System.out.println("Всё верно! Умничка!");
+                                ConsoleHelper.writeMessage("Всё верно! Умничка!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 9: {
                                 Thread.sleep(1000);
-                                System.out.println("Да! Ты правильно перевел!");
+                                ConsoleHelper.writeMessage("Да! Ты правильно перевел!");
                                 Thread.sleep(1000);
                                 break;
                             }
@@ -362,7 +365,7 @@ public class Chat implements Serializable {
 
                         countWrightAnswers++;
                         Thread.sleep(600);
-                        System.out.println("Количество твоих очков = " + countWrightAnswers);
+                        ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                         Thread.sleep(600);
 
                         if(countWrightAnswers == 5){
@@ -380,61 +383,61 @@ public class Chat implements Serializable {
                         switch (ran) {
                             case 0: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет... не правильно. Минус очко тебе");
+                                ConsoleHelper.writeMessage("Нет... не правильно. Минус очко тебе");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 1: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет, это неправильный ответ.");
+                                ConsoleHelper.writeMessage("Нет, это неправильный ответ.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 2: {
                                 Thread.sleep(1000);
-                                System.out.println("Ты не прав.");
+                                ConsoleHelper.writeMessage("Ты не прав.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 3: {
                                 Thread.sleep(1000);
-                                System.out.println("Ты неправильно перевел.");
+                                ConsoleHelper.writeMessage("Ты неправильно перевел.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 4: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет, нет, нет. Этот перевод никуда не годится.");
+                                ConsoleHelper.writeMessage("Нет, нет, нет. Этот перевод никуда не годится.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 5: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет, ты не прав. У этого слова другое значение.");
+                                ConsoleHelper.writeMessage("Нет, ты не прав. У этого слова другое значение.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 6: {
                                 Thread.sleep(1000);
-                                System.out.println("Ответ неправильный.");
+                                ConsoleHelper.writeMessage("Ответ неправильный.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 7: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет, всё совсем не так. Неправильно.");
+                                ConsoleHelper.writeMessage("Нет, всё совсем не так. Неправильно.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 8: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет. Не то ты написал.");
+                                ConsoleHelper.writeMessage("Нет. Не то ты написал.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 9: {
                                 Thread.sleep(1000);
-                                System.out.println("Ты меня разочаровал. Неправильный ответ.");
+                                ConsoleHelper.writeMessage("Ты меня разочаровал. Неправильный ответ.");
                                 Thread.sleep(1000);
                                 break;
                             }
@@ -443,7 +446,7 @@ public class Chat implements Serializable {
 
                         countWrightAnswers--;
                         Thread.sleep(600);
-                        System.out.println("Количество твоих очков = " + countWrightAnswers);
+                        ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
 
                         if(countWrightAnswers == 5){
                             gameEngWordsWin();
@@ -455,21 +458,21 @@ public class Chat implements Serializable {
                         }
 
                         Thread.sleep(600);
-                        System.out.println("Еще попытку хочешь? Да или нет?");
+                        ConsoleHelper.writeMessage("Еще попытку хочешь? Да или нет?");
                         Thread.sleep(600);
                         String answerYesNo = bufferedReader.readLine();
                         answerYesNo = answerYesNo.toLowerCase();
                         if (Test.yesNo(answerYesNo)) {
                             Thread.sleep(600);
-                            System.out.println("переведи слово: " + key);
+                            ConsoleHelper.writeMessage("переведи слово: " + key);
                             Thread.sleep(600);
                             String answer2 = bufferedReader.readLine();
                             if (answer2.equals(value)) {
                                 Thread.sleep(600);
-                                System.out.println("Ура! Теперь правильно!");
+                                ConsoleHelper.writeMessage("Ура! Теперь правильно!");
                                 countWrightAnswers++;
                                 Thread.sleep(600);
-                                System.out.println("Количество твоих очков = " + countWrightAnswers);
+                                ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                                 Thread.sleep(600);
 
                                 if(countWrightAnswers == 5){
@@ -483,12 +486,12 @@ public class Chat implements Serializable {
 
                             } else {
                                 Thread.sleep(600);
-                                System.out.println("Нет. Не то. Еще минус одно очко.");
+                                ConsoleHelper.writeMessage("Нет. Не то. Еще минус одно очко.");
                                 countWrightAnswers--;
                                 Thread.sleep(600);
-                                System.out.println("Количество твоих очков = " + countWrightAnswers);
+                                ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                                 Thread.sleep(600);
-                                System.out.println("Правильный ответ вот такой: " + value);
+                                ConsoleHelper.writeMessage("Правильный ответ вот такой: " + value);
                                 Thread.sleep(600);
 
                                 if(countWrightAnswers == 5){
@@ -502,7 +505,7 @@ public class Chat implements Serializable {
                             }
                         } else {
                             Thread.sleep(600);
-                            System.out.println("Правильный ответ: " + value);
+                            ConsoleHelper.writeMessage("Правильный ответ: " + value);
                             Thread.sleep(600);
                         }
                     }
@@ -510,7 +513,7 @@ public class Chat implements Serializable {
                     //это раздражает. Постоянный вопрос. Игра есть игра. 5 слов задаем, не спрашивая. Пока выключаю.
 /*                    if(countWrightAnswers!=5 || countWrightAnswers !=-5) {
                         Thread.sleep(600);
-                        System.out.println("Ну что, хочешь еще одно слово перевести?");
+                        ConsoleHelper.writeMessage("Ну что, хочешь еще одно слово перевести?");
                         Thread.sleep(600);
                         String answerYesNo = bufferedReader.readLine();
                         answerYesNo = answerYesNo.toLowerCase();
@@ -522,9 +525,9 @@ public class Chat implements Serializable {
                     }*/
 /*                    if(countWrightAnswers == 5){
                         Thread.sleep(600);
-                        System.out.println("Поздравляю. Я проиграл. Ты - победитель.");
+                        ConsoleHelper.writeMessage("Поздравляю. Я проиграл. Ты - победитель.");
                         Thread.sleep(600);
-                        System.out.println("Хочешь еще попробовать в эту же игру?");
+                        ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                         Thread.sleep(600);
                         BufferedReader bufferedReader01 = new BufferedReader(new InputStreamReader(System.in));
                         String answerYesNo01 = bufferedReader01.readLine();
@@ -538,9 +541,9 @@ public class Chat implements Serializable {
 
                     if(countWrightAnswers == -5){
                         Thread.sleep(600);
-                        System.out.println("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
+                        ConsoleHelper.writeMessage("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
                         Thread.sleep(600);
-                        System.out.println("Хочешь еще попробовать в эту же игру?");
+                        ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                         Thread.sleep(600);
                         BufferedReader bufferedReader02 = new BufferedReader(new InputStreamReader(System.in));
                         String answerYesNo02 = bufferedReader02.readLine();
@@ -557,9 +560,9 @@ public class Chat implements Serializable {
 /*            else if(countWrightAnswers == 5)
             {
                 Thread.sleep(600);
-                System.out.println("Поздравляю. Я проиграл. Ты - победитель.");
+                ConsoleHelper.writeMessage("Поздравляю. Я проиграл. Ты - победитель.");
                 Thread.sleep(600);
-                System.out.println("Хочешь еще попробовать в эту же игру?");
+                ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                 Thread.sleep(600);
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String answerYesNo = bufferedReader.readLine();
@@ -572,9 +575,9 @@ public class Chat implements Serializable {
             }
             else if(countWrightAnswers == -5){
                 Thread.sleep(600);
-                System.out.println("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
+                ConsoleHelper.writeMessage("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
                 Thread.sleep(600);
-                System.out.println("Хочешь еще попробовать в эту же игру?");
+                ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                 Thread.sleep(600);
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String answerYesNo = bufferedReader.readLine();
@@ -586,7 +589,7 @@ public class Chat implements Serializable {
                 }
             }*/
             else{
-                System.out.println("Что-то мне надоело играть...");
+                ConsoleHelper.writeMessage("Что-то мне надоело играть...");
                 Test.chat00();
             }
 
@@ -594,10 +597,10 @@ public class Chat implements Serializable {
 
         }
         catch(InterruptedException ie){
-            System.out.println("Интерраптед ошибочка в методе gameEngWords(). Но мы идем далее.");
+            ConsoleHelper.writeMessage("Интерраптед ошибочка в методе gameEngWords(). Но мы идем далее.");
         }
         catch(IOException io){
-            System.out.println("Ошибка ввода-вывода в методе gameEngWords(). Но мы идем далее.");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода в методе gameEngWords(). Но мы идем далее.");
         }
     } //старый метод, вместо него использую gameEngWords2()
 
@@ -895,11 +898,11 @@ public class Chat implements Serializable {
                 }*/
 
                 Thread.sleep(600);
-                System.out.println("Давай сначала повторим слова, которые ты не назвал правильно в прошлый раз");
+                ConsoleHelper.writeMessage("Давай сначала повторим слова, которые ты не назвал правильно в прошлый раз");
                 Thread.sleep(600);
                 wordsGuess2(listOfUnknownWordsOld);
 
-                System.out.println("Хорошо, повторили. Теперь поиграем в слова с полным списком слов!");
+                ConsoleHelper.writeMessage("Хорошо, повторили. Теперь поиграем в слова с полным списком слов!");
                 Thread.sleep(600);
                 listOfUnknownWords = wordsGuess(listOfEngWords);
             }
@@ -912,7 +915,7 @@ public class Chat implements Serializable {
 /*
                 while (wantMore) {
                     int r = Test.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
-                    //System.out.println("рандомное число = " + r); // это проверка, что за рандомное число мы получаем.
+                    //ConsoleHelper.writeMessage("рандомное число = " + r); // это проверка, что за рандомное число мы получаем.
 
                     //этот блок кода нужен чтобы не было ArrayOutOfBounds Exception.
                     if (r >= listOfEngWords.size()) {
@@ -926,50 +929,50 @@ public class Chat implements Serializable {
                     switch (countWords) {
                         case 0: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Начали. Переводи первое слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Начали. Переводи первое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 1: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи второе слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи второе слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 2: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи третье слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи третье слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 3: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи четвертое слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи четвертое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 4: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи пятое слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи пятое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 5: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи шестое слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи шестое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         default: {
                             Thread.sleep(600);
-                            System.out.println("Хорошо. Переводи " + (countWords + 1) + " слово:");
+                            ConsoleHelper.writeMessage("Хорошо. Переводи " + (countWords + 1) + " слово:");
                             Thread.sleep(600);
                             break;
                         }
                     } //хорошо. переводи 1-е, 2-е ... слово.
 
 
-                    System.out.println(word.getEngWord1()); //выводим на экран в качестве вопроса английский вариант номер 1 этого произвольного слова.
+                    ConsoleHelper.writeMessage(word.getEngWord1()); //выводим на экран в качестве вопроса английский вариант номер 1 этого произвольного слова.
                     countWords++;
 
                     //пользователь вводит свой ответ
@@ -988,61 +991,61 @@ public class Chat implements Serializable {
                         switch (random) {                                    //говорим пользователю Ура! Правильно!
                             case 0: {
                                 Thread.sleep(1000);
-                                System.out.println("Ура! Правильно!");
+                                ConsoleHelper.writeMessage("Ура! Правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 1: {
                                 Thread.sleep(1000);
-                                System.out.println("Да! Всё верно!");
+                                ConsoleHelper.writeMessage("Да! Всё верно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 2: {
                                 Thread.sleep(1000);
-                                System.out.println("Правильно! Молодец!");
+                                ConsoleHelper.writeMessage("Правильно! Молодец!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 3: {
                                 Thread.sleep(1000);
-                                System.out.println("Умница! Правильно!");
+                                ConsoleHelper.writeMessage("Умница! Правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 4: {
                                 Thread.sleep(1000);
-                                System.out.println("Ты мой золотой! Всё правильно!");
+                                ConsoleHelper.writeMessage("Ты мой золотой! Всё правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 5: {
                                 Thread.sleep(1000);
-                                System.out.println("Да! Да! Да! Все правильно!");
+                                ConsoleHelper.writeMessage("Да! Да! Да! Все правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 6: {
                                 Thread.sleep(1000);
-                                System.out.println("Ух-ты! Правильно!");
+                                ConsoleHelper.writeMessage("Ух-ты! Правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 7: {
                                 Thread.sleep(1000);
-                                System.out.println("Точно! Молодец!");
+                                ConsoleHelper.writeMessage("Точно! Молодец!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 8: {
                                 Thread.sleep(1000);
-                                System.out.println("Всё верно! Умничка!");
+                                ConsoleHelper.writeMessage("Всё верно! Умничка!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 9: {
                                 Thread.sleep(1000);
-                                System.out.println("Да! Ты правильно перевел!");
+                                ConsoleHelper.writeMessage("Да! Ты правильно перевел!");
                                 Thread.sleep(1000);
                                 break;
                             }
@@ -1050,13 +1053,13 @@ public class Chat implements Serializable {
 
                         countWrightAnswers++;
                         Thread.sleep(600);
-                        System.out.println("Количество твоих очков = " + countWrightAnswers);
+                        ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                         Thread.sleep(600);
 
                         if (countWrightAnswers == 3) {
                             gameEngWordsWin();
                             Thread.sleep(600);
-                            System.out.println("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
+                            ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
@@ -1070,7 +1073,7 @@ public class Chat implements Serializable {
                         if (countWrightAnswers == -3) {
                             gameEngWordsLoose();
                             Thread.sleep(600);
-                            System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                            ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
@@ -1090,61 +1093,61 @@ public class Chat implements Serializable {
                         switch (ran) {                   //говорим пользователю: Нет... не правильно. Минус очко тебе
                             case 0: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет... не правильно. Минус очко тебе");
+                                ConsoleHelper.writeMessage("Нет... не правильно. Минус очко тебе");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 1: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет, это неправильный ответ.");
+                                ConsoleHelper.writeMessage("Нет, это неправильный ответ.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 2: {
                                 Thread.sleep(1000);
-                                System.out.println("Ты не прав.");
+                                ConsoleHelper.writeMessage("Ты не прав.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 3: {
                                 Thread.sleep(1000);
-                                System.out.println("Ты неправильно перевел.");
+                                ConsoleHelper.writeMessage("Ты неправильно перевел.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 4: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет, нет, нет. Этот перевод никуда не годится.");
+                                ConsoleHelper.writeMessage("Нет, нет, нет. Этот перевод никуда не годится.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 5: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет, ты не прав. У этого слова другое значение.");
+                                ConsoleHelper.writeMessage("Нет, ты не прав. У этого слова другое значение.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 6: {
                                 Thread.sleep(1000);
-                                System.out.println("Ответ неправильный.");
+                                ConsoleHelper.writeMessage("Ответ неправильный.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 7: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет, всё совсем не так. Неправильно.");
+                                ConsoleHelper.writeMessage("Нет, всё совсем не так. Неправильно.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 8: {
                                 Thread.sleep(1000);
-                                System.out.println("Нет. Не то ты написал.");
+                                ConsoleHelper.writeMessage("Нет. Не то ты написал.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 9: {
                                 Thread.sleep(1000);
-                                System.out.println("Ты меня разочаровал. Неправильный ответ.");
+                                ConsoleHelper.writeMessage("Ты меня разочаровал. Неправильный ответ.");
                                 Thread.sleep(1000);
                                 break;
                             }
@@ -1153,12 +1156,12 @@ public class Chat implements Serializable {
 
                         countWrightAnswers--;
                         Thread.sleep(600);
-                        System.out.println("Количество твоих очков = " + countWrightAnswers);
+                        ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
 
                         if (countWrightAnswers == 3) {
                             gameEngWordsWin();
                             Thread.sleep(600);
-                            System.out.println("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
+                            ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
@@ -1172,7 +1175,7 @@ public class Chat implements Serializable {
                         if (countWrightAnswers == -3) {
                             gameEngWordsLoose();
                             Thread.sleep(600);
-                            System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                            ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
@@ -1185,7 +1188,7 @@ public class Chat implements Serializable {
                         }
 
                         Thread.sleep(600);
-                        System.out.println("Еще попытку хочешь? Да или нет?");
+                        ConsoleHelper.writeMessage("Еще попытку хочешь? Да или нет?");
                         Thread.sleep(600);
                         String answerYesNo = bufferedReader.readLine();
                         answerYesNo = answerYesNo.toLowerCase();
@@ -1195,22 +1198,22 @@ public class Chat implements Serializable {
 
                         if (Test.yesNo(answerYesNo)) {
                             Thread.sleep(600);
-                            System.out.println("переведи слово: " + word.getEngWord1());
+                            ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
                             Thread.sleep(600);
                             String answer2 = bufferedReader.readLine();
                             answer2 = answer2.toLowerCase();
                             if (answer2.equals(word.getRusWord1()) || answer2.equals(word.getRusWord2()) || answer2.equals(word.getRusWord3()) || answer2.equals(word.getRusWord4()) || answer2.equals(word.getRusWordPlural1()) || answer2.equals(word.getRusWordPlural2()) || answer2.equals(word.getRusSinonim1()) || answer2.contains(word.getRusWord1()) || answer2.contains(word.getRusWord2()) || answer2.contains(word.getRusWord3()) || answer2.contains(word.getRusWord4()) || answer2.contains(word.getRusWordPlural1()) || answer2.contains(word.getRusWordPlural2()) || answer2.contains(word.getRusSinonim1())) {
                                 Thread.sleep(600);
-                                System.out.println("Ура! Теперь правильно!");
+                                ConsoleHelper.writeMessage("Ура! Теперь правильно!");
                                 countWrightAnswers++;
                                 Thread.sleep(600);
-                                System.out.println("Количество твоих очков = " + countWrightAnswers);
+                                ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                                 Thread.sleep(600);
 
                                 if (countWrightAnswers == 3) {
                                     gameEngWordsWin();
                                     Thread.sleep(600);
-                                    System.out.println("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
+                                    ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
                                     String answer3 = bufferedReader.readLine();
                                     answer3 = answer3.toLowerCase();
 
@@ -1222,7 +1225,7 @@ public class Chat implements Serializable {
                                 if (countWrightAnswers == -3) {
                                     gameEngWordsLoose();
                                     Thread.sleep(600);
-                                    System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                                    ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                                     String answer4 = bufferedReader.readLine();
                                     answer4 = answer4.toLowerCase();
 
@@ -1234,20 +1237,20 @@ public class Chat implements Serializable {
 
                             } else {
                                 Thread.sleep(600);
-                                System.out.println("Нет. Не то. Еще минус одно очко.");
+                                ConsoleHelper.writeMessage("Нет. Не то. Еще минус одно очко.");
                                 countWrightAnswers--;
                                 listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
                                 Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                                 Thread.sleep(600);
-                                System.out.println("Количество твоих очков = " + countWrightAnswers);
+                                ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                                 Thread.sleep(600);
-                                System.out.println("Правильный ответ вот такой: " + word.getRusWord1());
+                                ConsoleHelper.writeMessage("Правильный ответ вот такой: " + word.getRusWord1());
                                 Thread.sleep(600);
 
                                 if (countWrightAnswers == 3) {
                                     gameEngWordsWin();
                                     Thread.sleep(600);
-                                    System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                                    ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                                     String answer5 = bufferedReader.readLine();
                                     answer5 = answer5.toLowerCase();
 
@@ -1261,7 +1264,7 @@ public class Chat implements Serializable {
                                 if (countWrightAnswers == -3) {
                                     gameEngWordsLoose();
                                     Thread.sleep(600);
-                                    System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                                    ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                                     String answer6 = bufferedReader.readLine();
                                     answer6 = answer6.toLowerCase();
 
@@ -1278,15 +1281,15 @@ public class Chat implements Serializable {
                             if (word instanceof EngWordsVerb) {
 
                                 Thread.sleep(600);
-                                System.out.println("Правильный ответ: " + word.getRusWord1());
+                                ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                                 Thread.sleep(600);
-                                System.out.println("Три формы глагола: " + word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
+                                ConsoleHelper.writeMessage("Три формы глагола: " + word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
                                 listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
                                 Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                                 Thread.sleep(600);
                             } else {
                                 Thread.sleep(600);
-                                System.out.println("Правильный ответ: " + word.getRusWord1());
+                                ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                                 listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
                                 Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                                 Thread.sleep(600);
@@ -1333,13 +1336,13 @@ public class Chat implements Serializable {
 
         }
         catch(InterruptedException ie){
-            System.out.println("Ошибочка. InterruptedException в методе gameEngWords2(). Но мы идем дальше.");
+            ConsoleHelper.writeMessage("Ошибочка. InterruptedException в методе gameEngWords2(). Но мы идем дальше.");
         }
         catch(IOException io){
-            System.out.println("Ошибка ввода-вывода в методе gameEngWords2(). Но мы идем дальше.");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода в методе gameEngWords2(). Но мы идем дальше.");
         }
         catch(ClassNotFoundException cnf){
-            System.out.println("Ошибка ClassNotFoundException в методе gameEngWords2(). Но мы идем дальше.");
+            ConsoleHelper.writeMessage("Ошибка ClassNotFoundException в методе gameEngWords2(). Но мы идем дальше.");
         }
     }
 
@@ -1347,9 +1350,9 @@ public class Chat implements Serializable {
 
         try {
             Thread.sleep(600);
-            System.out.println("Поздравляю. Я проиграл. Ты - победитель.");
+            ConsoleHelper.writeMessage("Поздравляю. Я проиграл. Ты - победитель.");
             Thread.sleep(600);
-            System.out.println("Хочешь еще попробовать в эту же игру?");
+            ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
             Thread.sleep(600);
             BufferedReader bufferedReader01 = new BufferedReader(new InputStreamReader(System.in));
             String answerYesNo01 = bufferedReader01.readLine();
@@ -1357,16 +1360,16 @@ public class Chat implements Serializable {
             if (Test.yesNo(answerYesNo01)) {
                 gameEngWords2();
             } else {
-                System.out.println("Ладно. Тогда...");
+                ConsoleHelper.writeMessage("Ладно. Тогда...");
                 //Test.chat00();
                 return;
             }
         }
         catch(InterruptedException intex){
-            System.out.println("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
+            ConsoleHelper.writeMessage("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
         }
         catch(IOException ioe){
-            System.out.println("Здесь у нас ошибка ввода вывода в методе gameEngWordsWin(), но мы продолжаем.");
+            ConsoleHelper.writeMessage("Здесь у нас ошибка ввода вывода в методе gameEngWordsWin(), но мы продолжаем.");
         }
 
     }
@@ -1374,9 +1377,9 @@ public class Chat implements Serializable {
     public static void gameEngWordsLoose(){
         try {
             Thread.sleep(600);
-            System.out.println("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
+            ConsoleHelper.writeMessage("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
             Thread.sleep(600);
-            System.out.println("Хочешь еще попробовать в эту же игру?");
+            ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
             Thread.sleep(600);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             String answerYesNo = bufferedReader.readLine();
@@ -1389,10 +1392,10 @@ public class Chat implements Serializable {
             }
         }
         catch(InterruptedException intex){
-            System.out.println("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
+            ConsoleHelper.writeMessage("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
         }
         catch(IOException ioe){
-            System.out.println("Здесь у нас ошибка ввода вывода в методе gameEngWordsWin(), но мы продолжаем.");
+            ConsoleHelper.writeMessage("Здесь у нас ошибка ввода вывода в методе gameEngWordsWin(), но мы продолжаем.");
         }
     }
 
@@ -1400,58 +1403,58 @@ public class Chat implements Serializable {
         try {
             int countOfWords = 0;
             Thread.sleep(800);
-            System.out.println("хорошо. Теперь я буду писать тебе английское слово, ");
+            ConsoleHelper.writeMessage("хорошо. Теперь я буду писать тебе английское слово, ");
             Thread.sleep(1000);
-            System.out.println("а потом буду сообщать тебе его перевод на русский язык. ");
+            ConsoleHelper.writeMessage("а потом буду сообщать тебе его перевод на русский язык. ");
             Thread.sleep(1200);
-            System.out.println("И буду писать тебе этимологию (то есть происхождение) этого английского слова. Если найду её в Интернете, конечно.");
+            ConsoleHelper.writeMessage("И буду писать тебе этимологию (то есть происхождение) этого английского слова. Если найду её в Интернете, конечно.");
             Thread.sleep(1000);
-            System.out.println("А ты просто запоминай.");
+            ConsoleHelper.writeMessage("А ты просто запоминай.");
             Thread.sleep(600);
-            System.out.println("Итак, начнем!");
+            ConsoleHelper.writeMessage("Итак, начнем!");
             if(listOfUnknownWords.size() > 0) {
                 for (EngWords word : listOfUnknownWords) {
 
                     if(word instanceof EngWordsVerb){
                     Thread.sleep(600);
-                    System.out.println("Английское слово ");
+                    ConsoleHelper.writeMessage("Английское слово ");
                     Thread.sleep(600);
-                    System.out.println("-----------------");
-                    System.out.println(word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
-                    System.out.println("-----------------");
+                    ConsoleHelper.writeMessage("-----------------");
+                    ConsoleHelper.writeMessage(word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
+                    ConsoleHelper.writeMessage("-----------------");
                     Thread.sleep(600);
-                    System.out.println("означает: ");
+                    ConsoleHelper.writeMessage("означает: ");
                     Thread.sleep(600);
-                    System.out.println("-----------------");
-                    System.out.println(word.getRusWord1());
-                    System.out.println("-----------------");
+                    ConsoleHelper.writeMessage("-----------------");
+                    ConsoleHelper.writeMessage(word.getRusWord1());
+                    ConsoleHelper.writeMessage("-----------------");
                     Thread.sleep(600);
-                        System.out.println("Происхождение этого слова:");
-                        System.out.println(word.getEngEtymology1());
+                        ConsoleHelper.writeMessage("Происхождение этого слова:");
+                        ConsoleHelper.writeMessage(word.getEngEtymology1());
 
                     }
                     else{
                         Thread.sleep(600);
-                        System.out.println("Английское слово ");
+                        ConsoleHelper.writeMessage("Английское слово ");
                         Thread.sleep(600);
-                        System.out.println("-----------------");
-                        System.out.println(word.getEngWord1());
-                        System.out.println("-----------------");
+                        ConsoleHelper.writeMessage("-----------------");
+                        ConsoleHelper.writeMessage(word.getEngWord1());
+                        ConsoleHelper.writeMessage("-----------------");
                         Thread.sleep(600);
-                        System.out.println("означает: ");
+                        ConsoleHelper.writeMessage("означает: ");
                         Thread.sleep(600);
-                        System.out.println("-----------------");
-                        System.out.println(word.getRusWord1());
-                        System.out.println("-----------------");
+                        ConsoleHelper.writeMessage("-----------------");
+                        ConsoleHelper.writeMessage(word.getRusWord1());
+                        ConsoleHelper.writeMessage("-----------------");
                         Thread.sleep(600);
-                        System.out.println("Происхождение у этого слова такое:");
-                        System.out.println(word.getEngEtymology1());
+                        ConsoleHelper.writeMessage("Происхождение у этого слова такое:");
+                        ConsoleHelper.writeMessage(word.getEngEtymology1());
                     }
 
                     countOfWords++;
 
                     if(countOfWords < listOfUnknownWords.size()) {
-                        System.out.println("Еще слово?");
+                        ConsoleHelper.writeMessage("Еще слово?");
                         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                         String answer = bufferedReader.readLine();
                         answer = answer.toLowerCase();
@@ -1465,7 +1468,7 @@ public class Chat implements Serializable {
 
                 }
                 Thread.sleep(600);
-                System.out.println("Ну что, позагадывать тебе еще английские слова?");
+                ConsoleHelper.writeMessage("Ну что, позагадывать тебе еще английские слова?");
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String answer = bufferedReader.readLine();
                 answer = answer.toLowerCase();
@@ -1473,19 +1476,19 @@ public class Chat implements Serializable {
                     gameEngWords2();
                 }
                 else{
-                    System.out.println("Ну тогда...");
+                    ConsoleHelper.writeMessage("Ну тогда...");
                     Test.chat00();
                 }
             }
             else{
-                System.out.println("Слушай... Оказывается, нет таких слов, которые ты неправильно перевел! Ты крутой!");
+                ConsoleHelper.writeMessage("Слушай... Оказывается, нет таких слов, которые ты неправильно перевел! Ты крутой!");
             }
         }
         catch(InterruptedException ie){
-            System.out.println("Это InterruptedException в методе learnUnknownWords(), но мы идем дальше.");
+            ConsoleHelper.writeMessage("Это InterruptedException в методе learnUnknownWords(), но мы идем дальше.");
         }
         catch(IOException io){
-            System.out.println("Это ошибка ввода-вывода в методе learnUnknownWords(). А мы идем дальше.");
+            ConsoleHelper.writeMessage("Это ошибка ввода-вывода в методе learnUnknownWords(). А мы идем дальше.");
         }
     }
 
@@ -1504,10 +1507,10 @@ public class Chat implements Serializable {
 
         }
         catch(FileNotFoundException fnf){
-            System.out.println("Файл не найден. Идем далее.");
+            ConsoleHelper.writeMessage("Файл не найден. Идем далее.");
         }
         catch (IOException ioe) {
-            System.out.println("Ошибка ввода-вывода");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода");
         }
 
     }
@@ -1534,50 +1537,50 @@ public class Chat implements Serializable {
                 switch (countWords) {
                     case 0: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Начали. Переводи первое слово:");
+                        ConsoleHelper.writeMessage("Хорошо. Начали. Переводи первое слово:");
                         Thread.sleep(600);
                         break;
                     }
                     case 1: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи второе слово:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи второе слово:");
                         Thread.sleep(600);
                         break;
                     }
                     case 2: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи третье слово:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи третье слово:");
                         Thread.sleep(600);
                         break;
                     }
                     case 3: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи четвертое слово:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи четвертое слово:");
                         Thread.sleep(600);
                         break;
                     }
                     case 4: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи пятое слово:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи пятое слово:");
                         Thread.sleep(600);
                         break;
                     }
                     case 5: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи шестое слово:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи шестое слово:");
                         Thread.sleep(600);
                         break;
                     }
                     default: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи " + (countWords + 1) + " слово:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи " + (countWords + 1) + " слово:");
                         Thread.sleep(600);
                         break;
                     }
                 } //хорошо. переводи 1-е, 2-е ... слово.
 
 
-                System.out.println(word.getEngWord1()); //выводим на экран в качестве вопроса английский вариант номер 1 этого произвольного слова.
+                ConsoleHelper.writeMessage(word.getEngWord1()); //выводим на экран в качестве вопроса английский вариант номер 1 этого произвольного слова.
                 countWords++;
 
                 //пользователь вводит свой ответ
@@ -1596,61 +1599,61 @@ public class Chat implements Serializable {
                     switch (random) {                                    //говорим пользователю Ура! Правильно!
                         case 0: {
                             Thread.sleep(1000);
-                            System.out.println("Ура! Правильно!");
+                            ConsoleHelper.writeMessage("Ура! Правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 1: {
                             Thread.sleep(1000);
-                            System.out.println("Да! Всё верно!");
+                            ConsoleHelper.writeMessage("Да! Всё верно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 2: {
                             Thread.sleep(1000);
-                            System.out.println("Правильно! Молодец!");
+                            ConsoleHelper.writeMessage("Правильно! Молодец!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 3: {
                             Thread.sleep(1000);
-                            System.out.println("Умница! Правильно!");
+                            ConsoleHelper.writeMessage("Умница! Правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 4: {
                             Thread.sleep(1000);
-                            System.out.println("Ты мой золотой! Всё правильно!");
+                            ConsoleHelper.writeMessage("Ты мой золотой! Всё правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 5: {
                             Thread.sleep(1000);
-                            System.out.println("Да! Да! Да! Все правильно!");
+                            ConsoleHelper.writeMessage("Да! Да! Да! Все правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 6: {
                             Thread.sleep(1000);
-                            System.out.println("Ух-ты! Правильно!");
+                            ConsoleHelper.writeMessage("Ух-ты! Правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 7: {
                             Thread.sleep(1000);
-                            System.out.println("Точно! Молодец!");
+                            ConsoleHelper.writeMessage("Точно! Молодец!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 8: {
                             Thread.sleep(1000);
-                            System.out.println("Всё верно! Умничка!");
+                            ConsoleHelper.writeMessage("Всё верно! Умничка!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 9: {
                             Thread.sleep(1000);
-                            System.out.println("Да! Ты правильно перевел!");
+                            ConsoleHelper.writeMessage("Да! Ты правильно перевел!");
                             Thread.sleep(1000);
                             break;
                         }
@@ -1658,13 +1661,13 @@ public class Chat implements Serializable {
 
                     countWrightAnswers++;
                     Thread.sleep(600);
-                    System.out.println("Количество твоих очков = " + countWrightAnswers);
+                    ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                     Thread.sleep(600);
 
                     if (countWrightAnswers == 3) {
                         gameEngWordsWin();
                         Thread.sleep(600);
-                        System.out.println("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
+                        ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
                         String answerYesNo = bufferedReader.readLine();
                         answerYesNo = answerYesNo.toLowerCase();
 
@@ -1678,7 +1681,7 @@ public class Chat implements Serializable {
                     if (countWrightAnswers == -3) {
                         gameEngWordsLoose();
                         Thread.sleep(600);
-                        System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                        ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                         String answerYesNo = bufferedReader.readLine();
                         answerYesNo = answerYesNo.toLowerCase();
 
@@ -1698,61 +1701,61 @@ public class Chat implements Serializable {
                     switch (ran) {                   //говорим пользователю: Нет... не правильно. Минус очко тебе
                         case 0: {
                             Thread.sleep(1000);
-                            System.out.println("Нет... не правильно. Минус очко тебе");
+                            ConsoleHelper.writeMessage("Нет... не правильно. Минус очко тебе");
                             Thread.sleep(1000);
                             break;
                         }
                         case 1: {
                             Thread.sleep(1000);
-                            System.out.println("Нет, это неправильный ответ.");
+                            ConsoleHelper.writeMessage("Нет, это неправильный ответ.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 2: {
                             Thread.sleep(1000);
-                            System.out.println("Ты не прав.");
+                            ConsoleHelper.writeMessage("Ты не прав.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 3: {
                             Thread.sleep(1000);
-                            System.out.println("Ты неправильно перевел.");
+                            ConsoleHelper.writeMessage("Ты неправильно перевел.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 4: {
                             Thread.sleep(1000);
-                            System.out.println("Нет, нет, нет. Этот перевод никуда не годится.");
+                            ConsoleHelper.writeMessage("Нет, нет, нет. Этот перевод никуда не годится.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 5: {
                             Thread.sleep(1000);
-                            System.out.println("Нет, ты не прав. У этого слова другое значение.");
+                            ConsoleHelper.writeMessage("Нет, ты не прав. У этого слова другое значение.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 6: {
                             Thread.sleep(1000);
-                            System.out.println("Ответ неправильный.");
+                            ConsoleHelper.writeMessage("Ответ неправильный.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 7: {
                             Thread.sleep(1000);
-                            System.out.println("Нет, всё совсем не так. Неправильно.");
+                            ConsoleHelper.writeMessage("Нет, всё совсем не так. Неправильно.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 8: {
                             Thread.sleep(1000);
-                            System.out.println("Нет. Не то ты написал.");
+                            ConsoleHelper.writeMessage("Нет. Не то ты написал.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 9: {
                             Thread.sleep(1000);
-                            System.out.println("Ты меня разочаровал. Неправильный ответ.");
+                            ConsoleHelper.writeMessage("Ты меня разочаровал. Неправильный ответ.");
                             Thread.sleep(1000);
                             break;
                         }
@@ -1761,7 +1764,7 @@ public class Chat implements Serializable {
 
                     countWrightAnswers--;
                     Thread.sleep(600);
-                    System.out.println("Количество твоих очков = " + countWrightAnswers);
+                    ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                     listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
                     Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
 
@@ -1769,7 +1772,7 @@ public class Chat implements Serializable {
                     if (countWrightAnswers == 3) {
                         gameEngWordsWin();
                         Thread.sleep(600);
-                        System.out.println("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
+                        ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
                         String answerYesNo = bufferedReader.readLine();
                         answerYesNo = answerYesNo.toLowerCase();
 
@@ -1783,7 +1786,7 @@ public class Chat implements Serializable {
                     if (countWrightAnswers == -3) {
                         gameEngWordsLoose();
                         Thread.sleep(600);
-                        System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                        ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                         String answerYesNo = bufferedReader.readLine();
                         answerYesNo = answerYesNo.toLowerCase();
 
@@ -1796,7 +1799,7 @@ public class Chat implements Serializable {
                     }
 
                     Thread.sleep(600);
-                    System.out.println("Еще попытку хочешь? Да или нет?");
+                    ConsoleHelper.writeMessage("Еще попытку хочешь? Да или нет?");
                     Thread.sleep(600);
                     String answerYesNo = bufferedReader.readLine();
                     answerYesNo = answerYesNo.toLowerCase();
@@ -1806,22 +1809,22 @@ public class Chat implements Serializable {
 
                     if (Test.yesNo(answerYesNo)) {
                         Thread.sleep(600);
-                        System.out.println("переведи слово: " + word.getEngWord1());
+                        ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
                         Thread.sleep(600);
                         String answer2 = bufferedReader.readLine();
                         answer2 = answer2.toLowerCase();
                         if (answer2.equals(word.getRusWord1()) || answer2.equals(word.getRusWord2()) || answer2.equals(word.getRusWord3()) || answer2.equals(word.getRusWord4()) || answer2.equals(word.getRusWordPlural1()) || answer2.equals(word.getRusWordPlural2()) || answer2.equals(word.getRusSinonim1()) || answer2.contains(word.getRusWord1()) || answer2.contains(word.getRusWord2()) || answer2.contains(word.getRusWord3()) || answer2.contains(word.getRusWord4()) || answer2.contains(word.getRusWordPlural1()) || answer2.contains(word.getRusWordPlural2()) || answer2.contains(word.getRusSinonim1())) {
                             Thread.sleep(600);
-                            System.out.println("Ура! Теперь правильно!");
+                            ConsoleHelper.writeMessage("Ура! Теперь правильно!");
                             countWrightAnswers++;
                             Thread.sleep(600);
-                            System.out.println("Количество твоих очков = " + countWrightAnswers);
+                            ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                             Thread.sleep(600);
 
                             if (countWrightAnswers == 3) {
                                 gameEngWordsWin();
                                 Thread.sleep(600);
-                                System.out.println("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
+                                ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
                                 String answer3 = bufferedReader.readLine();
                                 answer3 = answer3.toLowerCase();
 
@@ -1833,7 +1836,7 @@ public class Chat implements Serializable {
                             if (countWrightAnswers == -3) {
                                 gameEngWordsLoose();
                                 Thread.sleep(600);
-                                System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                                ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                                 String answer4 = bufferedReader.readLine();
                                 answer4 = answer4.toLowerCase();
 
@@ -1845,20 +1848,20 @@ public class Chat implements Serializable {
 
                         } else {
                             Thread.sleep(600);
-                            System.out.println("Нет. Не то. Еще минус одно очко.");
+                            ConsoleHelper.writeMessage("Нет. Не то. Еще минус одно очко.");
                             countWrightAnswers--;
                             listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
                             Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                             Thread.sleep(600);
-                            System.out.println("Количество твоих очков = " + countWrightAnswers);
+                            ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                             Thread.sleep(600);
-                            System.out.println("Правильный ответ вот такой: " + word.getRusWord1());
+                            ConsoleHelper.writeMessage("Правильный ответ вот такой: " + word.getRusWord1());
                             Thread.sleep(600);
 
                             if (countWrightAnswers == 3) {
                                 gameEngWordsWin();
                                 Thread.sleep(600);
-                                System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                                ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                                 String answer5 = bufferedReader.readLine();
                                 answer5 = answer5.toLowerCase();
 
@@ -1872,7 +1875,7 @@ public class Chat implements Serializable {
                             if (countWrightAnswers == -3) {
                                 gameEngWordsLoose();
                                 Thread.sleep(600);
-                                System.out.println("А давай повторим слова, которые ты не перевел правильно?");
+                                ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                                 String answer6 = bufferedReader.readLine();
                                 answer6 = answer6.toLowerCase();
 
@@ -1889,15 +1892,15 @@ public class Chat implements Serializable {
                         if (word instanceof EngWordsVerb) {
 
                             Thread.sleep(600);
-                            System.out.println("Правильный ответ: " + word.getRusWord1());
+                            ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                             Thread.sleep(600);
-                            System.out.println("Три формы глагола: " + word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
+                            ConsoleHelper.writeMessage("Три формы глагола: " + word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
                             listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
                             Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                             Thread.sleep(600);
                         } else {
                             Thread.sleep(600);
-                            System.out.println("Правильный ответ: " + word.getRusWord1());
+                            ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                             listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
                             Test.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                             Thread.sleep(600);
@@ -1911,10 +1914,10 @@ public class Chat implements Serializable {
             return listOfUnknownWords;
         }
         catch(InterruptedException ie){
-            System.out.println("Ошибка InterruptedException в методе wordsGuess() , но мы идем далее.");
+            ConsoleHelper.writeMessage("Ошибка InterruptedException в методе wordsGuess() , но мы идем далее.");
         }
         catch (IOException io){
-            System.out.println("Ошибка ввода-вывода в методе wordsGuess() , но мы идем далее.");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода в методе wordsGuess() , но мы идем далее.");
         }
         return new ArrayList<EngWords>();    //можеет быть тут кроется ошибка. Возвращаем пустой список.
     }
@@ -1942,50 +1945,50 @@ public class Chat implements Serializable {
                 switch (countWords) {
                     case 0: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Начали. Переводи слово:");
+                        ConsoleHelper.writeMessage("Хорошо. Начали. Переводи слово:");
                         Thread.sleep(600);
                         break;
                     }
                     case 1: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи еще:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи еще:");
                         Thread.sleep(600);
                         break;
                     }
                     case 2: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи снова:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи снова:");
                         Thread.sleep(600);
                         break;
                     }
                     case 3: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи опять:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи опять:");
                         Thread.sleep(600);
                         break;
                     }
                     case 4: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Снова переводи:");
+                        ConsoleHelper.writeMessage("Хорошо. Снова переводи:");
                         Thread.sleep(600);
                         break;
                     }
                     case 5: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи еще слово:");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи еще слово:");
                         Thread.sleep(600);
                         break;
                     }
                     default: {
                         Thread.sleep(600);
-                        System.out.println("Хорошо. Переводи опять");
+                        ConsoleHelper.writeMessage("Хорошо. Переводи опять");
                         Thread.sleep(600);
                         break;
                     }
                 } //хорошо. переводи 1-е, 2-е ... слово.
 
 
-                System.out.println(word.getEngWord1()); //выводим на экран в качестве вопроса английский вариант номер 1 этого произвольного слова.
+                ConsoleHelper.writeMessage(word.getEngWord1()); //выводим на экран в качестве вопроса английский вариант номер 1 этого произвольного слова.
                 countWords++;
 
                 //пользователь вводит свой ответ
@@ -2004,61 +2007,61 @@ public class Chat implements Serializable {
                     switch (random) {                                    //говорим пользователю Ура! Правильно!
                         case 0: {
                             Thread.sleep(1000);
-                            System.out.println("Ура! Правильно!");
+                            ConsoleHelper.writeMessage("Ура! Правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 1: {
                             Thread.sleep(1000);
-                            System.out.println("Да! Всё верно!");
+                            ConsoleHelper.writeMessage("Да! Всё верно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 2: {
                             Thread.sleep(1000);
-                            System.out.println("Правильно! Молодец!");
+                            ConsoleHelper.writeMessage("Правильно! Молодец!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 3: {
                             Thread.sleep(1000);
-                            System.out.println("Умница! Правильно!");
+                            ConsoleHelper.writeMessage("Умница! Правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 4: {
                             Thread.sleep(1000);
-                            System.out.println("Ты мой золотой! Всё правильно!");
+                            ConsoleHelper.writeMessage("Ты мой золотой! Всё правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 5: {
                             Thread.sleep(1000);
-                            System.out.println("Да! Да! Да! Все правильно!");
+                            ConsoleHelper.writeMessage("Да! Да! Да! Все правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 6: {
                             Thread.sleep(1000);
-                            System.out.println("Ух-ты! Правильно!");
+                            ConsoleHelper.writeMessage("Ух-ты! Правильно!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 7: {
                             Thread.sleep(1000);
-                            System.out.println("Точно! Молодец!");
+                            ConsoleHelper.writeMessage("Точно! Молодец!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 8: {
                             Thread.sleep(1000);
-                            System.out.println("Всё верно! Умничка!");
+                            ConsoleHelper.writeMessage("Всё верно! Умничка!");
                             Thread.sleep(1000);
                             break;
                         }
                         case 9: {
                             Thread.sleep(1000);
-                            System.out.println("Да! Ты правильно перевел!");
+                            ConsoleHelper.writeMessage("Да! Ты правильно перевел!");
                             Thread.sleep(1000);
                             break;
                         }
@@ -2066,7 +2069,7 @@ public class Chat implements Serializable {
 
                     countWrightAnswers++;
                     Thread.sleep(600);
-                    System.out.println("Количество твоих очков = " + countWrightAnswers);
+                    ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                     Thread.sleep(600);
 
                     if (countWrightAnswers == 3) {
@@ -2086,61 +2089,61 @@ public class Chat implements Serializable {
                     switch (ran) {                   //говорим пользователю: Нет... не правильно. Минус очко тебе
                         case 0: {
                             Thread.sleep(1000);
-                            System.out.println("Нет... не правильно. Минус очко тебе");
+                            ConsoleHelper.writeMessage("Нет... не правильно. Минус очко тебе");
                             Thread.sleep(1000);
                             break;
                         }
                         case 1: {
                             Thread.sleep(1000);
-                            System.out.println("Нет, это неправильный ответ.");
+                            ConsoleHelper.writeMessage("Нет, это неправильный ответ.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 2: {
                             Thread.sleep(1000);
-                            System.out.println("Ты не прав.");
+                            ConsoleHelper.writeMessage("Ты не прав.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 3: {
                             Thread.sleep(1000);
-                            System.out.println("Ты неправильно перевел.");
+                            ConsoleHelper.writeMessage("Ты неправильно перевел.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 4: {
                             Thread.sleep(1000);
-                            System.out.println("Нет, нет, нет. Этот перевод никуда не годится.");
+                            ConsoleHelper.writeMessage("Нет, нет, нет. Этот перевод никуда не годится.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 5: {
                             Thread.sleep(1000);
-                            System.out.println("Нет, ты не прав. У этого слова другое значение.");
+                            ConsoleHelper.writeMessage("Нет, ты не прав. У этого слова другое значение.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 6: {
                             Thread.sleep(1000);
-                            System.out.println("Ответ неправильный.");
+                            ConsoleHelper.writeMessage("Ответ неправильный.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 7: {
                             Thread.sleep(1000);
-                            System.out.println("Нет, всё совсем не так. Неправильно.");
+                            ConsoleHelper.writeMessage("Нет, всё совсем не так. Неправильно.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 8: {
                             Thread.sleep(1000);
-                            System.out.println("Нет. Не то ты написал.");
+                            ConsoleHelper.writeMessage("Нет. Не то ты написал.");
                             Thread.sleep(1000);
                             break;
                         }
                         case 9: {
                             Thread.sleep(1000);
-                            System.out.println("Ты меня разочаровал. Неправильный ответ.");
+                            ConsoleHelper.writeMessage("Ты меня разочаровал. Неправильный ответ.");
                             Thread.sleep(1000);
                             break;
                         }
@@ -2149,7 +2152,7 @@ public class Chat implements Serializable {
 
                     countWrightAnswers--;
                     Thread.sleep(600);
-                    System.out.println("Количество твоих очков = " + countWrightAnswers);
+                    ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
 
                     if (countWrightAnswers == 3) {
                         gameEngWordsWin2();                                         //создать такой же метод без ЕЩЕ РАЗ?
@@ -2162,7 +2165,7 @@ public class Chat implements Serializable {
                     }
 
                     Thread.sleep(600);
-                    System.out.println("Еще попытку хочешь? Да или нет?");
+                    ConsoleHelper.writeMessage("Еще попытку хочешь? Да или нет?");
                     Thread.sleep(600);
                     String answerYesNo = bufferedReader.readLine();
                     answerYesNo = answerYesNo.toLowerCase();
@@ -2172,16 +2175,16 @@ public class Chat implements Serializable {
 
                     if (Test.yesNo(answerYesNo)) {
                         Thread.sleep(600);
-                        System.out.println("переведи слово: " + word.getEngWord1());
+                        ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
                         Thread.sleep(600);
                         String answer2 = bufferedReader.readLine();
                         answer2 = answer2.toLowerCase();
                         if (answer2.equals(word.getRusWord1()) || answer2.equals(word.getRusWord2()) || answer2.equals(word.getRusWord3()) || answer2.equals(word.getRusWord4()) || answer2.equals(word.getRusWordPlural1()) || answer2.equals(word.getRusWordPlural2()) || answer2.equals(word.getRusSinonim1()) || answer2.contains(word.getRusWord1()) || answer2.contains(word.getRusWord2()) || answer2.contains(word.getRusWord3()) || answer2.contains(word.getRusWord4()) || answer2.contains(word.getRusWordPlural1()) || answer2.contains(word.getRusWordPlural2()) || answer2.contains(word.getRusSinonim1())) {
                             Thread.sleep(600);
-                            System.out.println("Ура! Теперь правильно!");
+                            ConsoleHelper.writeMessage("Ура! Теперь правильно!");
                             countWrightAnswers++;
                             Thread.sleep(600);
-                            System.out.println("Количество твоих очков = " + countWrightAnswers);
+                            ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                             Thread.sleep(600);
 
                             if (countWrightAnswers == 3) {
@@ -2195,12 +2198,12 @@ public class Chat implements Serializable {
 
                         } else {
                             Thread.sleep(600);
-                            System.out.println("Нет. Не то. Еще минус одно очко.");
+                            ConsoleHelper.writeMessage("Нет. Не то. Еще минус одно очко.");
                             countWrightAnswers--;
                             Thread.sleep(600);
-                            System.out.println("Количество твоих очков = " + countWrightAnswers);
+                            ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                             Thread.sleep(600);
-                            System.out.println("Правильный ответ вот такой: " + word.getRusWord1());
+                            ConsoleHelper.writeMessage("Правильный ответ вот такой: " + word.getRusWord1());
                             Thread.sleep(600);
 
                             if (countWrightAnswers == 3) {
@@ -2216,13 +2219,13 @@ public class Chat implements Serializable {
                         if (word instanceof EngWordsVerb) {
 
                             Thread.sleep(600);
-                            System.out.println("Правильный ответ: " + word.getRusWord1());
+                            ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                             Thread.sleep(600);
-                            System.out.println("Три формы глагола: " + word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
+                            ConsoleHelper.writeMessage("Три формы глагола: " + word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
                               Thread.sleep(600);
                         } else {
                             Thread.sleep(600);
-                            System.out.println("Правильный ответ: " + word.getRusWord1());
+                            ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                             Thread.sleep(600);
                         }
 
@@ -2234,10 +2237,10 @@ public class Chat implements Serializable {
             return listOfUnknownWords;      //а это нужно вообще в этом дублированном методе?
         }
         catch(InterruptedException ie){
-            System.out.println("Ошибка InterruptedException в методе wordsGuess() , но мы идем далее.");
+            ConsoleHelper.writeMessage("Ошибка InterruptedException в методе wordsGuess() , но мы идем далее.");
         }
         catch (IOException io){
-            System.out.println("Ошибка ввода-вывода в методе wordsGuess() , но мы идем далее.");
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода в методе wordsGuess() , но мы идем далее.");
         }
         return new ArrayList<EngWords>();    //можеет быть тут кроется ошибка. Возвращаем пустой список.
     }
@@ -2247,12 +2250,12 @@ public class Chat implements Serializable {
 
         try {
             Thread.sleep(600);
-            System.out.println("Поздравляю. Я проиграл. Ты - победитель.");
+            ConsoleHelper.writeMessage("Поздравляю. Я проиграл. Ты - победитель.");
             Thread.sleep(600);
 
         }
         catch(InterruptedException intex){
-            System.out.println("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
+            ConsoleHelper.writeMessage("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
         }
 
     }
@@ -2260,12 +2263,12 @@ public class Chat implements Serializable {
     public static void gameEngWordsLoose2(){
         try {
             Thread.sleep(600);
-            System.out.println("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
+            ConsoleHelper.writeMessage("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
             Thread.sleep(600);
 
         }
         catch(InterruptedException intex){
-            System.out.println("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
+            ConsoleHelper.writeMessage("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
         }
     }
 
