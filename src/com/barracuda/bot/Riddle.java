@@ -933,9 +933,9 @@ public class Riddle implements Serializable {
     catch(InterruptedException i){
         ConsoleHelper.writeMessage("Слишком уж долго тебя ждать...");
     }
-    catch(IOException io){
-        ConsoleHelper.writeMessage("Мне тут говорят, что ошибка ввода-вывода какая-то... Но мы продолжаем!");
-    }
+//    catch(IOException io){
+//        ConsoleHelper.writeMessage("Мне тут говорят, что ошибка ввода-вывода какая-то... Но мы продолжаем!");
+//    }
         return false; ////////////////////////////////////////вот если ретерн фолс убрать, то это может быть поможет...
     }
     public void wasEasy(){
@@ -1024,8 +1024,8 @@ public class Riddle implements Serializable {
                 ConsoleHelper.writeMessage(this.getThree());
                 Thread.sleep(600);
             }
-        }catch(IOException i){
-            i.printStackTrace();
+//        }catch(IOException i){
+//            i.printStackTrace();
         }
         catch(InterruptedException in){
             in.printStackTrace();

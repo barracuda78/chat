@@ -124,9 +124,9 @@ public class Anecdot implements Serializable {
         catch(InterruptedException ie){
             ConsoleHelper.writeMessage("Я ждал, ждал... и не дождался!");
         }
-        catch(IOException io){
-            ConsoleHelper.writeMessage("Ошибочка. Ввода-вывода. Что делать. А мы дальше работаем.");
-        }
+//        catch(IOException io){
+//            ConsoleHelper.writeMessage("Ошибочка. Ввода-вывода. Что делать. А мы дальше работаем.");
+//        }
 
         return "нет"; //Вот убрать это и убрать try-catch - и тогда все заработает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }

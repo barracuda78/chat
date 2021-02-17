@@ -66,9 +66,9 @@ public class Chat implements Serializable {
         catch(InterruptedException ie){
             ConsoleHelper.writeMessage("Очень-очень-очень долго тебя ждать...");
         }
-        catch(IOException io){
-            ConsoleHelper.writeMessage("Это еще одна ошибка ввода-вывода в chat002music()");
-        }
+//        catch(IOException io){
+//            ConsoleHelper.writeMessage("Это еще одна ошибка ввода-вывода в chat002music()");
+//        }
     }
 
     public static void chat003english(){
@@ -1375,9 +1375,9 @@ public class Chat implements Serializable {
         catch(InterruptedException intex){
             ConsoleHelper.writeMessage("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
         }
-        catch(IOException ioe){
-            ConsoleHelper.writeMessage("Здесь у нас ошибка ввода вывода в методе gameEngWordsWin(), но мы продолжаем.");
-        }
+//        catch(IOException ioe){
+//            ConsoleHelper.writeMessage("Здесь у нас ошибка ввода вывода в методе gameEngWordsWin(), но мы продолжаем.");
+//        }
 
     }
 
@@ -1401,9 +1401,9 @@ public class Chat implements Serializable {
         catch(InterruptedException intex){
             ConsoleHelper.writeMessage("Это InterruptedException в методе gameEngWordsWin(), но мы продолжаем.");
         }
-        catch(IOException ioe){
-            ConsoleHelper.writeMessage("Здесь у нас ошибка ввода вывода в методе gameEngWordsWin(), но мы продолжаем.");
-        }
+//        catch(IOException ioe){
+//            ConsoleHelper.writeMessage("Здесь у нас ошибка ввода вывода в методе gameEngWordsWin(), но мы продолжаем.");
+//        }
     }
 
     public static void learnUnknownWords(ArrayList<EngWords> listOfUnknownWords){
@@ -1923,9 +1923,9 @@ public class Chat implements Serializable {
         catch(InterruptedException ie){
             ConsoleHelper.writeMessage("Ошибка InterruptedException в методе wordsGuess() , но мы идем далее.");
         }
-        catch (IOException io){
-            ConsoleHelper.writeMessage("Ошибка ввода-вывода в методе wordsGuess() , но мы идем далее.");
-        }
+//        catch (IOException io){
+//            ConsoleHelper.writeMessage("Ошибка ввода-вывода в методе wordsGuess() , но мы идем далее.");
+//        }
         return new ArrayList<EngWords>();    //можеет быть тут кроется ошибка. Возвращаем пустой список.
     }
     /////////////////////////конец отдельного метода по словам.
@@ -2246,9 +2246,9 @@ public class Chat implements Serializable {
         catch(InterruptedException ie){
             ConsoleHelper.writeMessage("Ошибка InterruptedException в методе wordsGuess() , но мы идем далее.");
         }
-        catch (IOException io){
-            ConsoleHelper.writeMessage("Ошибка ввода-вывода в методе wordsGuess() , но мы идем далее.");
-        }
+//        catch (IOException io){
+//            ConsoleHelper.writeMessage("Ошибка ввода-вывода в методе wordsGuess() , но мы идем далее.");
+//        }
         return new ArrayList<EngWords>();    //можеет быть тут кроется ошибка. Возвращаем пустой список.
     }
 

@@ -125,9 +125,9 @@ public class Fairytale implements Serializable {
         catch(InterruptedException i){
             ConsoleHelper.writeMessage("Слишком уж долго тебя ждать...");
         }
-        catch(IOException io){
-            ConsoleHelper.writeMessage("Мне тут говорят, что ошибка ввода-вывода какая-то... Но мы продолжаем!");
-        }
+//        catch(IOException io){
+//            ConsoleHelper.writeMessage("Мне тут говорят, что ошибка ввода-вывода какая-то... Но мы продолжаем!");
+//        }
         return false; ////////////////////////////////////////вот если ретерн фолс убрать, то это может быть поможет...
     }
 

@@ -6,18 +6,38 @@ import java.io.InputStreamReader;
 
 public class ConsoleHelper {
 
-    private static BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
+    private static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void writeMessage(String message) {
         System.out.println(message);
     }
 
-    public static String readString() throws IOException {
-        return bis.readLine();
+    public static String readString(){
+        String s = null;
+        try {
+            s = bufferedReader.readLine();
+        } catch (IOException e) {
+            System.out.println("Произошла ошибка при попытке ввода текста. Попробуйте еще раз.");
+            return readString();
+        }
+//        finally{
+//            try {
+//                bufferedReader.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+        return s;
     }
 
-    public static int readInt() throws IOException {
-        String text = readString();
-        return Integer.parseInt(text.trim());
+    public static int readInt(){
+        int a = 0;
+        try {
+            a = Integer.valueOf(readString());
+        }catch (NumberFormatException e){
+            System.out.println("Произошла ошибка при попытке ввода числа. Попробуйте еще раз.");
+            return Integer.valueOf(readString());
+        }
+        return a;
     }
 }
