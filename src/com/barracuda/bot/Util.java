@@ -263,4 +263,130 @@ public class Util {
         return randomNumber;
     }
 
+    public static int randomize100(){
+        //получаем целое произвольное число от 0 до 9
+        int b = 100;
+        int randomNumber = (int)(b*Math.random());
+        return randomNumber;
+    }
+
+    public static boolean yesNo(String answer){
+
+        if (answer.equals("да") || answer.equals("ага") || answer.equals("угу") || answer.equals("конечно") || answer.equals("давай")|| answer.equals("без базара")|| answer.contains("валяй")|| answer.equals("еще")|| answer.equals("ещё")|| answer.equals("еще бы")|| answer.contains("угумс")) {
+            return true;
+        } else if (answer.equals("yes") || answer.equals("yeah") || answer.equals("yep")) {
+            return true;
+        } else if (answer.contains("yes") || answer.contains("yeah") || answer.contains("yep")|| answer.contains("поиграем")) {
+            return true;
+        } else if (answer.contains("да") || answer.contains("ага") || answer.contains("угу") || answer.contains("конечно")) {
+            return true;
+        } else if (answer.contains("no") || answer.contains("not") || answer.contains("nop") || answer.contains("не") || answer.equals("не надо") || answer.equals("не хочу") || answer.contains("достал") || answer.contains("задолбал") || answer.contains("надоел") || answer.contains("заткнись")) {
+            return false;
+        } else if (answer.contains("сказку") || answer.contains("сказк") || answer.contains("сказочк") || answer.contains("сказание") || answer.equals("fairytale") || answer.equals("tsle") ) {
+            Fairytale.fairytaleNew();
+        } else if (answer.contains("загадк") || answer.contains("загадочк") || answer.contains("riddle") || answer.equals("загадку") || answer.equals("загадочку") ) {
+            Riddle.riddleNew();
+        } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
+            Anecdot.exit();
+        } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
+            Main.anecdoteNew();
+        } else return false;
+        return false;
+    }
+
+    public static void exit(String answer){
+        try {
+            if (answer.contains("exit") || answer.contains("выключ") || answer.contains("выход") || answer.contains("надоел")) {
+                Thread.sleep(600);
+                ConsoleHelper.writeMessage("Всё, всё. Пора заканчивать разговор. Пока!");
+                System.exit(0);
+            }
+        }
+        catch(InterruptedException ie){
+            ConsoleHelper.writeMessage("Это InterruptedException в методе exit(String answer). Но мы идем дальше.");
+        }
+    }
+
+    public static int randomize2(){
+        //получаем целое произвольное число от 0 до 9
+        int b = 10;
+        int randomNumber = (int)(b*Math.random());
+        //получаем либо 0, либо 1.
+        randomNumber = randomNumber%2;
+        return randomNumber;
+    }
+
+    //этот метод - для проверки данных о пользователях записанных в файл.
+    public static void usersToString(String filePath){
+
+        try {
+            ArrayList<User> oldUsersList = new ArrayList<>();
+            //цикл десериализации старых юзеров и записи их в ArrayList oldUsersList.
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filePath));
+            while (ois.available() > 0) {
+                oldUsersList.add((User)ois.readObject());
+
+            }
+            ois.close();
+
+            for(User user : oldUsersList){
+                ConsoleHelper.writeMessage(user.toString());
+            }
+
+        }
+        catch(FileNotFoundException f){
+            ConsoleHelper.writeMessage("Файл не найден.");
+            f.printStackTrace();
+        }
+        catch(IOException ioex){
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода");
+            ioex.printStackTrace();
+        }
+        catch(ClassNotFoundException c){
+            ConsoleHelper.writeMessage("Нет такого класса");
+            c.printStackTrace();
+        }
+    }
+
+    //этот метод не использую. Код есть в методе greeting();
+    public static ArrayList<User> seriaFromFile(String filePath) throws ClassNotFoundException, IOException{
+
+        ArrayList<User> oldUsersList = new ArrayList<>();
+        //цикл десериализации старых юзеров и записи их в ArrayList oldUsersList.
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filePath));
+        while(ois.available() > 0){
+            User user = new User();
+            user = (User)ois.readObject();
+            oldUsersList.add(user);
+        }
+        ois.close();
+
+        return oldUsersList;
+    }
+
+    //метод читает количество пользователей из файла. Пока не использую его, т.к. пока не пишу кол-во пользователей в файл.
+    public static int usersCountFromFile(){
+        int countUsers = 0;
+
+        try {
+            File file = new File("usersCount001.bin");
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            countUsers = ois.readInt();
+            ois.close();
+            fis.close();
+
+            //return countUsers;
+        }
+        catch(FileNotFoundException f){
+            ConsoleHelper.writeMessage("Файл не найден в usersCountFromFile(). А мы идем дальше.");
+        }
+        catch(IOException io){
+            ConsoleHelper.writeMessage("Ошибка ввода-вывода в usersCountFromFile(). А мы идем дальше.");
+            io.printStackTrace();
+        }
+
+        return countUsers;
+    }
+
 }

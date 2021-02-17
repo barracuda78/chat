@@ -925,7 +925,7 @@ public class Riddle implements Serializable {
         } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
             Main.anecdoteNew();
         } else if (answer.contains("сказк") || answer.contains("fairytale") || answer.contains("сказочк")) {
-            Main.fairytaleNew();
+            Fairytale.fairytaleNew();
         } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
             Riddle.exit();
         } else return false;
@@ -1038,7 +1038,7 @@ public String toString(){
 }
 
 public static void exit(){
-        Main.exit("exit");
+        Util.exit("exit");
         return;
     }
 }

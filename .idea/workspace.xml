@@ -7,25 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/barracuda/client/BotClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/barracuda/client/ClientGuiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/barracuda/client/ClientGuiModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/barracuda/client/ClientGuiView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Anecdot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Anecdot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Chat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/ConsoleHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Fairytale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Fairytale.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Greeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Greeting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Riddle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Riddle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/ConsoleHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/ConsoleHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Deal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +46,33 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8432">
-              <caret line="496" column="20" selection-start-line="496" selection-start-column="20" selection-end-line="496" selection-end-column="20" />
+            <state relative-caret-position="229">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#864#5597#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Deal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="72" lean-forward="true" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="73" lean-forward="true" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,10 +104,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="126" selection-start-line="126" selection-start-column="2" selection-end-line="128" selection-end-column="11" />
+            <state relative-caret-position="-812">
+              <caret line="63" column="43" lean-forward="true" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="method#readFromFile#0;class#Anecdot#0" />
+                <element signature="method#wantMoreAnecdot#0;class#Anecdot#0" />
+                <element signature="e#5213#5298#0" />
+                <element signature="e#5299#5331#0" />
+                <element signature="method#exit#0;class#Anecdot#0" />
               </folding>
             </state>
           </provider>
@@ -102,16 +125,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Chat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="2251" column="31" selection-start-line="2251" selection-start-column="31" selection-end-line="2251" selection-end-column="31" />
+            <state relative-caret-position="328">
+              <caret line="263" column="57" lean-forward="true" selection-start-line="263" selection-start-column="57" selection-end-line="263" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#chat00#0;class#Chat#0" />
                 <element signature="method#chat01school#0;class#Chat#0" />
-                <element signature="method#chat003english#0;class#Chat#0" />
-                <element signature="method#gameEngWords#0;class#Chat#0" />
-                <element signature="method#gameEngWords2#0;class#Chat#0" />
-                <element signature="method#learnUnknownWords#0;class#Chat#0" />
-                <element signature="method#seriaUsersUnknownWords#0;class#Chat#0" />
+                <element signature="method#chat002music#0;class#Chat#0" />
                 <element signature="method#gameEngWordsWin2#0;class#Chat#0" />
                 <element signature="method#gameEngWordsLoose2#0;class#Chat#0" />
               </folding>
@@ -120,12 +140,41 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java">
+        <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="127" selection-start-line="127" selection-start-column="2" selection-end-line="129" selection-end-column="11" />
+            <state relative-caret-position="510">
+              <caret line="270" column="5" selection-start-line="270" selection-start-column="5" selection-end-line="270" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#createGoodName#0;class#Util#0" />
+                <element signature="method#createGoodAge#0;class#Util#0" />
+                <element signature="method#ageProof#0;class#Util#0" />
+                <element signature="method#firstUpperCase#0;class#Util#0" />
+                <element signature="method#seria#0;class#Util#0" />
+                <element signature="method#randomize#0;class#Util#0" />
+                <element signature="method#randomize100#0;class#Util#0" />
+                <element signature="method#yesNo#0;class#Util#0" />
+                <element signature="method#exit#0;class#Util#0" />
+                <element signature="method#randomize2#0;class#Util#0" />
+                <element signature="method#usersToString#0;class#Util#0" />
+                <element signature="method#seriaFromFile#0;class#Util#0" />
+                <element signature="method#usersCountFromFile#0;class#Util#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#258#259#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="method#readFromFile#0;class#Fairytale#0" />
+                <element signature="method#wantMore#0;class#Fairytale#0" />
               </folding>
             </state>
           </provider>
@@ -134,41 +183,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="934" column="5" selection-start-line="935" selection-start-column="2" selection-end-line="937" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/barracuda/client/ClientGuiController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/barracuda/client/ClientGuiView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="851">
-              <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/barracuda/client/ClientGuiModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+            <state relative-caret-position="16275">
+              <caret line="1037" column="1" lean-forward="true" selection-start-line="1037" selection-start-column="1" selection-end-line="1037" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,10 +220,12 @@
       <find>System.out.println</find>
       <find>Buffered</find>
       <find>Main.randomize()</find>
+      <find>Main.chat00</find>
     </findStrings>
     <replaceStrings>
       <replace>ConsoleHelper.writeMessage</replace>
       <replace>Util.randomize()</replace>
+      <replace>Chat.chat00</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -216,10 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/riddle002" />
-        <option value="$PROJECT_DIR$/riddle001_02" />
-        <option value="$PROJECT_DIR$/riddle003" />
-        <option value="$PROJECT_DIR$/riddle004" />
         <option value="$PROJECT_DIR$/riddle005" />
         <option value="$PROJECT_DIR$/riddle006" />
         <option value="$PROJECT_DIR$/riddle007" />
@@ -262,11 +276,15 @@
         <option value="$PROJECT_DIR$/src/com/barracuda/client/ClientGuiController.java" />
         <option value="$PROJECT_DIR$/src/com/barracuda/client/ClientGuiView.java" />
         <option value="$PROJECT_DIR$/src/com/barracuda/client/ClientGuiModel.java" />
-        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java" />
-        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java" />
-        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java" />
-        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" />
         <option value="$PROJECT_DIR$/src/com/barracuda/client/BotClient.java" />
+        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Util.java" />
+        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" />
+        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java" />
+        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java" />
+        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java" />
+        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Deal.java" />
+        <option value="$PROJECT_DIR$/src/com/barracuda/bot/Main.java" />
       </list>
     </option>
   </component>
@@ -397,7 +415,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ClientGuiController">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ClientGuiController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.barracuda.client.ClientGuiController" />
       <module name="BarraChat" />
@@ -453,9 +471,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ClientGuiController" />
         <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -476,6 +494,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1359275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -537,8 +556,6 @@
     <SUITE FILE_PATH="coverage/BarraChat$Test.ic" NAME="Test Coverage Results" MODIFIED="1581863321227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/users.bin" />
-    <entry file="file://$PROJECT_DIR$/src/users.bin" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/ObjectInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -687,18 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#seria#0;class#Util#0" />
-            <element signature="method#randomize#0;class#Util#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Greeting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12019">
@@ -813,54 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="127" selection-start-line="127" selection-start-column="2" selection-end-line="129" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="126" selection-start-line="126" selection-start-column="2" selection-end-line="128" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="934" column="5" selection-start-line="935" selection-start-column="2" selection-end-line="937" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Chat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="2251" column="31" selection-start-line="2251" selection-start-column="31" selection-end-line="2251" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#chat01school#0;class#Chat#0" />
-            <element signature="method#chat003english#0;class#Chat#0" />
-            <element signature="method#gameEngWords#0;class#Chat#0" />
-            <element signature="method#gameEngWords2#0;class#Chat#0" />
-            <element signature="method#learnUnknownWords#0;class#Chat#0" />
-            <element signature="method#seriaUsersUnknownWords#0;class#Chat#0" />
-            <element signature="method#gameEngWordsWin2#0;class#Chat#0" />
-            <element signature="method#gameEngWordsLoose2#0;class#Chat#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/barracuda/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-795">
@@ -890,12 +847,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8432">
-          <caret line="496" column="20" selection-start-line="496" selection-start-column="20" selection-end-line="496" selection-end-column="20" />
+        <state relative-caret-position="510">
+          <caret line="270" column="5" selection-start-line="270" selection-start-column="5" selection-end-line="270" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#createGoodName#0;class#Util#0" />
+            <element signature="method#createGoodAge#0;class#Util#0" />
+            <element signature="method#ageProof#0;class#Util#0" />
+            <element signature="method#firstUpperCase#0;class#Util#0" />
+            <element signature="method#seria#0;class#Util#0" />
+            <element signature="method#randomize#0;class#Util#0" />
+            <element signature="method#randomize100#0;class#Util#0" />
+            <element signature="method#yesNo#0;class#Util#0" />
+            <element signature="method#exit#0;class#Util#0" />
+            <element signature="method#randomize2#0;class#Util#0" />
+            <element signature="method#usersToString#0;class#Util#0" />
+            <element signature="method#seriaFromFile#0;class#Util#0" />
+            <element signature="method#usersCountFromFile#0;class#Util#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Chat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="263" column="57" lean-forward="true" selection-start-line="263" selection-start-column="57" selection-end-line="263" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#chat00#0;class#Chat#0" />
+            <element signature="method#chat01school#0;class#Chat#0" />
+            <element signature="method#chat002music#0;class#Chat#0" />
+            <element signature="method#gameEngWordsWin2#0;class#Chat#0" />
+            <element signature="method#gameEngWordsLoose2#0;class#Chat#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="method#readFromFile#0;class#Fairytale#0" />
+            <element signature="method#wantMore#0;class#Fairytale#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16275">
+          <caret line="1037" column="1" lean-forward="true" selection-start-line="1037" selection-start-column="1" selection-end-line="1037" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-812">
+          <caret line="63" column="43" lean-forward="true" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="method#readFromFile#0;class#Anecdot#0" />
+            <element signature="method#wantMoreAnecdot#0;class#Anecdot#0" />
+            <element signature="e#5213#5298#0" />
+            <element signature="e#5299#5331#0" />
+            <element signature="method#exit#0;class#Anecdot#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="73" lean-forward="true" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Deal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="72" lean-forward="true" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#864#5597#0" />
           </folding>
         </state>
       </provider>
