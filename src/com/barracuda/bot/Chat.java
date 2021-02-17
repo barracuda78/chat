@@ -1,3 +1,7 @@
+package com.barracuda.bot;
+
+import com.barracuda.ConsoleHelper;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,7 +45,7 @@ public class Chat implements Serializable {
             ConsoleHelper.writeMessage("Я люблю музыку. При том очень разную. А тебе какая музыка нравится?");
             Thread.sleep(600);
             //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            //String answerWhatMusic = ConsoleHelper.readString();
+            //String answerWhatMusic = com.barracuda.ConsoleHelper.readString();
             String answerWhatMusic = ConsoleHelper.readString();
             if(answerWhatMusic.contains("рэп")){
                 ConsoleHelper.writeMessage("О! Круто! А какие рэп-исполнители тебе нравятся? Я имею ввиду российских рэперов!");
@@ -82,7 +86,7 @@ public class Chat implements Serializable {
             Thread.sleep(1000);
             ConsoleHelper.writeMessage("Ну что, поиграем?");
             //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            //String answer = ConsoleHelper.readString();
+            //String answer = com.barracuda.ConsoleHelper.readString();
             String answer =ConsoleHelper.readString();
             answer = answer.toLowerCase();
 
@@ -292,7 +296,7 @@ public class Chat implements Serializable {
 
                     //пользователь вводит свой ответ
                     //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                    //String answer = ConsoleHelper.readString();
+                    //String answer = com.barracuda.ConsoleHelper.readString();
                     String answer = ConsoleHelper.readString();
                     answer = answer.toLowerCase();
 
@@ -516,11 +520,11 @@ public class Chat implements Serializable {
                     //это раздражает. Постоянный вопрос. Игра есть игра. 5 слов задаем, не спрашивая. Пока выключаю.
 /*                    if(countWrightAnswers!=5 || countWrightAnswers !=-5) {
                         Thread.sleep(600);
-                        ConsoleHelper.writeMessage("Ну что, хочешь еще одно слово перевести?");
+                        com.barracuda.ConsoleHelper.writeMessage("Ну что, хочешь еще одно слово перевести?");
                         Thread.sleep(600);
-                        String answerYesNo = = ConsoleHelper.readString();
+                        String answerYesNo = = com.barracuda.ConsoleHelper.readString();
                         answerYesNo = answerYesNo.toLowerCase();
-                        if (Main.yesNo(answerYesNo)) {
+                        if (com.barracuda.bot.Main.yesNo(answerYesNo)) {
                             wantMore = true;
                         } else {
                             wantMore = false;
@@ -528,33 +532,33 @@ public class Chat implements Serializable {
                     }*/
 /*                    if(countWrightAnswers == 5){
                         Thread.sleep(600);
-                        ConsoleHelper.writeMessage("Поздравляю. Я проиграл. Ты - победитель.");
+                        com.barracuda.ConsoleHelper.writeMessage("Поздравляю. Я проиграл. Ты - победитель.");
                         Thread.sleep(600);
-                        ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
+                        com.barracuda.ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                         Thread.sleep(600);
                         //BufferedReader bufferedReader01 = new BufferedReader(new InputStreamReader(System.in));
-                        String answerYesNo01 = ConsoleHelper.readString();
+                        String answerYesNo01 = com.barracuda.ConsoleHelper.readString();
                         answerYesNo01 = answerYesNo01.toLowerCase();
-                        if (Main.yesNo(answerYesNo01)) {
+                        if (com.barracuda.bot.Main.yesNo(answerYesNo01)) {
                             gameEngWords();
                         } else {
-                            Main.chat00();
+                            com.barracuda.bot.Main.chat00();
                         }
                     }
 
                     if(countWrightAnswers == -5){
                         Thread.sleep(600);
-                        ConsoleHelper.writeMessage("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
+                        com.barracuda.ConsoleHelper.writeMessage("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
                         Thread.sleep(600);
-                        ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
+                        com.barracuda.ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                         Thread.sleep(600);
                         //BufferedReader bufferedReader02 = new BufferedReader(new InputStreamReader(System.in));
-                        String answerYesNo02 = ConsoleHelper.readString();
+                        String answerYesNo02 = com.barracuda.ConsoleHelper.readString();
                         answerYesNo02 = answerYesNo02.toLowerCase();
-                        if (Main.yesNo(answerYesNo02)) {
+                        if (com.barracuda.bot.Main.yesNo(answerYesNo02)) {
                             gameEngWords();
                         } else {
-                            Main.chat00();
+                            com.barracuda.bot.Main.chat00();
                         }
 
                     }*/
@@ -563,32 +567,32 @@ public class Chat implements Serializable {
 /*            else if(countWrightAnswers == 5)
             {
                 Thread.sleep(600);
-                ConsoleHelper.writeMessage("Поздравляю. Я проиграл. Ты - победитель.");
+                com.barracuda.ConsoleHelper.writeMessage("Поздравляю. Я проиграл. Ты - победитель.");
                 Thread.sleep(600);
-                ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
+                com.barracuda.ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                 Thread.sleep(600);
                 //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                String answerYesNo = ConsoleHelper.readString();
+                String answerYesNo = com.barracuda.ConsoleHelper.readString();
                 answerYesNo = answerYesNo.toLowerCase();
-                if (Main.yesNo(answerYesNo)) {
+                if (com.barracuda.bot.Main.yesNo(answerYesNo)) {
                     gameEngWords();
                 } else {
-                    Main.chat00();
+                    com.barracuda.bot.Main.chat00();
                 }
             }
             else if(countWrightAnswers == -5){
                 Thread.sleep(600);
-                ConsoleHelper.writeMessage("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
+                com.barracuda.ConsoleHelper.writeMessage("Поздравь меня. Я победил. Тебе нужно подучить английские слова!");
                 Thread.sleep(600);
-                ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
+                com.barracuda.ConsoleHelper.writeMessage("Хочешь еще попробовать в эту же игру?");
                 Thread.sleep(600);
                 //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                String answerYesNo = ConsoleHelper.readString();
+                String answerYesNo = com.barracuda.ConsoleHelper.readString();
                 answerYesNo = answerYesNo.toLowerCase();
-                if (Main.yesNo(answerYesNo)) {
+                if (com.barracuda.bot.Main.yesNo(answerYesNo)) {
                     gameEngWords();
                 } else {
-                    Main.chat00();
+                    com.barracuda.bot.Main.chat00();
                 }
             }*/
             else{
@@ -795,7 +799,7 @@ public class Chat implements Serializable {
             word009.setRusEtymology1("Писа́ть. По происхождению близко к «пестрый» (см.). Сначала значило: покрывать узором, пестрить (художники и сейчас говорят не «рисовать красками», а «писать красками», а на Украине еще недавно «писанками» назывались пестро раскрашенные пасхальные яйца). Сравните также слово «расписной» — «пестрый».");
             listOfEngWords.add(word009);
 
-            EngWordsVerb word010 = new EngWordsVerb();       ////////тут ошибка. Потом создаем массив из EngWords, а это EngWordsVerb и он не влезет в массив.
+            EngWordsVerb word010 = new EngWordsVerb();       ////////тут ошибка. Потом создаем массив из com.barracuda.bot.EngWords, а это com.barracuda.bot.EngWordsVerb и он не влезет в массив.
             word010.setEngWord1("to speak");
             word010.setEngWord2("speak");
             word010.setEngWord3("say");
@@ -817,7 +821,7 @@ public class Chat implements Serializable {
             listOfEngWords.add(word010);
 
             //шаблон для новых слов
-/*            EngWords word010 = new EngWords();
+/*            com.barracuda.bot.EngWords word010 = new com.barracuda.bot.EngWords();
             word010.setEngWord1("");
             word010.setEngWord2("");
             word010.setEngWord3("");
@@ -847,7 +851,7 @@ public class Chat implements Serializable {
 
             //Создадим тестовое слово, чтобы не было NullPointerException в следующем блоке, добавим просто так одно слово.
 /*
-            EngWords wordTest = new EngWords();
+            com.barracuda.bot.EngWords wordTest = new com.barracuda.bot.EngWords();
             word001.setEngWord1("test001");
             word001.setEngWord2("-empty-");
             word001.setEngWord3("-empty-");
@@ -917,138 +921,138 @@ public class Chat implements Serializable {
 /////////////////////////начало старого кода, без метода wordsGuess();
 /*
                 while (wantMore) {
-                    int r = Util.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
-                    //ConsoleHelper.writeMessage("рандомное число = " + r); // это проверка, что за рандомное число мы получаем.
+                    int r = com.barracuda.bot.Util.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<com.barracuda.bot.EngWords> listOfEngWords.
+                    //com.barracuda.ConsoleHelper.writeMessage("рандомное число = " + r); // это проверка, что за рандомное число мы получаем.
 
                     //этот блок кода нужен чтобы не было ArrayOutOfBounds Exception.
                     if (r >= listOfEngWords.size()) {
                         r = listOfEngWords.size() - 1;
                     }
 
-                    EngWords word = listOfEngWords.get(r); //достаем из ArrayList произвольно одно слово.
+                    com.barracuda.bot.EngWords word = listOfEngWords.get(r); //достаем из ArrayList произвольно одно слово.
 
 
 
                     switch (countWords) {
                         case 0: {
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("Хорошо. Начали. Переводи первое слово:");
+                            com.barracuda.ConsoleHelper.writeMessage("Хорошо. Начали. Переводи первое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 1: {
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("Хорошо. Переводи второе слово:");
+                            com.barracuda.ConsoleHelper.writeMessage("Хорошо. Переводи второе слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 2: {
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("Хорошо. Переводи третье слово:");
+                            com.barracuda.ConsoleHelper.writeMessage("Хорошо. Переводи третье слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 3: {
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("Хорошо. Переводи четвертое слово:");
+                            com.barracuda.ConsoleHelper.writeMessage("Хорошо. Переводи четвертое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 4: {
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("Хорошо. Переводи пятое слово:");
+                            com.barracuda.ConsoleHelper.writeMessage("Хорошо. Переводи пятое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         case 5: {
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("Хорошо. Переводи шестое слово:");
+                            com.barracuda.ConsoleHelper.writeMessage("Хорошо. Переводи шестое слово:");
                             Thread.sleep(600);
                             break;
                         }
                         default: {
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("Хорошо. Переводи " + (countWords + 1) + " слово:");
+                            com.barracuda.ConsoleHelper.writeMessage("Хорошо. Переводи " + (countWords + 1) + " слово:");
                             Thread.sleep(600);
                             break;
                         }
                     } //хорошо. переводи 1-е, 2-е ... слово.
 
 
-                    ConsoleHelper.writeMessage(word.getEngWord1()); //выводим на экран в качестве вопроса английский вариант номер 1 этого произвольного слова.
+                    com.barracuda.ConsoleHelper.writeMessage(word.getEngWord1()); //выводим на экран в качестве вопроса английский вариант номер 1 этого произвольного слова.
                     countWords++;
 
                     //пользователь вводит свой ответ
                     //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-                    String answer = ConsoleHelper.readString();
+                    String answer = com.barracuda.ConsoleHelper.readString();
                     answer = answer.toLowerCase();
 
-                    Main.exit(answer);//выход, если напишет exit и т.п.
+                    com.barracuda.bot.Main.exit(answer);//выход, если напишет exit и т.п.
 
                     //сравниваем ответ:
                     if (answer.equals(word.getRusWord1()) || answer.equals(word.getRusWord2()) || answer.equals(word.getRusWord3()) || answer.equals(word.getRusWord4()) || answer.equals(word.getRusWordPlural1()) || answer.equals(word.getRusWordPlural2()) || answer.equals(word.getRusSinonim1()) || answer.contains(word.getRusWord1()) || answer.contains(word.getRusWord2()) || answer.contains(word.getRusWord3()) || answer.contains(word.getRusWord4()) || answer.contains(word.getRusWordPlural1()) || answer.contains(word.getRusWordPlural2()) || answer.contains(word.getRusSinonim1())) {
                         Thread.sleep(600);
 
 
-                        int random = Util.randomize();
+                        int random = com.barracuda.bot.Util.randomize();
                         switch (random) {                                    //говорим пользователю Ура! Правильно!
                             case 0: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Ура! Правильно!");
+                                com.barracuda.ConsoleHelper.writeMessage("Ура! Правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 1: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Да! Всё верно!");
+                                com.barracuda.ConsoleHelper.writeMessage("Да! Всё верно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 2: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Правильно! Молодец!");
+                                com.barracuda.ConsoleHelper.writeMessage("Правильно! Молодец!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 3: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Умница! Правильно!");
+                                com.barracuda.ConsoleHelper.writeMessage("Умница! Правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 4: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Ты мой золотой! Всё правильно!");
+                                com.barracuda.ConsoleHelper.writeMessage("Ты мой золотой! Всё правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 5: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Да! Да! Да! Все правильно!");
+                                com.barracuda.ConsoleHelper.writeMessage("Да! Да! Да! Все правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 6: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Ух-ты! Правильно!");
+                                com.barracuda.ConsoleHelper.writeMessage("Ух-ты! Правильно!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 7: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Точно! Молодец!");
+                                com.barracuda.ConsoleHelper.writeMessage("Точно! Молодец!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 8: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Всё верно! Умничка!");
+                                com.barracuda.ConsoleHelper.writeMessage("Всё верно! Умничка!");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 9: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Да! Ты правильно перевел!");
+                                com.barracuda.ConsoleHelper.writeMessage("Да! Ты правильно перевел!");
                                 Thread.sleep(1000);
                                 break;
                             }
@@ -1056,19 +1060,19 @@ public class Chat implements Serializable {
 
                         countWrightAnswers++;
                         Thread.sleep(600);
-                        ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
+                        com.barracuda.ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                         Thread.sleep(600);
 
                         if (countWrightAnswers == 3) {
                             gameEngWordsWin();
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
+                            com.barracuda.ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
-                            Main.exit(answerYesNo);//выход, если напишет exit и т.п.
+                            com.barracuda.bot.Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
-                            if (Main.yesNo(answerYesNo)) {
+                            if (com.barracuda.bot.Main.yesNo(answerYesNo)) {
                                 learnUnknownWords(listOfUnknownWords);
                             }
                             break;
@@ -1076,14 +1080,14 @@ public class Chat implements Serializable {
                         if (countWrightAnswers == -3) {
                             gameEngWordsLoose();
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
+                            com.barracuda.ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
-                            Main.exit(answerYesNo);//выход, если напишет exit и т.п.
+                            com.barracuda.bot.Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
 
-                            if (Main.yesNo(answerYesNo)) {
+                            if (com.barracuda.bot.Main.yesNo(answerYesNo)) {
                                 learnUnknownWords(listOfUnknownWords);
                             }
 
@@ -1092,65 +1096,65 @@ public class Chat implements Serializable {
 
                     } else {
 
-                        int ran = Util.randomize();
+                        int ran = com.barracuda.bot.Util.randomize();
                         switch (ran) {                   //говорим пользователю: Нет... не правильно. Минус очко тебе
                             case 0: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Нет... не правильно. Минус очко тебе");
+                                com.barracuda.ConsoleHelper.writeMessage("Нет... не правильно. Минус очко тебе");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 1: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Нет, это неправильный ответ.");
+                                com.barracuda.ConsoleHelper.writeMessage("Нет, это неправильный ответ.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 2: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Ты не прав.");
+                                com.barracuda.ConsoleHelper.writeMessage("Ты не прав.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 3: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Ты неправильно перевел.");
+                                com.barracuda.ConsoleHelper.writeMessage("Ты неправильно перевел.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 4: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Нет, нет, нет. Этот перевод никуда не годится.");
+                                com.barracuda.ConsoleHelper.writeMessage("Нет, нет, нет. Этот перевод никуда не годится.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 5: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Нет, ты не прав. У этого слова другое значение.");
+                                com.barracuda.ConsoleHelper.writeMessage("Нет, ты не прав. У этого слова другое значение.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 6: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Ответ неправильный.");
+                                com.barracuda.ConsoleHelper.writeMessage("Ответ неправильный.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 7: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Нет, всё совсем не так. Неправильно.");
+                                com.barracuda.ConsoleHelper.writeMessage("Нет, всё совсем не так. Неправильно.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 8: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Нет. Не то ты написал.");
+                                com.barracuda.ConsoleHelper.writeMessage("Нет. Не то ты написал.");
                                 Thread.sleep(1000);
                                 break;
                             }
                             case 9: {
                                 Thread.sleep(1000);
-                                ConsoleHelper.writeMessage("Ты меня разочаровал. Неправильный ответ.");
+                                com.barracuda.ConsoleHelper.writeMessage("Ты меня разочаровал. Неправильный ответ.");
                                 Thread.sleep(1000);
                                 break;
                             }
@@ -1159,18 +1163,18 @@ public class Chat implements Serializable {
 
                         countWrightAnswers--;
                         Thread.sleep(600);
-                        ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
+                        com.barracuda.ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
 
                         if (countWrightAnswers == 3) {
                             gameEngWordsWin();
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
+                            com.barracuda.ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
-                            Main.exit(answerYesNo);//выход, если напишет exit и т.п.
+                            com.barracuda.bot.Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
-                            if (Main.yesNo(answerYesNo)) {
+                            if (com.barracuda.bot.Main.yesNo(answerYesNo)) {
                                 learnUnknownWords(listOfUnknownWords);
                             }
                             break;
@@ -1178,49 +1182,49 @@ public class Chat implements Serializable {
                         if (countWrightAnswers == -3) {
                             gameEngWordsLoose();
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
+                            com.barracuda.ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                             String answerYesNo = bufferedReader.readLine();
                             answerYesNo = answerYesNo.toLowerCase();
 
-                            Main.exit(answerYesNo);//выход, если напишет exit и т.п.
+                            com.barracuda.bot.Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
-                            if (Main.yesNo(answerYesNo)) {
+                            if (com.barracuda.bot.Main.yesNo(answerYesNo)) {
                                 learnUnknownWords(listOfUnknownWords);
                             }
                             break;
                         }
 
                         Thread.sleep(600);
-                        ConsoleHelper.writeMessage("Еще попытку хочешь? Да или нет?");
+                        com.barracuda.ConsoleHelper.writeMessage("Еще попытку хочешь? Да или нет?");
                         Thread.sleep(600);
                         String answerYesNo = bufferedReader.readLine();
                         answerYesNo = answerYesNo.toLowerCase();
 
-                        Main.exit(answerYesNo);//выход, если напишет exit и т.п.
+                        com.barracuda.bot.Main.exit(answerYesNo);//выход, если напишет exit и т.п.
 
 
-                        if (Main.yesNo(answerYesNo)) {
+                        if (com.barracuda.bot.Main.yesNo(answerYesNo)) {
                             Thread.sleep(600);
-                            ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
+                            com.barracuda.ConsoleHelper.writeMessage("переведи слово: " + word.getEngWord1());
                             Thread.sleep(600);
                             String answer2 = bufferedReader.readLine();
                             answer2 = answer2.toLowerCase();
                             if (answer2.equals(word.getRusWord1()) || answer2.equals(word.getRusWord2()) || answer2.equals(word.getRusWord3()) || answer2.equals(word.getRusWord4()) || answer2.equals(word.getRusWordPlural1()) || answer2.equals(word.getRusWordPlural2()) || answer2.equals(word.getRusSinonim1()) || answer2.contains(word.getRusWord1()) || answer2.contains(word.getRusWord2()) || answer2.contains(word.getRusWord3()) || answer2.contains(word.getRusWord4()) || answer2.contains(word.getRusWordPlural1()) || answer2.contains(word.getRusWordPlural2()) || answer2.contains(word.getRusSinonim1())) {
                                 Thread.sleep(600);
-                                ConsoleHelper.writeMessage("Ура! Теперь правильно!");
+                                com.barracuda.ConsoleHelper.writeMessage("Ура! Теперь правильно!");
                                 countWrightAnswers++;
                                 Thread.sleep(600);
-                                ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
+                                com.barracuda.ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                                 Thread.sleep(600);
 
                                 if (countWrightAnswers == 3) {
                                     gameEngWordsWin();
                                     Thread.sleep(600);
-                                    ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
+                                    com.barracuda.ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно? Если такие были, конечно...");
                                     String answer3 = bufferedReader.readLine();
                                     answer3 = answer3.toLowerCase();
 
-                                    if (Main.yesNo(answer3)) {
+                                    if (com.barracuda.bot.Main.yesNo(answer3)) {
                                         learnUnknownWords(listOfUnknownWords);
                                     }
                                     break;
@@ -1228,11 +1232,11 @@ public class Chat implements Serializable {
                                 if (countWrightAnswers == -3) {
                                     gameEngWordsLoose();
                                     Thread.sleep(600);
-                                    ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
+                                    com.barracuda.ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                                     String answer4 = bufferedReader.readLine();
                                     answer4 = answer4.toLowerCase();
 
-                                    if (Main.yesNo(answer4)) {
+                                    if (com.barracuda.bot.Main.yesNo(answer4)) {
                                         learnUnknownWords(listOfUnknownWords);
                                     }
                                     break;
@@ -1240,26 +1244,26 @@ public class Chat implements Serializable {
 
                             } else {
                                 Thread.sleep(600);
-                                ConsoleHelper.writeMessage("Нет. Не то. Еще минус одно очко.");
+                                com.barracuda.ConsoleHelper.writeMessage("Нет. Не то. Еще минус одно очко.");
                                 countWrightAnswers--;
                                 listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                                Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                                com.barracuda.bot.Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                                 Thread.sleep(600);
-                                ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
+                                com.barracuda.ConsoleHelper.writeMessage("Количество твоих очков = " + countWrightAnswers);
                                 Thread.sleep(600);
-                                ConsoleHelper.writeMessage("Правильный ответ вот такой: " + word.getRusWord1());
+                                com.barracuda.ConsoleHelper.writeMessage("Правильный ответ вот такой: " + word.getRusWord1());
                                 Thread.sleep(600);
 
                                 if (countWrightAnswers == 3) {
                                     gameEngWordsWin();
                                     Thread.sleep(600);
-                                    ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
+                                    com.barracuda.ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                                     String answer5 = bufferedReader.readLine();
                                     answer5 = answer5.toLowerCase();
 
-                                    Main.exit(answer5);//выход, если напишет exit и т.п.
+                                    com.barracuda.bot.Main.exit(answer5);//выход, если напишет exit и т.п.
 
-                                    if (Main.yesNo(answer5)) {
+                                    if (com.barracuda.bot.Main.yesNo(answer5)) {
                                         learnUnknownWords(listOfUnknownWords);
                                     }
                                     break;
@@ -1267,34 +1271,34 @@ public class Chat implements Serializable {
                                 if (countWrightAnswers == -3) {
                                     gameEngWordsLoose();
                                     Thread.sleep(600);
-                                    ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
+                                    com.barracuda.ConsoleHelper.writeMessage("А давай повторим слова, которые ты не перевел правильно?");
                                     String answer6 = bufferedReader.readLine();
                                     answer6 = answer6.toLowerCase();
 
-                                    Main.exit(answer6);//выход, если напишет exit и т.п.
+                                    com.barracuda.bot.Main.exit(answer6);//выход, если напишет exit и т.п.
 
 
-                                    if (Main.yesNo(answer6)) {
+                                    if (com.barracuda.bot.Main.yesNo(answer6)) {
                                         learnUnknownWords(listOfUnknownWords);
                                     }
                                     break;
                                 }
                             }
                         } else {
-                            if (word instanceof EngWordsVerb) {
+                            if (word instanceof com.barracuda.bot.EngWordsVerb) {
 
                                 Thread.sleep(600);
-                                ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
+                                com.barracuda.ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                                 Thread.sleep(600);
-                                ConsoleHelper.writeMessage("Три формы глагола: " + word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
+                                com.barracuda.ConsoleHelper.writeMessage("Три формы глагола: " + word.getEngWord1() + ", " + ((com.barracuda.bot.EngWordsVerb) word).getSecondForm() + ", " + ((com.barracuda.bot.EngWordsVerb) word).getThirdForm());
                                 listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                                Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                                com.barracuda.bot.Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                                 Thread.sleep(600);
                             } else {
                                 Thread.sleep(600);
-                                ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
+                                com.barracuda.ConsoleHelper.writeMessage("Правильный ответ: " + word.getRusWord1());
                                 listOfUnknownWords.add(word); //- добавляем слово в список незнакомых слов для дальнейшего изучения пользователем
-                                Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
+                                com.barracuda.bot.Main.user.setUsersListOfUnknownWords(listOfUnknownWords); //здесь мы записали в поле юзера список его незнакомых слов.
                                 Thread.sleep(600);
                             }
 
@@ -1364,7 +1368,7 @@ public class Chat implements Serializable {
                 gameEngWords2();
             } else {
                 ConsoleHelper.writeMessage("Ладно. Тогда...");
-                //Main.chat00();
+                //com.barracuda.bot.Main.chat00();
                 return;
             }
         }
@@ -1390,7 +1394,7 @@ public class Chat implements Serializable {
             if (Main.yesNo(answerYesNo)) {
                 gameEngWords2();
             } else {
-                //Main.chat00();
+                //com.barracuda.bot.Main.chat00();
                 return;
             }
         }
@@ -1419,19 +1423,19 @@ public class Chat implements Serializable {
                 for (EngWords word : listOfUnknownWords) {
 
                     if(word instanceof EngWordsVerb){
-                    Thread.sleep(600);
-                    ConsoleHelper.writeMessage("Английское слово ");
-                    Thread.sleep(600);
-                    ConsoleHelper.writeMessage("-----------------");
-                    ConsoleHelper.writeMessage(word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
-                    ConsoleHelper.writeMessage("-----------------");
-                    Thread.sleep(600);
-                    ConsoleHelper.writeMessage("означает: ");
-                    Thread.sleep(600);
-                    ConsoleHelper.writeMessage("-----------------");
-                    ConsoleHelper.writeMessage(word.getRusWord1());
-                    ConsoleHelper.writeMessage("-----------------");
-                    Thread.sleep(600);
+                        Thread.sleep(600);
+                        ConsoleHelper.writeMessage("Английское слово ");
+                        Thread.sleep(600);
+                        ConsoleHelper.writeMessage("-----------------");
+                        ConsoleHelper.writeMessage(word.getEngWord1() + ", " + ((EngWordsVerb) word).getSecondForm() + ", " + ((EngWordsVerb) word).getThirdForm());
+                        ConsoleHelper.writeMessage("-----------------");
+                        Thread.sleep(600);
+                        ConsoleHelper.writeMessage("означает: ");
+                        Thread.sleep(600);
+                        ConsoleHelper.writeMessage("-----------------");
+                        ConsoleHelper.writeMessage(word.getRusWord1());
+                        ConsoleHelper.writeMessage("-----------------");
+                        Thread.sleep(600);
                         ConsoleHelper.writeMessage("Происхождение этого слова:");
                         ConsoleHelper.writeMessage(word.getEngEtymology1());
 
@@ -1527,7 +1531,7 @@ public class Chat implements Serializable {
             int countWrightAnswers = 0;     //счетчик количества правильных ответов
             boolean wantMore = true;
             while (wantMore) {
-                int r = Util.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
+                int r = Util.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<com.barracuda.bot.EngWords> listOfEngWords.
 
                 //этот блок кода нужен чтобы не было ArrayOutOfBounds Exception.
                 if (r >= listOfEngWords.size()) {
@@ -1935,7 +1939,7 @@ public class Chat implements Serializable {
             int countWrightAnswers = 0;     //счетчик количества правильных ответов
             boolean wantMore = true;
             while (wantMore) {
-                int r = Util.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<EngWords> listOfEngWords.
+                int r = Util.randomize(); //получаем рандомное число для выбора английского слова из ArrayList<com.barracuda.bot.EngWords> listOfEngWords.
 
                 //этот блок кода нужен чтобы не было ArrayOutOfBounds Exception.
                 if (r >= listOfEngWords.size()) {

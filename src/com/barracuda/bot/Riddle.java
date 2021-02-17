@@ -1,9 +1,13 @@
+package com.barracuda.bot;
+
+import com.barracuda.ConsoleHelper;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Riddle implements Serializable {
-    public static int globalCount; //счетчик добавления новых загадок в лист. Используется в методе riddleNew() в Main
+    public static int globalCount; //счетчик добавления новых загадок в лист. Используется в методе riddleNew() в com.barracuda.bot.Main
     public int count;              //счетчик количества загаданной конкретной загадки при неправильном ответе. Не более трех раз. Тогда сообщаем правильный ответ юзеру.
     public final static String NAME = "загадку";
     String path;

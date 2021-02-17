@@ -1,3 +1,7 @@
+package com.barracuda.bot;
+
+import com.barracuda.ConsoleHelper;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -61,7 +65,7 @@ public class Greeting {
 
     public static void greeting(User user){
         try{
-            //User user = new User();
+            //com.barracuda.bot.User user = new com.barracuda.bot.User();
             //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             String name = ConsoleHelper.readString();
 
@@ -98,29 +102,29 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
                         ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброй ночи!!!");
-                        //ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброй ночи!!!");
+                        //com.barracuda.ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброй ночи!!!");
                         Thread.sleep(600);
                     } else if(tt >= 6 & tt <  11){
                         ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго утра!!!");
-                        //ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго утра!!!");
+                        //com.barracuda.ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго утра!!!");
                         Thread.sleep(600);
                     } else if(tt >= 11 & tt <  17){
                         ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго дня!!!");
-                        //ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго дня!!!");
+                        //com.barracuda.ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго дня!!!");
                         Thread.sleep(600);
                     } else if(tt >= 17 & tt <=  23){
                         ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго вечера!!!");
-                        //ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго вечера!!!");
+                        //com.barracuda.ConsoleHelper.writeMessage("Привет, " + user.getName() + ", доброго вечера!!!");
                         Thread.sleep(600);
                     }
                     Thread.sleep(600);
                     ConsoleHelper.writeMessage("Скажи мне, а сколько тебе лет, а?");
-                    //ConsoleHelper.writeMessage("Скажи мне, а сколько тебе лет, а?");
+                    //com.barracuda.ConsoleHelper.writeMessage("Скажи мне, а сколько тебе лет, а?");
                     Thread.sleep(1000);
                     ConsoleHelper.writeMessage("И чтобы без обмана! Введи целое число с клавиатуры:");
                     ConsoleHelper.writeMessage("И чтобы без обмана! Введи целое число с клавиатуры:");
@@ -130,7 +134,7 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
@@ -156,7 +160,7 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
@@ -182,7 +186,7 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
@@ -208,7 +212,7 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
@@ -234,7 +238,7 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
@@ -260,7 +264,7 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
@@ -286,7 +290,7 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
@@ -312,7 +316,7 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
@@ -338,7 +342,7 @@ public class Greeting {
                     Thread.sleep(600);
                     DateFormat dateFormat = new SimpleDateFormat("H");
                     Date date = new Date();
-                    //ConsoleHelper.writeMessage(dateFormat.format(date));
+                    //com.barracuda.ConsoleHelper.writeMessage(dateFormat.format(date));
                     String t = dateFormat.format(date);
                     int tt = Integer.parseInt(t);
                     if(tt >= 0 & tt <  6 ){
@@ -385,7 +389,7 @@ public class Greeting {
             //в циклое добавляем этих юзеров из файла в  oldUsersList
 
 /*            for(int i = 0; i < countUsers; i++){
-                User user001 = (User) ois.readObject();
+                com.barracuda.bot.User user001 = (com.barracuda.bot.User) ois.readObject();
                 oldUsersList.add(user001);
             }*/
 
@@ -415,7 +419,7 @@ public class Greeting {
                 newUser = true;
 /*            //    seria(user); // теперь сериализацию нового юзера делаем только если юзера не было до этого.
                 //раньше мы просто сериализовывали юзера. Теперь нужно добавить юзера в массив и сериализовать весь массив.
-                oldUsersList.add(Main.user); // добавили юзера в массив.
+                oldUsersList.add(com.barracuda.bot.Main.user); // добавили юзера в массив.
 
                 seria(oldUsersList); //серииализовали новый массив с новым пользователем. ЗАТЕРЕВ СТАРЫЙ МАССИВ!*/
             }

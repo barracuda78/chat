@@ -1,8 +1,9 @@
+package com.barracuda.bot;
+
+import com.barracuda.ConsoleHelper;
+
 import java.io.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 //выяснить почему не все неотгаданные слова попадают в список слов для изучения.
 //записывать в файл неправильно названные слова (МАССИВ). И при запуске проги сразу добавлять их в список . Сделать игру только из этих слов.
 //юзеру сделать поле - список именно его неправильных слов. И для него формировать игру по угадыванию в первую очередь из этих слов.
@@ -16,10 +17,10 @@ public class Main implements Serializable {
     public static void main(String[] args) {
 
 ///////////////////////////запишем тестового юзера в файл users01.bin, чтобы файл  был чем-то наполнен.
-/*        ArrayList<User> oldUsersList = new ArrayList<>();
-        ArrayList<EngWords> list = new ArrayList<>();
+/*        ArrayList<com.barracuda.bot.User> oldUsersList = new ArrayList<>();
+        ArrayList<com.barracuda.bot.EngWords> list = new ArrayList<>();
 
-        EngWords word001 = new EngWords();
+        com.barracuda.bot.EngWords word001 = new com.barracuda.bot.EngWords();
         word001.setEngWord1("friend");
         word001.setEngWord2("fellow");
         word001.setEngWord3("-empty-");
@@ -38,12 +39,12 @@ public class Main implements Serializable {
         word001.setRusEtymology1("нет этимологии на русском");
         list.add(word001);
 
-        Main.user.setUsersListOfUnknownWords(list);
-        Main.user.setAge(111);
-        Main.user.setName("Курдалы");
-        Main.user.setLogin("111");
-        Main.user.setPassword("111");
-        oldUsersList.add(Main.user);
+        com.barracuda.bot.Main.user.setUsersListOfUnknownWords(list);
+        com.barracuda.bot.Main.user.setAge(111);
+        com.barracuda.bot.Main.user.setName("Курдалы");
+        com.barracuda.bot.Main.user.setLogin("111");
+        com.barracuda.bot.Main.user.setPassword("111");
+        oldUsersList.add(com.barracuda.bot.Main.user);
         try {
                 File file = new File("users01.bin");
                 FileOutputStream fos = new FileOutputStream(file, true);
@@ -51,37 +52,37 @@ public class Main implements Serializable {
                 oos.writeObject(oldUsersList);                              // пишем в файл объект список юзеров
                 fos.close();
                 oos.close();
-            ConsoleHelper.writeMessage("Список пользователей oldUsersList с одним пользователем  " + Main.user.toString() + " записан в файл.");
+            com.barracuda.ConsoleHelper.writeMessage("Список пользователей oldUsersList с одним пользователем  " + com.barracuda.bot.Main.user.toString() + " записан в файл.");
             ////////////////запишем в другой файл usersCount001.bin кол-во пользователей = 1
             File file02 = new File("usersCount001.bin");
             FileOutputStream fosCount = new FileOutputStream(file02, false);
             ObjectOutputStream oosCount = new ObjectOutputStream(fosCount);     // пишем в файл кол-во юзеров
             int countUsers = 1; //Запишем единичку в файл подсчета пользователей, т.к. до этого мы записала в файл одного (первого) пользователя
             oosCount.writeInt(countUsers);   //запишем в файл количество пользователей = 1.
-            ConsoleHelper.writeMessage("кол-во юзеров записано в файл.");
+            com.barracuda.ConsoleHelper.writeMessage("кол-во юзеров записано в файл.");
             oosCount.close();
             fosCount.close();
 
 
-            ConsoleHelper.writeMessage("проверим, какие слова записались пользователю в список неизвестных слов:");
+            com.barracuda.ConsoleHelper.writeMessage("проверим, какие слова записались пользователю в список неизвестных слов:");
 
             FileInputStream fis = new FileInputStream(file);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            ArrayList<User> oldUsersListDeserialized = (ArrayList<User>)ois.readObject();
-            ConsoleHelper.writeMessage("Вытащили из файла список юзеров с одним юзером Курдалы.");
+            ArrayList<com.barracuda.bot.User> oldUsersListDeserialized = (ArrayList<com.barracuda.bot.User>)ois.readObject();
+            com.barracuda.ConsoleHelper.writeMessage("Вытащили из файла список юзеров с одним юзером Курдалы.");
 
-            ArrayList<EngWords> listOfUnknownWordsOld = new ArrayList<>();
-            for(User userSerialized : oldUsersListDeserialized){
-                if(Main.user.getName().equals(userSerialized.getName()) & Main.user.getAge() == (userSerialized.getAge())){
+            ArrayList<com.barracuda.bot.EngWords> listOfUnknownWordsOld = new ArrayList<>();
+            for(com.barracuda.bot.User userSerialized : oldUsersListDeserialized){
+                if(com.barracuda.bot.Main.user.getName().equals(userSerialized.getName()) & com.barracuda.bot.Main.user.getAge() == (userSerialized.getAge())){
                     listOfUnknownWordsOld = userSerialized.getUsersListOfUnknownWords();
-                    ConsoleHelper.writeMessage("записали список слов нашего юзера в переменную listOfUnknownWordsOld");
-                    ConsoleHelper.writeMessage("выведем прочитанный из файла список пользователей на экран: ");
-                    ConsoleHelper.writeMessage(userSerialized.toString());
+                    com.barracuda.ConsoleHelper.writeMessage("записали список слов нашего юзера в переменную listOfUnknownWordsOld");
+                    com.barracuda.ConsoleHelper.writeMessage("выведем прочитанный из файла список пользователей на экран: ");
+                    com.barracuda.ConsoleHelper.writeMessage(userSerialized.toString());
                 }
 
-                ConsoleHelper.writeMessage("Выведем слова из списка слов юзера на экран: ");
-                for(EngWords word : userSerialized.getUsersListOfUnknownWords()){
-                    ConsoleHelper.writeMessage(word.toString());
+                com.barracuda.ConsoleHelper.writeMessage("Выведем слова из списка слов юзера на экран: ");
+                for(com.barracuda.bot.EngWords word : userSerialized.getUsersListOfUnknownWords()){
+                    com.barracuda.ConsoleHelper.writeMessage(word.toString());
                 }
             }
 
@@ -91,14 +92,14 @@ public class Main implements Serializable {
 
          }
         catch(FileNotFoundException fnf){
-            ConsoleHelper.writeMessage("Файл не найден. Идем далее.");
+            com.barracuda.ConsoleHelper.writeMessage("Файл не найден. Идем далее.");
         }
         catch (IOException ioe) {
-            ConsoleHelper.writeMessage("Ошибка ввода-вывода");
+            com.barracuda.ConsoleHelper.writeMessage("Ошибка ввода-вывода");
             ioe.printStackTrace();
         }
         catch(ClassNotFoundException cnf){
-            ConsoleHelper.writeMessage("Ошибка ClassNotFoundException в тестовой записи пользователя в main");
+            com.barracuda.ConsoleHelper.writeMessage("Ошибка ClassNotFoundException в тестовой записи пользователя в main");
         }*/
 ///////////////////////////Конец тестовой записи юзера и числа юзеров в файлы.
 

@@ -1,3 +1,5 @@
+package com.barracuda.bot;
+
 public class EngWordsVerb extends EngWords {
     private String secondForm;
     private String thirdForm;

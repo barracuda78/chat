@@ -1,3 +1,7 @@
+package com.barracuda.bot;
+
+import com.barracuda.ConsoleHelper;
+
 import java.io.*;
 import java.util.ArrayList;
 

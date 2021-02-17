@@ -1,3 +1,5 @@
+package com.barracuda.bot;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
