@@ -375,7 +375,7 @@ public class Greeting {
             ArrayList<User> oldUsersList = new ArrayList<>();
 
             //в этом блоке кода читаем количество юзеров из файла usersCount001.bin
-            File file = new File("usersCount001.bin");
+            File file = new File("bin/usersCount001.bin");
             FileInputStream fisCount = new FileInputStream(file);
             ObjectInputStream oisCount = new ObjectInputStream(fisCount);
             int countUsers = oisCount.readInt();
@@ -383,7 +383,7 @@ public class Greeting {
             fisCount.close();
 
             //в этом блоке кода читаем самих юзеров (объекты) из файла users01.bin.
-            File file01 = new File("users01.bin");
+            File file01 = new File("bin/users01.bin");
             FileInputStream fis = new FileInputStream(file01);
             ObjectInputStream ois = new ObjectInputStream(fis);
             //в циклое добавляем этих юзеров из файла в  oldUsersList
@@ -529,7 +529,7 @@ public class Greeting {
                     ConsoleHelper.writeMessage("Теперь пароль, пожалуйста:");
                     String password = ConsoleHelper.readString();
 
-                    File fileLogin = new File("users01.bin");
+                    File fileLogin = new File("bin/users01.bin");
                     FileInputStream fisLogin = new FileInputStream(fileLogin);
                     ObjectInputStream oisLogin = new ObjectInputStream(fisLogin);
                     ArrayList<User> userLoginList = (ArrayList<User>)oisLogin.readObject();
@@ -783,6 +783,8 @@ public class Greeting {
         }
         catch(ClassNotFoundException cnf){
             ConsoleHelper.writeMessage("Опа... нет такого класса line412 seriaFromFile() method! Но мы продолжаем.");
+            System.out.println(cnf.getMessage());
+            cnf.printStackTrace();
         }
         catch(NullPointerException npe){
             ConsoleHelper.writeMessage("Опа... NullPointerException в методе greeting()! Но мы продолжаем.");

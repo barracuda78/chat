@@ -21,25 +21,25 @@ public class Fairytale implements Serializable {
 
     public static void fairytaleNew(){
         ArrayList<Fairytale> listOfFairytales = new ArrayList<>();
-        Fairytale fairytale001 = new Fairytale("fairytale001");
+        Fairytale fairytale001 = new Fairytale("bin/fairytale001");
         listOfFairytales.add(0, fairytale001);
-        Fairytale fairytale002 = new Fairytale("fairytale002");
+        Fairytale fairytale002 = new Fairytale("bin/fairytale002");
         listOfFairytales.add(0, fairytale002);
-        Fairytale fairytale003 = new Fairytale("fairytale003");
+        Fairytale fairytale003 = new Fairytale("bin/fairytale003");
         listOfFairytales.add(0, fairytale003);
-        Fairytale fairytale004 = new Fairytale("fairytale004");
+        Fairytale fairytale004 = new Fairytale("bin/fairytale004");
         listOfFairytales.add(0, fairytale004);
-        Fairytale fairytale005 = new Fairytale("fairytale005");
+        Fairytale fairytale005 = new Fairytale("bin/fairytale005");
         listOfFairytales.add(0, fairytale005);
-        Fairytale fairytale006 = new Fairytale("fairytale006");
+        Fairytale fairytale006 = new Fairytale("bin/fairytale006");
         listOfFairytales.add(0, fairytale006);
-        Fairytale fairytale007 = new Fairytale("fairytale007");
+        Fairytale fairytale007 = new Fairytale("bin/fairytale007");
         listOfFairytales.add(0, fairytale007);
-        Fairytale fairytale008 = new Fairytale("fairytale008");
+        Fairytale fairytale008 = new Fairytale("bin/fairytale008");
         listOfFairytales.add(0, fairytale008);
-        Fairytale fairytale009 = new Fairytale("fairytale009");
+        Fairytale fairytale009 = new Fairytale("bin/fairytale009");
         listOfFairytales.add(0, fairytale009);
-        Fairytale fairytale010 = new Fairytale("fairytale010");
+        Fairytale fairytale010 = new Fairytale("bin/fairytale010");
         listOfFairytales.add(0, fairytale010);
 
         ArrayList<Integer> listOfRandoms = new ArrayList<>(); //для сбора уже выскакивавших рандомных значений.
@@ -135,7 +135,7 @@ public class Fairytale implements Serializable {
                     if (Fairytale.wantMore()) {
                         fairytaleNew();           //здесь ошибка. Он не учитывает загаданную загадку и может загадать ту же. Нужно удалять загаданную загадку из массива. Массив загадок создавать в другом методе.
                     } else {
-                        Main.dealer();
+                        Deal.dealer();
                     }
                     listOfFairytales.remove(rr);                                 //удалисть из списка б/у-шную сказку.
                 }
@@ -251,7 +251,7 @@ public class Fairytale implements Serializable {
             } else if (answer.contains("не надо") || answer.contains("не хочу") || answer.contains("неа") || answer.contains("достал") || answer.contains("надоел") || answer.contains("задолбал") || answer.contains("скучно")) {
                 return false;
             } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
-                Main.anecdoteNew();
+                Anecdot.anecdoteNew();
             } else if (answer.contains("загадк") || answer.contains("загадочк") || answer.contains("riddle") || answer.equals("загадку") || answer.equals("загадочку") ) {
                 Riddle.riddleNew();
             } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
