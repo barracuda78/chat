@@ -88,8 +88,8 @@ public class Riddle implements Serializable {
             ArrayList<Riddle> listOfRiddles = new ArrayList<>();
             if (Riddle.globalCount == 1) {
 
-                Riddle riddle01 = new Riddle("riddle001");
-                riddle01.setPath2("riddle001_02");
+                Riddle riddle01 = new Riddle("bin/riddle001");
+                riddle01.setPath2("bin/riddle001_02");
                 riddle01.setAnswer("5");
                 riddle01.setAnswerEng("five");
                 riddle01.setFinalAnswer("Правильный ответ: ТРИ плюс ДВА равно ПЯТЬ!");
@@ -104,8 +104,8 @@ public class Riddle implements Serializable {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-                Riddle riddle02 = new Riddle("riddle002");
-                riddle02.setPath2("riddle002");
+                Riddle riddle02 = new Riddle("bin/riddle002");
+                riddle02.setPath2("bin/riddle002");
                 riddle02.setAnswer("хлеб");
                 riddle02.setAnswerEng("bread");
                 riddle02.setFinalAnswer("Правильный ответ: ХЛЕБ!");
@@ -118,8 +118,8 @@ public class Riddle implements Serializable {
 
                 listOfRiddles.add(0, riddle02);
 ///////////////////////////////////////////////////////////////////////////////////////////////
-                Riddle riddle03 = new Riddle("riddle003");
-                riddle03.setPath2("riddle003");
+                Riddle riddle03 = new Riddle("bin/riddle003");
+                riddle03.setPath2("bin/riddle003");
                 riddle03.setAnswer("ю");
                 riddle03.setAnswerEng("u");
                 riddle03.setFinalAnswer("Правильный ответ: БУКВА Ю");
@@ -132,8 +132,8 @@ public class Riddle implements Serializable {
 
                 listOfRiddles.add(0, riddle03);
 ///////////////////////////////////////////////////////////////////////////////////////////////
-                Riddle riddle04 = new Riddle("riddle004");
-                riddle04.setPath2("riddle004");
+                Riddle riddle04 = new Riddle("bin/riddle004");
+                riddle04.setPath2("bin/riddle004");
                 riddle04.setAnswer("перец");
                 riddle04.setAnswerEng("pepper");
                 riddle04.setFinalAnswer("Правильный ответ: ПЕРЕЦ!");
@@ -147,8 +147,8 @@ public class Riddle implements Serializable {
                 listOfRiddles.add(0, riddle04);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-                Riddle riddle05 = new Riddle("riddle005");
-                riddle05.setPath2("riddle005");
+                Riddle riddle05 = new Riddle("bin/riddle005");
+                riddle05.setPath2("bin/riddle005");
                 riddle05.setAnswer("чай");
                 riddle05.setAnswerEng("tea");
                 riddle05.setFinalAnswer("Правильный ответ: ЧАЙ!");
@@ -161,8 +161,8 @@ public class Riddle implements Serializable {
 
                 listOfRiddles.add(0, riddle05);
 ///////////////////////////////////////////////////////////////////////////////////////////////
-                Riddle riddle06 = new Riddle("riddle006");
-                riddle06.setPath2("riddle006");
+                Riddle riddle06 = new Riddle("bin/riddle006");
+                riddle06.setPath2("bin/riddle006");
                 riddle06.setAnswer("сырник");
                 riddle06.setAnswerEng("cheesecake");
                 riddle06.setFinalAnswer("Правильный ответ: СЫРНИК!");
@@ -175,8 +175,8 @@ public class Riddle implements Serializable {
 
                 listOfRiddles.add(0, riddle06);
 ///////////////////////////////////////////////////////////////////////////////////////////////
-                Riddle riddle07 = new Riddle("riddle007");
-                riddle07.setPath2("riddle007");
+                Riddle riddle07 = new Riddle("bin/riddle007");
+                riddle07.setPath2("bin/riddle007");
                 riddle07.setAnswer("бутерброд");
                 riddle07.setAnswerEng("sandwich");
                 riddle07.setFinalAnswer("Правильный ответ: БУТЕРБРОД!");
@@ -189,8 +189,8 @@ public class Riddle implements Serializable {
 
                 listOfRiddles.add(0, riddle07);
 ///////////////////////////////////////////////////////////////////////////////////////////////
-                Riddle riddle08 = new Riddle("riddle008");
-                riddle08.setPath2("riddle008");
+                Riddle riddle08 = new Riddle("bin/riddle008");
+                riddle08.setPath2("bin/riddle008");
                 riddle08.setAnswer("масло");
                 riddle08.setAnswerEng("butter");
                 riddle08.setFinalAnswer("Правильный ответ: МАСЛО!");
@@ -203,8 +203,8 @@ public class Riddle implements Serializable {
 
                 listOfRiddles.add(0, riddle08);
 ///////////////////////////////////////////////////////////////////////////////////////////////
-                Riddle riddle09 = new Riddle("riddle009");
-                riddle09.setPath2("riddle009");
+                Riddle riddle09 = new Riddle("bin/riddle009");
+                riddle09.setPath2("bin/riddle009");
                 riddle09.setAnswer("мед");
                 riddle09.setAnswerEng("honey");
                 riddle09.setFinalAnswer("Правильный ответ: МЕД");
@@ -217,8 +217,8 @@ public class Riddle implements Serializable {
 
                 listOfRiddles.add(0, riddle09);
 ///////////////////////////////////////////////////////////////////////////////////////////////
-                Riddle riddle10 = new Riddle("riddle010");
-                riddle10.setPath2("riddle010");
+                Riddle riddle10 = new Riddle("bin/riddle010");
+                riddle10.setPath2("bin/riddle010");
                 riddle10.setAnswer("пельмени");
                 riddle10.setAnswerEng("dumplings");
                 riddle10.setFinalAnswer("Правильный ответ: ПЕЛЬМЕНИ!");
@@ -377,7 +377,7 @@ public class Riddle implements Serializable {
             if (wantMore()) {
                 riddleNew();           //здесь ошибка. Он не учитывает загаданную загадку и может загадать ту же. Нужно удалять загаданную загадку из массива. Массив загадок создавать в другом методе.
             } else {
-                Main.dealer();
+                Deal.dealer();
             }
 
         }
@@ -923,7 +923,7 @@ public class Riddle implements Serializable {
         } else if (answer.contains("не надо") || answer.contains("не хочу") || answer.contains("неа") || answer.contains("достал") || answer.contains("надоел") || answer.contains("задолбал") || answer.contains("скучно")) {
             return false;
         } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
-            Main.anecdoteNew();
+            Anecdot.anecdoteNew();
         } else if (answer.contains("сказк") || answer.contains("fairytale") || answer.contains("сказочк")) {
             Fairytale.fairytaleNew();
         } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {

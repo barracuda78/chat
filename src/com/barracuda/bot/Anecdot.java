@@ -18,27 +18,27 @@ public class Anecdot implements Serializable {
 
         try {
             ArrayList<Anecdot> listOfAnecdots = new ArrayList<>();
-            Anecdot anecdot01 = new Anecdot("anecdot001");
+            Anecdot anecdot01 = new Anecdot("bin/anecdot001");
             listOfAnecdots.add(0, anecdot01);
-            Anecdot anecdot02 = new Anecdot("anecdot002");
+            Anecdot anecdot02 = new Anecdot("bin/anecdot002");
             listOfAnecdots.add(1, anecdot02);
-            Anecdot anecdot03 = new Anecdot("anecdot003");
+            Anecdot anecdot03 = new Anecdot("bin/anecdot003");
             listOfAnecdots.add(2, anecdot03);
-            Anecdot anecdot04 = new Anecdot("anecdot004");
+            Anecdot anecdot04 = new Anecdot("bin/anecdot004");
             listOfAnecdots.add(3, anecdot04);
-            Anecdot anecdot05 = new Anecdot("anecdot005");
+            Anecdot anecdot05 = new Anecdot("bin/anecdot005");
             listOfAnecdots.add(4, anecdot05);
-            Anecdot anecdot06 = new Anecdot("anecdot006");
+            Anecdot anecdot06 = new Anecdot("bin/anecdot006");
             listOfAnecdots.add(5, anecdot06);
-            Anecdot anecdot07 = new Anecdot("anecdot007");
+            Anecdot anecdot07 = new Anecdot("bin/anecdot007");
             listOfAnecdots.add(6, anecdot07);
-            Anecdot anecdot08 = new Anecdot("anecdot008");
+            Anecdot anecdot08 = new Anecdot("bin/anecdot008");
             listOfAnecdots.add(7, anecdot08);
-            Anecdot anecdot09 = new Anecdot("anecdot009");
+            Anecdot anecdot09 = new Anecdot("bin/anecdot009");
             listOfAnecdots.add(8, anecdot09);
-            Anecdot anecdot10 = new Anecdot("anecdot010");
+            Anecdot anecdot10 = new Anecdot("bin/anecdot010");
             listOfAnecdots.add(9, anecdot10);
-            Anecdot anecdot11 = new Anecdot("anecdot011");
+            Anecdot anecdot11 = new Anecdot("bin/anecdot011");
             listOfAnecdots.add(10, anecdot11);
 
 
@@ -62,7 +62,7 @@ public class Anecdot implements Serializable {
                     //узнать хочет ли еще анекдот.
                     String yN = Anecdot.wantMoreAnecdot();
                     if (yN.equals("нет")) {
-                        Main.dealer();
+                        Deal.dealer();
                     } else {
 
                         int ran = Util.randomize();

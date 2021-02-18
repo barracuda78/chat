@@ -289,7 +289,7 @@ public class Util {
         } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
             Anecdot.exit();
         } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
-            Main.anecdoteNew();
+            Anecdot.anecdoteNew();
         } else return false;
         return false;
     }
