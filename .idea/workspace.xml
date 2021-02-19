@@ -7,60 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/users01.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/usersCount001.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot001" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot002" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot002" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot003" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot003" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot004" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot004" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot005" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot005" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot006" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot006" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot007" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot007" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot008" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot008" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot009" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot009" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot010" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot010" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anecdot011" beforeDir="false" afterPath="$PROJECT_DIR$/bin/anecdot011" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale001" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale002" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale002" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale003" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale003" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale004" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale004" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale005" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale005" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale006" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale006" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale007" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale007" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale008" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale008" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale009" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale009" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fairytale010" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fairytale010" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Anecdot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Anecdot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Fairytale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Fairytale.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Greeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Greeting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Riddle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Riddle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle001" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle001_02" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle001_02" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle002" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle002" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle003" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle003" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle004" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle004" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle005" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle005" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle006" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle006" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle007" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle007" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle008" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle008" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle009" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle009" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle010" beforeDir="false" afterPath="$PROJECT_DIR$/bin/riddle010" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Greeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users01.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usersCount001.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/usersUnknownWords001.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bin/usersUnknownWords001.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/META-INF/BarraChat.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +21,11 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="241" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="cf28cd31-ff9c-4044-9c27-c80412a3ff9f" value="Violet" />
+    </colors>
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -171,8 +129,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13552">
-              <caret line="220" column="39" selection-start-line="220" selection-start-column="39" selection-end-line="220" selection-end-column="39" />
+            <state relative-caret-position="323">
+              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -290,6 +248,7 @@
     <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectId" id="1ofca50ZoFmTlJKBC7Z8jyLoWMB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -302,11 +261,6 @@
             <path>
               <item name="BarraChat" type="b2602c69:ProjectViewProjectNode" />
               <item name="BarraChat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BarraChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BarraChat" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BarraChat" type="b2602c69:ProjectViewProjectNode" />
@@ -342,12 +296,22 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bin" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -362,19 +326,33 @@
       <recent name="C:\coding\BarraChat" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.BarracudaBotClient">
+    <configuration name="BarracudaBotClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.barracuda.client.BarracudaBotClient" />
+      <module name="BarraChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.barracuda.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BotClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.barracuda.client.BotClient" />
+      <module name="BarraChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.barracuda.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClientGuiController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.barracuda.client.ClientGuiController" />
       <module name="BarraChat" />
@@ -428,15 +406,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BarracudaBotClient" />
+        <item itemvalue="Application.BotClient" />
         <item itemvalue="Application.ClientGuiController" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -447,12 +440,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581681829671</updated>
+      <workItem from="1613681152707" duration="3618000" />
+      <workItem from="1613763707103" duration="3426000" />
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13859275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -463,7 +457,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33547696" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33547696" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -510,19 +504,34 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BarraChat$Test.ic" NAME="Test Coverage Results" MODIFIED="1581863321227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/usercCount001.bin" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/FileOutputStream.java">
+    <entry file="jar://$PROJECT_DIR$/../../Program Files/Java/jdk1.8.0_201/src.zip!/java/io/FileOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="325" selection-start-line="325" selection-end-line="325" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/ObjectOutputStream.java">
+    <entry file="jar://$PROJECT_DIR$/../../Program Files/Java/jdk1.8.0_201/src.zip!/java/io/ObjectOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="1874" column="16" selection-start-line="1874" selection-start-column="16" selection-end-line="1874" selection-end-column="16" />
@@ -621,7 +630,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
+    <entry file="jar://$PROJECT_DIR$/../../Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2210">
           <caret line="169" column="23" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="37" />
@@ -632,7 +641,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/ArrayList.java">
+    <entry file="jar://$PROJECT_DIR$/../../Program Files/Java/jdk1.8.0_201/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="460" column="19" selection-start-line="460" selection-start-column="19" selection-end-line="460" selection-end-column="19" />
@@ -892,8 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13552">
-          <caret line="220" column="39" selection-start-line="220" selection-start-column="39" selection-end-line="220" selection-end-column="39" />
+        <state relative-caret-position="323">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
