@@ -7,14 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/barracuda/bot/WindowHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/ConsoleHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/ConsoleHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Anecdot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Deal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Fairytale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Riddle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BotClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -430,8 +431,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BarracudaBotClient" />
-        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.ClientGuiController" />
         <item itemvalue="Application.BotClient" />
       </list>
@@ -451,7 +452,7 @@
       <workItem from="1613681152707" duration="3618000" />
       <workItem from="1613763707103" duration="4500000" />
       <workItem from="1613802166332" duration="3725000" />
-      <workItem from="1613806235720" duration="1323000" />
+      <workItem from="1613806235720" duration="4511000" />
     </task>
     <servers />
   </component>

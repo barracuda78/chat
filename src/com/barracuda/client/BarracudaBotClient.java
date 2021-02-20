@@ -19,8 +19,8 @@ public class BarracudaBotClient extends Client {
 
             Greeting.whatIsYourName(BarracudaBotClient.this);
             try {
-                Greeting.greeting(user);
-                Deal.dealer();
+                //Greeting.greeting(user);
+                Deal.dealer(BarracudaBotClient.this);
                 Util.exit("exit"); //по идее это должен быть выход из программы....
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();

@@ -1,6 +1,7 @@
 package com.barracuda.bot;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.client.Client;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ public class Anecdot implements Serializable {
         this.path = path;
     }
 
-    public static void anecdoteNew(){
+    public static void anecdoteNew(Client client){
 
         try {
             ArrayList<Anecdot> listOfAnecdots = new ArrayList<>();
@@ -60,9 +61,9 @@ public class Anecdot implements Serializable {
                     listOfRandoms.add(r);                   //добавить r  в список
                     listOfAnecdots.get(r).readFromFile();   //рассказать анекдот
                     //узнать хочет ли еще анекдот.
-                    String yN = Anecdot.wantMoreAnecdot();
+                    String yN = Anecdot.wantMoreAnecdot(client);
                     if (yN.equals("нет")) {
-                        Deal.dealer();
+                        Deal.dealer(client);
                     } else {
 
                         int ran = Util.randomize();
@@ -160,7 +161,7 @@ public class Anecdot implements Serializable {
             ConsoleHelper.writeMessage("Закончились мои анекдоты, детка...");        }
     }
 
-    public static String wantMoreAnecdot(){
+    public static String wantMoreAnecdot(Client client){
 
         try {
 
@@ -244,9 +245,9 @@ public class Anecdot implements Serializable {
             } else if (answer.contains("no") || answer.contains("not") || answer.contains("nop") || answer.contains("не") || answer.equals("не надо") || answer.equals("не хочу") || answer.contains("достал") || answer.contains("задолбал") || answer.contains("надоел") || answer.contains("заткнись")) {
                 return "нет";
             } else if (answer.contains("сказку") || answer.contains("сказк") || answer.contains("сказочк") || answer.contains("сказание") || answer.equals("fairytale") || answer.equals("tsle") ) {
-                Fairytale.fairytaleNew();
+                Fairytale.fairytaleNew(client);
             } else if (answer.contains("загадк") || answer.contains("загадочк") || answer.contains("riddle") || answer.equals("загадку") || answer.equals("загадочку") ) {
-                Riddle.riddleNew();
+                Riddle.riddleNew(client);
             } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
                 Anecdot.exit();
             } else return "нет";

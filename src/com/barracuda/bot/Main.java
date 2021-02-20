@@ -117,12 +117,12 @@ public class Main implements Serializable {
 ///////////////////////////Конец тестовой записи юзера и числа юзеров в файлы.
 
         //Greeting.whatIsYourName();
-        try {
-            Greeting.greeting(user);
-            Deal.dealer();
-            Util.exit("exit"); //по идее это должен быть выход из программы....
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Greeting.greeting(user);
+//            //Deal.dealer();
+//            Util.exit("exit"); //по идее это должен быть выход из программы....
+//        } catch (IOException | InterruptedException e) {
+//            e.printStackTrace();
+//        }
     }
 }
