@@ -1,6 +1,7 @@
 package com.barracuda.bot;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.client.Client;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -14,6 +15,9 @@ import java.util.ArrayList;
 
 public class Main implements Serializable {
     protected static User user = new User();
+
+
+
     public static void main(String[] args) {
 
 ///////////////////////////запишем тестового юзера в файл users01.bin, чтобы файл  был чем-то наполнен.
@@ -112,7 +116,7 @@ public class Main implements Serializable {
 //        }
 ///////////////////////////Конец тестовой записи юзера и числа юзеров в файлы.
 
-        Greeting.whatIsYourName();
+        //Greeting.whatIsYourName();
         try {
             Greeting.greeting(user);
             Deal.dealer();

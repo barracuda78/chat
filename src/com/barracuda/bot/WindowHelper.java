@@ -1,15 +1,18 @@
-package com.barracuda;
+package com.barracuda.bot;
+
+import com.barracuda.ConsoleHelper;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class ConsoleHelper {
-
+public class WindowHelper extends ConsoleHelper {
     private static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
 
     public static void writeMessage(String message) {
         System.out.println(message);
+        //sendTextMessage();
 
     }
 
@@ -21,13 +24,6 @@ public class ConsoleHelper {
             System.out.println("Произошла ошибка при попытке ввода текста. Попробуйте еще раз.");
             return readString();
         }
-//        finally{
-//            try {
-//                bufferedReader.close();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
         return s;
     }
 

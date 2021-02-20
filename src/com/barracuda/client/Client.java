@@ -208,7 +208,7 @@ public class Client {
     //Если во время отправки произошло исключение IOException, то необходимо вывести информацию об этом пользователю и присвоить false полю clientConnected.
     //5. Метод sendTextMessage() должен создавать и отправлять новое текстовое сообщение используя connection
     // и устанавливать флаг clientConnected в false, если во время отправки или создания сообщения возникло исключение IOException.
-    protected void sendTextMessage(String text) {
+    public void sendTextMessage(String text) {
 
         try {
             Message message = new Message(MessageType.TEXT, text);

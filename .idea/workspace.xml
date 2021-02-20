@@ -7,11 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/barracuda/bot/WindowHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/META-INF/BarraChat.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/ConsoleHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/ConsoleHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BotClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -353,8 +355,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientGuiController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.barracuda.client.ClientGuiController" />
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.barracuda.client.Client" />
       <module name="BarraChat" />
       <extension name="coverage">
         <pattern>
@@ -366,9 +368,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.barracuda.bot.Main" />
+    <configuration name="ClientGuiController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.barracuda.client.ClientGuiController" />
       <module name="BarraChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.barracuda.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -422,10 +430,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BarracudaBotClient" />
-        <item itemvalue="Application.BotClient" />
-        <item itemvalue="Application.ClientGuiController" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ClientGuiController" />
+        <item itemvalue="Application.BotClient" />
       </list>
     </recent_temporary>
   </component>
@@ -441,7 +449,9 @@
       <option name="presentableId" value="Default" />
       <updated>1581681829671</updated>
       <workItem from="1613681152707" duration="3618000" />
-      <workItem from="1613763707103" duration="3426000" />
+      <workItem from="1613763707103" duration="4500000" />
+      <workItem from="1613802166332" duration="3725000" />
+      <workItem from="1613806235720" duration="1323000" />
     </task>
     <servers />
   </component>
