@@ -1,6 +1,7 @@
 package com.barracuda.bot;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.client.BarracudaBotClient;
 import com.barracuda.client.Client;
 
 import java.io.IOException;
@@ -10,7 +11,14 @@ public class Deal {
         ConsoleHelper.writeMessage("Выбирай, чем займемся?");
         client.sendTextMessage("Выбирай, чем займемся?");
 
-        String deal = ConsoleHelper.readString();
+
+        String deal = ConsoleHelper.readString(); //----------------------------------------------->раскомментить!!!
+        //String deal = null;
+
+//        BarracudaBotClient bbClient = (BarracudaBotClient)client;
+//        BarracudaBotClient.BarraSocketThread bbst = (BarracudaBotClient.BarraSocketThread)bbClient.getSocketThread();
+//        bbst.processIncomingMessage("поиграем");
+
         //Сюда - логику чтения клиентом сообщений!!!!!!!!!!!!!!!!!!!!!!
         deal = deal.trim().toLowerCase();
         if (deal.contains("спать")){

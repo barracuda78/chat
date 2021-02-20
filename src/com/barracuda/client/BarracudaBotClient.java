@@ -1,9 +1,6 @@
 package com.barracuda.client;
 
-import com.barracuda.bot.Deal;
-import com.barracuda.bot.Greeting;
-import com.barracuda.bot.User;
-import com.barracuda.bot.Util;
+import com.barracuda.bot.*;
 
 import java.io.IOException;
 
@@ -17,25 +14,27 @@ public class BarracudaBotClient extends Client {
             sendTextMessage("Привет всем. Я бот. Умею болтать на любые темы.");
             //здесь сообщение с вариантами первого приветствия из barracudaChat:
 
+            super.clientMainLoop();
+        }
+
+        @Override
+        public void processIncomingMessage(String message) {
             Greeting.whatIsYourName(BarracudaBotClient.this);
             try {
-                //Greeting.greeting(user);
+                // Greeting.greeting(user);
                 Deal.dealer(BarracudaBotClient.this);
                 Util.exit("exit"); //по идее это должен быть выход из программы....
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();
             }
-            super.clientMainLoop();
-        }
 
-        @Override
-        protected void processIncomingMessage(String message) {
-            //com.barracuda.bot.Main.main(new String[0]);
+//            Helper helper = new Helper(BarracudaBotClient.this);
+//            helper.readString();
         }
     }
 
     @Override
-    protected SocketThread getSocketThread(){
+    public SocketThread getSocketThread(){
         return new BarracudaBotClient.BarraSocketThread();
     }
 

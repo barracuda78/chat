@@ -1,22 +1,31 @@
 package com.barracuda.bot;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.client.Client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class WindowHelper extends ConsoleHelper {
+public class Helper {
     private static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    private Client client;
 
+    public Helper(Client client){
+        this.client = client;
+    }
 
-    public static void writeMessage(String message) {
+    public Client getClient(Client client){
+        return  client;
+    }
+
+    public void writeMessage(String message) {
         System.out.println(message);
-        //sendTextMessage();
+        client.sendTextMessage(message);
 
     }
 
-    public static String readString(){
+    public String readString(){
         String s = null;
         try {
             s = bufferedReader.readLine();
@@ -27,7 +36,7 @@ public class WindowHelper extends ConsoleHelper {
         return s;
     }
 
-    public static int readInt(){
+    public int readInt(){
         int a = 0;
         try {
             a = Integer.valueOf(readString());
