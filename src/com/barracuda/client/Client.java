@@ -6,11 +6,15 @@ import com.barracuda.Message;
 import com.barracuda.MessageType;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 
 
 public class Client {
     protected Connection connection;
     private volatile boolean clientConnected = false;
+
+    //public static BlockingQueue<String> queue = new ArrayBlockingQueue<String>(100);
 
 
     public static void main(String[] args) {
@@ -40,7 +44,6 @@ public class Client {
         //void processIncomingMessage(String message) - должен выводить текст message в консоль.
         protected void processIncomingMessage(String message){
             ConsoleHelper.writeMessage(message);
-
         }
 
         //void informAboutAddingNewUser(String userName) - должен выводить в консоль информацию о том, что участник с именем userName присоединился к чату.
@@ -107,7 +110,27 @@ public class Client {
             while(true) {
                 Message messageFromServer = connection.receive();
                 if (messageFromServer.getType() == MessageType.TEXT) {
+
+                    //моя добавочка---для бота
+                    String message = messageFromServer.getData();
+                    String[] nameAndTextArray = message.split(": ");
+                    String name = null;
+                    String text = null;
+                    if (nameAndTextArray.length > 1) {
+                        name = nameAndTextArray[0];
+                        text = nameAndTextArray[1];
+                    }
+
+                    Client сlient = Client.this;
+
+                    if(text != null && name.equals("Andrey")) {
+                        BarracudaBotClient.messagesQueue.add(message);   //<========добавляем message, разделенный двоеточием с именем клиента!
+                        ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client");
+                    }
+                    //конец добавочки.
+
                     processIncomingMessage(messageFromServer.getData());
+                   // processIncomingMessage(message);
                 } else if (messageFromServer.getType() == MessageType.USER_ADDED) {
                     informAboutAddingNewUser(messageFromServer.getData());
                 } else if (messageFromServer.getType() == MessageType.USER_REMOVED) {
@@ -118,6 +141,25 @@ public class Client {
             }
         }
 
+
+    }
+
+    //я добавил метод.
+    public String getTextMessage(){
+        Message messageFromServer = null;
+        String text = null;
+        try {
+            while(text == null){
+                messageFromServer = connection.receive();
+                text = messageFromServer.getData();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return text;
 
     }
 

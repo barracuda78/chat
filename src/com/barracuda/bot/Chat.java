@@ -1,6 +1,7 @@
 package com.barracuda.bot;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.client.BarracudaBotClient;
 import com.barracuda.client.Client;
 
 import java.io.*;
@@ -31,13 +32,22 @@ public class Chat implements Serializable {
 
     public static void chat00(Client client)throws IOException, InterruptedException{
 
-        Chat chat = new Chat();
         //метод является входным для чата и далее вызывает chat001 chat002 chat003 и так далее в рандомном порядке.
         Thread.sleep(600);
         ConsoleHelper.writeMessage("Задавай любую тему. Я, правда, не всё на свете знаю, но... Можем про учебу... Или про музыку... Или про отпуск!");
+        client.sendTextMessage("Задавай любую тему. Я, правда, не всё на свете знаю, но... Можем про учебу... Или про музыку... Или про отпуск!");
         //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String chatTheme = ConsoleHelper.readString();
-        chatTheme = chatTheme.trim().toLowerCase();
+
+        //String chatTheme = ConsoleHelper.readString();
+        String chatTheme = null;
+        if(!BarracudaBotClient.messagesQueue.isEmpty())
+            chatTheme = BarracudaBotClient.messagesQueue.take();
+
+        if(chatTheme != null)
+            chatTheme = chatTheme.trim().toLowerCase();
+        else{
+            ConsoleHelper.writeMessage("chatTheme == null!!! (chat00())");
+        }
 
         Util.exit(chatTheme); //выход, если напишет exit и тп.
 

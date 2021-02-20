@@ -8,20 +8,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Anecdot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Anecdot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Chat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Deal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Deal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Fairytale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Fairytale.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Riddle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Riddle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/WindowHelper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/client/BarracudaBotClient$BarraSocketThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/client/BarracudaBotClient$BarraSocketThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/client/BarracudaBotClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/client/BarracudaBotClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Deal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/WindowHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/ClientGuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/ClientGuiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -458,7 +454,7 @@
       <workItem from="1613681152707" duration="3618000" />
       <workItem from="1613763707103" duration="4500000" />
       <workItem from="1613802166332" duration="3725000" />
-      <workItem from="1613806235720" duration="8882000" />
+      <workItem from="1613806235720" duration="27894000" />
     </task>
     <servers />
   </component>
@@ -535,6 +531,20 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/barracuda/bot/Deal.java</url>
+          <line>10</line>
+          <properties class="com.barracuda.bot.Deal" method="dealer">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BarraChat$Test.ic" NAME="Test Coverage Results" MODIFIED="1581863321227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

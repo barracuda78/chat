@@ -1,24 +1,28 @@
 package com.barracuda.client;
 
+import com.barracuda.ConsoleHelper;
 import com.barracuda.bot.*;
 
 import java.io.IOException;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 
 public class BarracudaBotClient extends Client {
-    protected static User user = new User();
+
+    public static volatile BlockingQueue<String> messagesQueue = new ArrayBlockingQueue<String>(100);
 
     public class BarraSocketThread extends SocketThread{
         @Override
         protected void clientMainLoop() throws IOException, ClassNotFoundException{
-
-            sendTextMessage("Привет всем. Я бот. Умею болтать на любые темы.");
-            //здесь сообщение с вариантами первого приветствия из barracudaChat:
-
+            //sendTextMessage("Привет всем. Я бот. Умею болтать на любые темы.");
             super.clientMainLoop();
         }
 
         @Override
         public void processIncomingMessage(String message) {
+            if(messagesQueue.add(message))
+                ConsoleHelper.writeMessage("в очередь добавлено: " + message + " из класса BarracudaBotClient");
+            ConsoleHelper.writeMessage(message);
             Greeting.whatIsYourName(BarracudaBotClient.this);
             try {
                 // Greeting.greeting(user);
@@ -27,7 +31,6 @@ public class BarracudaBotClient extends Client {
             } catch (IOException | InterruptedException e) {
                 e.printStackTrace();
             }
-
 //            Helper helper = new Helper(BarracudaBotClient.this);
 //            helper.readString();
         }
