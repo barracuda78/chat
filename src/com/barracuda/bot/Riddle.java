@@ -1,6 +1,7 @@
 package com.barracuda.bot;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.client.Client;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -82,7 +83,7 @@ public class Riddle implements Serializable {
     }
     public String getName(){ return NAME;}
 
-    public static void riddleNew(){
+    public static void riddleNew(Client client){
         try {
             Riddle.globalCount++;
             ArrayList<Riddle> listOfRiddles = new ArrayList<>();
@@ -253,7 +254,7 @@ public class Riddle implements Serializable {
                 } else {
                     listOfRandoms.add(r);                                       //добавить r  в список.
                     listOfRiddles.get(r).readFromFile(listOfRiddles.get(r));   //загадать загадку.
-                    listOfRiddles.get(r).otgadka(listOfRiddles.get(r));       //прочитать ответ. Оценить ответ. Если неправильно - дать правильнй ответ. Спросить, хочет ли еще загадку.
+                    listOfRiddles.get(r).otgadka(listOfRiddles.get(r), client);       //прочитать ответ. Оценить ответ. Если неправильно - дать правильнй ответ. Спросить, хочет ли еще загадку.
                     listOfRiddles.remove(r);                                 //удалисть из списка б/у-шную загадку.
                 }
             }
@@ -300,7 +301,7 @@ public class Riddle implements Serializable {
         }
     }
 
-    public void otgadka(Riddle riddle) {
+    public void otgadka(Riddle riddle, Client client) {
 
         try {
 
@@ -367,17 +368,17 @@ public class Riddle implements Serializable {
 
                 //  while(riddle.count < 3) {
                 riddle.count++;
-                otgadka(riddle);
+                otgadka(riddle, client);
 
                 //  }
                 riddle.giveCorrectAnswer();         //потом дать правильный ответ
                 riddle.wasEasy();
             }
             //потом спросить, хочет ли еще загадку.
-            if (wantMore()) {
-                riddleNew();           //здесь ошибка. Он не учитывает загаданную загадку и может загадать ту же. Нужно удалять загаданную загадку из массива. Массив загадок создавать в другом методе.
+            if (wantMore(client)) {
+                riddleNew(client);           //здесь ошибка. Он не учитывает загаданную загадку и может загадать ту же. Нужно удалять загаданную загадку из массива. Массив загадок создавать в другом методе.
             } else {
-                Deal.dealer();
+                Deal.dealer(client);
             }
 
         }
@@ -841,7 +842,7 @@ public class Riddle implements Serializable {
         }
 
     }
-    public static boolean wantMore(){
+    public static boolean wantMore(Client client){
     try {
         int r = Util.randomize();
         switch (r) {
@@ -923,9 +924,9 @@ public class Riddle implements Serializable {
         } else if (answer.contains("не надо") || answer.contains("не хочу") || answer.contains("неа") || answer.contains("достал") || answer.contains("надоел") || answer.contains("задолбал") || answer.contains("скучно")) {
             return false;
         } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
-            Anecdot.anecdoteNew();
+            Anecdot.anecdoteNew(client);
         } else if (answer.contains("сказк") || answer.contains("fairytale") || answer.contains("сказочк")) {
-            Fairytale.fairytaleNew();
+            Fairytale.fairytaleNew(client);
         } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
             Riddle.exit();
         } else return false;

@@ -1,13 +1,19 @@
 package com.barracuda;
 
+import jdk.nashorn.internal.ir.Block;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Map;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Server {
     private static Map<String, Connection> connectionMap = new ConcurrentHashMap<>();
+
+    //public static volatile BlockingQueue<String> messagesQueue = new ArrayBlockingQueue<String>(100);
 
     public static void main(String[] args) {
         ConsoleHelper.writeMessage("Это сервер. Введите порт, на котором будет работать сервер.");
@@ -151,6 +157,13 @@ public class Server {
             while (true) {
                 Message message = connection.receive();
                 if (message.getType() == MessageType.TEXT) {
+                    //моя добавочка:
+//                    String messageText = message.getData();
+//                    messagesQueue.add(messageText);
+//                    ConsoleHelper.writeMessage("В очередь добавлено сообщение: " + messageText);
+//                    ConsoleHelper.writeMessage("Содеримое queue теперь: ");
+//                    ConsoleHelper.writeMessage(messagesQueue.toString());
+                    //
                     Message messageToAll = new Message(MessageType.TEXT, userName + ": " + message.getData());
                     sendBroadcastMessage(messageToAll);
                 } else {

@@ -1,25 +1,43 @@
 package com.barracuda.client;
 
+import com.barracuda.ConsoleHelper;
+import com.barracuda.bot.*;
+
 import java.io.IOException;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 
 public class BarracudaBotClient extends Client {
 
+    public static volatile BlockingQueue<String> messagesQueue = new ArrayBlockingQueue<String>(100);
 
     public class BarraSocketThread extends SocketThread{
         @Override
         protected void clientMainLoop() throws IOException, ClassNotFoundException{
-            sendTextMessage("Привет всем. Я бот. Умею болтать на любые темы.");
+            //sendTextMessage("Привет всем. Я бот. Умею болтать на любые темы.");
             super.clientMainLoop();
         }
 
         @Override
-        protected void processIncomingMessage(String message) {
-            com.barracuda.bot.Main.main(new String[0]);
+        public void processIncomingMessage(String message) {
+            if(messagesQueue.add(message))
+                ConsoleHelper.writeMessage("в очередь добавлено: " + message + " из класса BarracudaBotClient");
+            ConsoleHelper.writeMessage(message);
+            Greeting.whatIsYourName(BarracudaBotClient.this);
+            try {
+                // Greeting.greeting(user);
+                Deal.dealer(BarracudaBotClient.this);
+                Util.exit("exit"); //по идее это должен быть выход из программы....
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+            }
+//            Helper helper = new Helper(BarracudaBotClient.this);
+//            helper.readString();
         }
     }
 
     @Override
-    protected SocketThread getSocketThread(){
+    public SocketThread getSocketThread(){
         return new BarracudaBotClient.BarraSocketThread();
     }
 

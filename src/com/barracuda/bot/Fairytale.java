@@ -1,6 +1,7 @@
 package com.barracuda.bot;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.client.Client;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class Fairytale implements Serializable {
     }
     public String getName(){ return NAME;}
 
-    public static void fairytaleNew(){
+    public static void fairytaleNew(Client client){
         ArrayList<Fairytale> listOfFairytales = new ArrayList<>();
         Fairytale fairytale001 = new Fairytale("bin/fairytale001");
         listOfFairytales.add(0, fairytale001);
@@ -132,10 +133,10 @@ public class Fairytale implements Serializable {
                     listOfFairytales.get(rr).readFromFile(listOfFairytales.get(rr));   //рассказать сказку.
 
                     //Спросить, хочет ли еще сказку
-                    if (Fairytale.wantMore()) {
-                        fairytaleNew();           //здесь ошибка. Он не учитывает загаданную загадку и может загадать ту же. Нужно удалять загаданную загадку из массива. Массив загадок создавать в другом методе.
+                    if (Fairytale.wantMore(client)) {
+                        fairytaleNew(client);           //здесь ошибка. Он не учитывает загаданную загадку и может загадать ту же. Нужно удалять загаданную загадку из массива. Массив загадок создавать в другом методе.
                     } else {
-                        Deal.dealer();
+                        Deal.dealer(client);
                     }
                     listOfFairytales.remove(rr);                                 //удалисть из списка б/у-шную сказку.
                 }
@@ -169,7 +170,7 @@ public class Fairytale implements Serializable {
         return "Сказка: путь: " + this.path +"имя: " + NAME + "";
     }
 
-    public static boolean wantMore(){
+    public static boolean wantMore(Client client){
         try {
             int r = Util.randomize();
             switch (r) {
@@ -251,9 +252,9 @@ public class Fairytale implements Serializable {
             } else if (answer.contains("не надо") || answer.contains("не хочу") || answer.contains("неа") || answer.contains("достал") || answer.contains("надоел") || answer.contains("задолбал") || answer.contains("скучно")) {
                 return false;
             } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
-                Anecdot.anecdoteNew();
+                Anecdot.anecdoteNew(client);
             } else if (answer.contains("загадк") || answer.contains("загадочк") || answer.contains("riddle") || answer.equals("загадку") || answer.equals("загадочку") ) {
-                Riddle.riddleNew();
+                Riddle.riddleNew(client);
             } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
                 Fairytale.exit();
             } else return false;

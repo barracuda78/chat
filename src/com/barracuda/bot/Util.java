@@ -1,6 +1,7 @@
 package com.barracuda.bot;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.client.Client;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -270,7 +271,7 @@ public class Util {
         return randomNumber;
     }
 
-    public static boolean yesNo(String answer){
+    public static boolean yesNo(String answer, Client client){
 
         if (answer.equals("да") || answer.equals("ага") || answer.equals("угу") || answer.equals("конечно") || answer.equals("давай")|| answer.equals("без базара")|| answer.contains("валяй")|| answer.equals("еще")|| answer.equals("ещё")|| answer.equals("еще бы")|| answer.contains("угумс")) {
             return true;
@@ -283,13 +284,13 @@ public class Util {
         } else if (answer.contains("no") || answer.contains("not") || answer.contains("nop") || answer.contains("не") || answer.equals("не надо") || answer.equals("не хочу") || answer.contains("достал") || answer.contains("задолбал") || answer.contains("надоел") || answer.contains("заткнись")) {
             return false;
         } else if (answer.contains("сказку") || answer.contains("сказк") || answer.contains("сказочк") || answer.contains("сказание") || answer.equals("fairytale") || answer.equals("tsle") ) {
-            Fairytale.fairytaleNew();
+            Fairytale.fairytaleNew(client);
         } else if (answer.contains("загадк") || answer.contains("загадочк") || answer.contains("riddle") || answer.equals("загадку") || answer.equals("загадочку") ) {
-            Riddle.riddleNew();
+            Riddle.riddleNew(client);
         } else if (answer.contains("выход") || answer.contains("exit") || answer.contains("выйти")) {
             Anecdot.exit();
         } else if (answer.contains("анекдот") || answer.contains("funn") || answer.contains("анегдот")) {
-            Anecdot.anecdoteNew();
+            Anecdot.anecdoteNew(client);
         } else return false;
         return false;
     }

@@ -42,7 +42,7 @@ public class ClientGuiController extends Client {
     //5. Переопределил методы в классе ClientGuiController:
     //а) SocketThread getSocketThread() - должен создавать и возвращать объект типа GuiSocketThread.
     @Override
-    protected SocketThread getSocketThread(){
+    public SocketThread getSocketThread(){
         return new GuiSocketThread();
     }
 

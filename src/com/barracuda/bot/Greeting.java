@@ -1,6 +1,7 @@
 package com.barracuda.bot;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.client.Client;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,9 +14,12 @@ import java.util.Date;
 
 public class Greeting {
 
-    public static void greeting000(){
+    public static void greeting000(Client client){
         ConsoleHelper.writeMessage("О! Человек!");
         ConsoleHelper.writeMessage("Привет, человек! Как тебя зовут?");
+        client.sendTextMessage("О! Человек!");
+        client.sendTextMessage("Привет, человек! Как тебя зовут?");
+
     }
 
     public static void greeting001(){
@@ -793,10 +797,11 @@ public class Greeting {
 
     }
 
-    public static void whatIsYourName(){
-        int r = Util.randomize();
+    public static void whatIsYourName(Client client){
+        //int r = Util.randomize();
+        int r = 0;                           //--------------------------------------->Закомментить и раскомментить предыдущую!
         if(r == 0){
-            Greeting.greeting000();
+            Greeting.greeting000(client);
         } else if(r == 1){
             Greeting.greeting001();
         }  else if(r == 2){
