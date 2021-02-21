@@ -23,6 +23,7 @@ public class Game {
             number = BarracudaBotClient.messagesQueue.take();
             number = number.replaceAll("[^0-9]", "");
         }
+
         int x = 0;
         if(number != null)
             x = Integer.parseInt(number);

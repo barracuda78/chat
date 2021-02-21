@@ -8,15 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Chat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Deal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Deal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/client/BarracudaBotClient$BarraSocketThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/client/BarracudaBotClient$BarraSocketThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/client/BarracudaBotClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/client/BarracudaBotClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Deal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -417,15 +409,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -454,7 +444,8 @@
       <workItem from="1613681152707" duration="3618000" />
       <workItem from="1613763707103" duration="4500000" />
       <workItem from="1613802166332" duration="3725000" />
-      <workItem from="1613806235720" duration="27894000" />
+      <workItem from="1613806235720" duration="28457000" />
+      <workItem from="1613929037070" duration="664000" />
     </task>
     <servers />
   </component>
