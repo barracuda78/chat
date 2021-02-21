@@ -123,7 +123,7 @@ public class Client {
 
                     Client сlient = Client.this;
 
-                    if(text != null && name.equals("Andrey")) {
+                    if(text != null && name.equals("Andrey")) {          //<======= пока костыль, расхардкодить имя и заменить на client.getName();
                         BarracudaBotClient.messagesQueue.add(message);   //<========добавляем message, разделенный двоеточием с именем клиента!
                         ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client");
                     }
