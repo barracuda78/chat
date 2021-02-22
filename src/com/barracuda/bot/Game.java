@@ -14,19 +14,21 @@ public class Game {
         Thread.sleep(600);
         ConsoleHelper.writeMessage("Введи это число с клавиатуры. Нажми ENTER.");
         client.sendTextMessage("Введи это число с клавиатуры. Нажми ENTER.");
-        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-
-        String deal = null;
         String number = null;
-        while (deal == null) {
+        while (number == null) {
             number = BarracudaBotClient.messagesQueue.take();
             number = number.replaceAll("[^0-9]", "");
         }
 
         int x = 0;
-        if(number != null)
-            x = Integer.parseInt(number);
+
+        try {
+            if (number != null)
+                x = Integer.parseInt(number);
+        }catch(NumberFormatException e){
+            game001(client);
+        }
         int delta = (int)(Math.random()*10) + 1;
         int y = x + delta;
         ConsoleHelper.writeMessage("мда... А я загадал число " + y + " !");
