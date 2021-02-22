@@ -9,7 +9,7 @@
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -409,13 +409,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -423,9 +425,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BarracudaBotClient" />
-        <item itemvalue="Application.ClientGuiController" />
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.ClientGuiController" />
         <item itemvalue="Application.BotClient" />
       </list>
     </recent_temporary>
@@ -445,7 +447,8 @@
       <workItem from="1613763707103" duration="4500000" />
       <workItem from="1613802166332" duration="3725000" />
       <workItem from="1613806235720" duration="28457000" />
-      <workItem from="1613929037070" duration="664000" />
+      <workItem from="1613929037070" duration="970000" />
+      <workItem from="1614024929281" duration="1929000" />
     </task>
     <servers />
   </component>

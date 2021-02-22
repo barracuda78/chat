@@ -2,6 +2,7 @@ package com.barracuda.client;
 
 import com.barracuda.ConsoleHelper;
 import com.barracuda.bot.*;
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 import java.io.IOException;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -20,8 +21,8 @@ public class BarracudaBotClient extends Client {
 
         @Override
         public void processIncomingMessage(String message) {
-            if(messagesQueue.add(message))
-                ConsoleHelper.writeMessage("в очередь добавлено: " + message + " из класса BarracudaBotClient");
+//            if(messagesQueue.add(message))
+//                ConsoleHelper.writeMessage("в очередь добавлено: " + message + " из класса BarracudaBotClient");
             ConsoleHelper.writeMessage(message);
             Greeting.whatIsYourName(BarracudaBotClient.this);
             try {
@@ -53,6 +54,16 @@ public class BarracudaBotClient extends Client {
 
     public static void main(String[] args) {
         new BarracudaBotClient().run();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(10000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("содержимое очереди: " + messagesQueue);
+            }
+        }).start();
     }
-
 }
