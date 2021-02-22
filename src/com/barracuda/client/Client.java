@@ -121,11 +121,9 @@ public class Client {
                         text = nameAndTextArray[1];
                     }
 
-                    Client сlient = Client.this;
-
                     if(text != null && name.equals("Andrey")) {          //<======= пока костыль, расхардкодить имя и заменить на client.getName();
                         BarracudaBotClient.messagesQueue.add(message);   //<========добавляем message, разделенный двоеточием с именем клиента!
-                        ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client");
+                        ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client, нить: " + Thread.currentThread().getName());
                     }
                     //конец добавочки.
 
@@ -177,6 +175,21 @@ public class Client {
     //Если во время ожидания возникнет исключение, сообщи об этом пользователю и выйди из программы.
 
     public void run(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(true) {
+                    System.out.println("содержимое очереди: " + BarracudaBotClient.messagesQueue + ", нить: " + Thread.currentThread().getName());
+                    try {
+                        Thread.sleep(10000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+
+
         SocketThread socketThread = getSocketThread();
         socketThread.setDaemon(true);
         socketThread.start();

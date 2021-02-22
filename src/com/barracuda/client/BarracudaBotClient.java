@@ -53,17 +53,10 @@ public class BarracudaBotClient extends Client {
     }
 
     public static void main(String[] args) {
+
         new BarracudaBotClient().run();
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(10000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("содержимое очереди: " + messagesQueue);
-            }
-        }).start();
+
+
+
     }
 }
