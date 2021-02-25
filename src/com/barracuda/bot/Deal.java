@@ -16,7 +16,6 @@ public class Deal {
         //String deal = ConsoleHelper.readString(); //----------------------------------------------->раскомментить!!!
 
        String deal = null;
-        ConsoleHelper.writeMessage("прошли в deal() String deal = null;");
 
         ConsoleHelper.writeMessage("messagesQueue содержимое: " + BarracudaBotClient.messagesQueue.toString());
 
@@ -26,9 +25,6 @@ public class Deal {
                 break;
             }
         }
-
-        ConsoleHelper.writeMessage("В методе deal() добрались до места после while!");
-        client.sendTextMessage("В методе deal() добрались до места после while!");
 
 
         deal = deal.trim().toLowerCase();
