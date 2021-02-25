@@ -2,7 +2,6 @@ package com.barracuda.client;
 
 import com.barracuda.ConsoleHelper;
 import com.barracuda.bot.*;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 import java.io.IOException;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -21,8 +20,23 @@ public class BarracudaBotClient extends Client {
 
         @Override
         public void processIncomingMessage(String message) {
-//            if(messagesQueue.add(message))
-//                ConsoleHelper.writeMessage("в очередь добавлено: " + message + " из класса BarracudaBotClient");
+            //моя добавочка---для бота
+            //String message = messageFromServer.getData();
+            String[] nameAndTextArray = message.split(": ");
+            String name = null;
+            String text = null;
+            if (nameAndTextArray.length > 1) {
+                name = nameAndTextArray[0];
+                text = nameAndTextArray[1];
+            }
+
+            if(text != null && name.equals("Andrey")) {          //<======= пока костыль, расхардкодить имя и заменить на client.getName();
+                BarracudaBotClient.messagesQueue.add(message);   //<========добавляем message, разделенный двоеточием с именем клиента!
+                ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client, нить: " + Thread.currentThread().getName());
+            }
+            //конец добавочки.
+
+
             ConsoleHelper.writeMessage(message);
             Greeting.whatIsYourName(BarracudaBotClient.this);
             try {
@@ -54,9 +68,19 @@ public class BarracudaBotClient extends Client {
 
     public static void main(String[] args) {
 
+        new Thread(() -> {
+            while(true) {
+                System.out.println("содержимое очереди: " + BarracudaBotClient.messagesQueue + ", выполняет нить: " + Thread.currentThread().getName());
+                try {
+                    Thread.sleep(10000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+
         new BarracudaBotClient().run();
-
-
 
     }
 }
