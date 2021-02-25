@@ -68,24 +68,19 @@ public class BarracudaBotClient extends Client {
 
     public static void main(String[] args) {
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while(true) {
-                    System.out.println("содержимое очереди: " + BarracudaBotClient.messagesQueue + ", нить: " + Thread.currentThread().getName());
-                    try {
-                        Thread.sleep(10000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+        new Thread(() -> {
+            while(true) {
+                System.out.println("содержимое очереди: " + BarracudaBotClient.messagesQueue + ", выполняет нить: " + Thread.currentThread().getName());
+                try {
+                    Thread.sleep(10000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         }).start();
 
 
         new BarracudaBotClient().run();
-
-
 
     }
 }
