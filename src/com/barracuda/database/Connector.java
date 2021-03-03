@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.Enumeration;
 
 public class Connector {
+    public static final String URL = "jdbc:posgresql://localhost:1527/test";
     private static Enumeration<Driver> drivers = DriverManager.getDrivers();
     private static Statement statement;
     private static Connection connection;
@@ -35,7 +36,7 @@ public class Connector {
     }
 
     public static void executeQuery(String query){
-        Connection connection = getConnection("", "user", "12345");
+        Connection connection = getConnection(URL, "user", "12345");
         try {
             statement = connection.createStatement();
             boolean b =statement.execute(query);
