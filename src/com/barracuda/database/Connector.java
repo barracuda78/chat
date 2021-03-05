@@ -5,6 +5,8 @@ import java.util.Enumeration;
 
 public class Connector {
     public static final String URL = "jdbc:posgresql://localhost:1527/test";
+    public static final String URL2 = "jdbc:derby://localhost:1527/test2";
+
     private static Enumeration<Driver> drivers = DriverManager.getDrivers();
     private static Statement statement;
     private static Connection connection;
