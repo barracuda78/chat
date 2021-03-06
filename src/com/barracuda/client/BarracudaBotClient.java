@@ -27,7 +27,9 @@ public class BarracudaBotClient extends Client {
                 Message messageFromServer = connection.receive();
                 if (messageFromServer.getType() == MessageType.TEXT) {
                     try {
-                        messagesQueue.put(messageFromServer.getData());
+                        String text = messageFromServer.getData();
+                        messagesQueue.put(text);
+                        ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client, нить: " + Thread.currentThread().getName());
                     } catch (InterruptedException e) {
                         ConsoleHelper.writeMessage("Не удалось поместить сообщение в очередь бота.");
                         e.printStackTrace();
@@ -57,10 +59,15 @@ public class BarracudaBotClient extends Client {
                 text = nameAndTextArray[1];
             }
 
-            if(text != null && name.equals("Andrey")) {          //<======= пока костыль, расхардкодить имя и заменить на client.getName();
-                BarracudaBotClient.messagesQueue.add(message);   //<========добавляем message, разделенный двоеточием с именем клиента!
-                ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client, нить: " + Thread.currentThread().getName());
-            }
+//            if(text != null && name.equals("Andrey")) {          //<======= пока костыль, расхардкодить имя и заменить на client.getName();
+//                try {
+//                    BarracudaBotClient.messagesQueue.put(message);   //<========добавляем message, разделенный двоеточием с именем клиента!
+//                } catch (InterruptedException e) {
+//                    ConsoleHelper.writeMessage("Не удалось поместить сообщение в очередь бота.");
+//                    e.printStackTrace();
+//                }
+//                ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client, нить: " + Thread.currentThread().getName());
+//            }
             //конец добавочки.
 
 

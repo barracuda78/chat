@@ -16,7 +16,6 @@ public class BotClient extends Client{
         protected void clientMainLoop() throws IOException, ClassNotFoundException{
             sendTextMessage("Привет всем. Я бот. Понимаю команды: дата, день, месяц, год, время, час, минуты, секунды.");
 
-
             super.clientMainLoop();
         }
 
@@ -38,7 +37,7 @@ public class BotClient extends Client{
                     case ("дата"): {
                         Format f = new SimpleDateFormat("d.MM.YYYY");
                         String s = f.format(date);
-                        ConsoleHelper.writeMessage("Информация для " + name + ": " + s);
+                        //ConsoleHelper.writeMessage("Информация для " + name + ": " + s);
                         sendTextMessage("Информация для " + name + ": " + s);
                         break;
                     }

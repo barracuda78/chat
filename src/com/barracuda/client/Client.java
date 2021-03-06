@@ -13,6 +13,7 @@ import java.util.concurrent.BlockingQueue;
 public class Client {
     protected Connection connection;
     private volatile boolean clientConnected = false;
+    private String userName;
 
     //public static BlockingQueue<String> queue = new ArrayBlockingQueue<String>(100);
 
@@ -216,19 +217,23 @@ public class Client {
     //Метод getServerAddress() возвращает некорректное значение. Убедись, что ты используешь метод readString() класса ConsoleHelper.
     protected String getServerAddress(){
         ConsoleHelper.writeMessage("введите адрес сервера");
-        return ConsoleHelper.readString();
+        //return ConsoleHelper.readString();
+        return "localhost";
     }
 
     //2. int getServerPort() - должен запрашивать ввод порта сервера и возвращать его.
     protected int getServerPort(){
         ConsoleHelper.writeMessage("введите номер порта сервера");
-        return ConsoleHelper.readInt();
+        //return ConsoleHelper.readInt();
+        return 7777;
     }
 
     //String getUserName() - должен запрашивать и возвращать имя пользователя.
     protected String getUserName(){
         ConsoleHelper.writeMessage("введите имя пользователя");
-        return ConsoleHelper.readString();
+//        String s =  ConsoleHelper.readString();
+//        userName = s;
+        return "Andrey";
     }
 
     //4. boolean shouldSendTextFromConsole() - в данной реализации клиента всегда должен возвращать true (мы всегда отправляем текст введенный в консоль).
@@ -249,7 +254,7 @@ public class Client {
     public void sendTextMessage(String text) {
 
         try {
-            Message message = new Message(MessageType.TEXT, text);
+            Message message = new Message(MessageType.TEXT, text, userName);
             connection.send(message);
         } catch (IOException e) {
             clientConnected = false;
