@@ -8,12 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BarraChat/com/barracuda/bot/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BotClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,7 +324,7 @@
       <recent name="C:\coding\BarraChat" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BotClient">
+  <component name="RunManager" selected="Application.BarracudaBotClient">
     <configuration name="BarracudaBotClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.barracuda.client.BarracudaBotClient" />
       <module name="BarraChat" />
@@ -408,10 +403,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BotClient" />
+        <item itemvalue="Application.BarracudaBotClient" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
-        <item itemvalue="Application.BarracudaBotClient" />
+        <item itemvalue="Application.BotClient" />
         <item itemvalue="Application.ClientGuiController" />
       </list>
     </recent_temporary>
@@ -437,7 +432,7 @@
       <workItem from="1614850812184" duration="171000" />
       <workItem from="1614932090882" duration="1246000" />
       <workItem from="1615047204392" duration="5217000" />
-      <workItem from="1615061663604" duration="1856000" />
+      <workItem from="1615061663604" duration="3704000" />
     </task>
     <servers />
   </component>

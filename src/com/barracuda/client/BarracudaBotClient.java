@@ -6,12 +6,14 @@ import com.barracuda.MessageType;
 import com.barracuda.bot.*;
 
 import java.io.IOException;
+import java.util.Stack;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 public class BarracudaBotClient extends Client {
 
     public static volatile BlockingQueue<String> messagesQueue = new ArrayBlockingQueue<String>(100);
+    public static volatile Stack<String> stack = new Stack<>();
 
     public class BarraSocketThread extends SocketThread{
         @Override
@@ -70,18 +72,15 @@ public class BarracudaBotClient extends Client {
 //            }
             //конец добавочки.
 
+//            Greeting.whatIsYourName(BarracudaBotClient.this);
+//            try {
+//                // Greeting.greeting(user);
+//                Deal.dealer(BarracudaBotClient.this);
+//                Util.exit("exit"); //по идее это должен быть выход из программы....
+//            } catch (IOException | InterruptedException e) {
+//                e.printStackTrace();
+//            }
 
-            ConsoleHelper.writeMessage(message);
-            Greeting.whatIsYourName(BarracudaBotClient.this);
-            try {
-                // Greeting.greeting(user);
-                Deal.dealer(BarracudaBotClient.this);
-                Util.exit("exit"); //по идее это должен быть выход из программы....
-            } catch (IOException | InterruptedException e) {
-                e.printStackTrace();
-            }
-//            Helper helper = new Helper(BarracudaBotClient.this);
-//            helper.readString();
         }
     }
 
