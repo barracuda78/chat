@@ -19,7 +19,10 @@ public class Game {
         while (number == null) {
             number = BarracudaBotClient.messagesQueue.take();
             number = number.replaceAll("[^0-9]", "");
+            System.out.println("number == 0");
+            Thread.sleep(5000);
         }
+        System.out.println("ушли в методе game001 дальше while(number == 0)");
 
         int x = 0;
 

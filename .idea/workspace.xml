@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -413,9 +414,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BarracudaBotClient" />
-        <item itemvalue="Application.ClientGuiController" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.ClientGuiController" />
         <item itemvalue="Application.Connector" />
       </list>
     </recent_temporary>
@@ -440,7 +441,7 @@
       <workItem from="1614845602697" duration="675000" />
       <workItem from="1614850812184" duration="171000" />
       <workItem from="1614932090882" duration="1246000" />
-      <workItem from="1615047204392" duration="1573000" />
+      <workItem from="1615047204392" duration="2646000" />
     </task>
     <servers />
   </component>
