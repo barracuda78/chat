@@ -9,10 +9,10 @@ import java.io.IOException;
 
 public class Game {
     public static void game001(Client client) throws IOException, InterruptedException{
-        ConsoleHelper.writeMessage("загадай любое целое число.");
+        //ConsoleHelper.writeMessage("загадай любое целое число.");
         client.sendTextMessage("загадай любое целое число.");
         Thread.sleep(600);
-        ConsoleHelper.writeMessage("Введи это число с клавиатуры. Нажми ENTER.");
+        //ConsoleHelper.writeMessage("Введи это число с клавиатуры. Нажми ENTER.");
         client.sendTextMessage("Введи это число с клавиатуры. Нажми ENTER.");
 
         String number = null;
@@ -38,6 +38,8 @@ public class Game {
         client.sendTextMessage("мда... А я загадал число " + y + " !");
         ConsoleHelper.writeMessage("Тебе все ясно? В цифрах мне нет равных. Тут я всегда... ПОБЕДЮ.");
         client.sendTextMessage("Тебе все ясно? В цифрах мне нет равных. Тут я всегда... ПОБЕДЮ.");
+
+        System.out.println("вышли из метода game001");
     }
 
     public static void game000(Client client) throws IOException, InterruptedException{
