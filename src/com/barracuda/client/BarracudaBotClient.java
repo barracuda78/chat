@@ -1,6 +1,8 @@
 package com.barracuda.client;
 
 import com.barracuda.ConsoleHelper;
+import com.barracuda.Message;
+import com.barracuda.MessageType;
 import com.barracuda.bot.*;
 
 import java.io.IOException;
@@ -15,7 +17,31 @@ public class BarracudaBotClient extends Client {
         @Override
         protected void clientMainLoop() throws IOException, ClassNotFoundException{
             //sendTextMessage("Привет всем. Я бот. Умею болтать на любые темы.");
-            super.clientMainLoop();
+            //super.clientMainLoop();
+            botMainLoop();
+        }
+
+        //мой метод
+        protected void botMainLoop() throws IOException, ClassNotFoundException{
+            while(true) {
+                Message messageFromServer = connection.receive();
+                if (messageFromServer.getType() == MessageType.TEXT) {
+                    try {
+                        messagesQueue.put(messageFromServer.getData());
+                    } catch (InterruptedException e) {
+                        ConsoleHelper.writeMessage("Не удалось поместить сообщение в очередь бота.");
+                        e.printStackTrace();
+                    }
+                    processIncomingMessage(messageFromServer.getData());
+                    // processIncomingMessage(message);
+                } else if (messageFromServer.getType() == MessageType.USER_ADDED) {
+                    informAboutAddingNewUser(messageFromServer.getData());
+                } else if (messageFromServer.getType() == MessageType.USER_REMOVED) {
+                    informAboutDeletingNewUser(messageFromServer.getData());
+                } else {
+                    throw new IOException("Unexpected MessageType");
+                }
+            }
         }
 
         @Override
