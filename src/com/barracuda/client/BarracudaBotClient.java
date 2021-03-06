@@ -48,6 +48,7 @@ public class BarracudaBotClient extends Client {
         public void processIncomingMessage(String message) {
             //моя добавочка---для бота
             //String message = messageFromServer.getData();
+            ConsoleHelper.writeMessage(message);
             String[] nameAndTextArray = message.split(": ");
             String name = null;
             String text = null;
