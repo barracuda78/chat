@@ -50,15 +50,29 @@ public class BarracudaBotClient extends Client {
 
         @Override
         public void processIncomingMessage(String message) {
+
             //моя добавочка---для бота
             //String message = messageFromServer.getData();
             ConsoleHelper.writeMessage(message);
+            stack.push(message);
+
             String[] nameAndTextArray = message.split(": ");
             String name = null;
             String text = null;
             if (nameAndTextArray.length > 1) {
                 name = nameAndTextArray[0];
                 text = nameAndTextArray[1];
+            }
+
+            switch(stack.size()){
+                case 1:
+                    try {
+                        Deal.dealer(BarracudaBotClient.this);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
             }
 
 //            if(text != null && name.equals("Andrey")) {          //<======= пока костыль, расхардкодить имя и заменить на client.getName();
