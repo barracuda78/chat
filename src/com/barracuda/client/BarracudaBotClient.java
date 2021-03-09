@@ -54,7 +54,9 @@ public class BarracudaBotClient extends Client {
             //моя добавочка---для бота
             //String message = messageFromServer.getData();
             ConsoleHelper.writeMessage(message);
-            stack.push(message);
+            stack.push(message); //запихали месседж в стек.
+
+
 
             String[] nameAndTextArray = message.split(": ");
             String name = null;
@@ -64,6 +66,7 @@ public class BarracudaBotClient extends Client {
                 text = nameAndTextArray[1];
             }
 
+            //глубина вхождения в методы...для интерпретации - к какому методу относится ответ пользователя.
             switch(stack.size()){
                 case 1:
                     try {
@@ -73,6 +76,19 @@ public class BarracudaBotClient extends Client {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    break;
+                case 2:
+                    ///
+                    break;
+                case 3:
+                    //
+                    break;
+                case 4:
+                    //
+                    break;
+                case 5:
+                    //
+                    break;
             }
 
 //            if(text != null && name.equals("Andrey")) {          //<======= пока костыль, расхардкодить имя и заменить на client.getName();
