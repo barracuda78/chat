@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b40440f-e3a0-4625-b1cf-535046d73460" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/barracuda/bot/Mode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/barracuda/client/BarracudaBotClient.java" afterDir="false" />
     </list>
@@ -138,8 +139,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -437,7 +438,7 @@
       <workItem from="1615061663604" duration="3781000" />
       <workItem from="1615221126916" duration="392000" />
       <workItem from="1615321193335" duration="874000" />
-      <workItem from="1615401764225" duration="405000" />
+      <workItem from="1615401764225" duration="3772000" />
     </task>
     <servers />
   </component>

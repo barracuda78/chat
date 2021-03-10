@@ -56,8 +56,6 @@ public class BarracudaBotClient extends Client {
             ConsoleHelper.writeMessage(message);
             stack.push(message); //запихали месседж в стек.
 
-
-
             String[] nameAndTextArray = message.split(": ");
             String name = null;
             String text = null;
@@ -69,8 +67,25 @@ public class BarracudaBotClient extends Client {
             //глубина вхождения в методы...для интерпретации - к какому методу относится ответ пользователя.
             //добавлять в стек строки - слова в зависимости от контекста. Возможно, LinkedHashMap вместо стека использовать.
             //Чтобы определять в каком мы методе.
-            switch(stack.size()){
-                case 1:
+
+            String s = stack.pop();
+            //тут привести строку к одному слову типа "игра", "анекдот", "загадка" и прочим. Завести для этого приватный метод:
+            //по сути этот метод - заменитель Dealer.deal();
+            Mode mode = null;
+
+            try {
+                mode = stringConverter(s);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //тут в свитче в зависимости от значения mode - вызывать нужные методы.
+            //далее внутри каждого case добавить еще по одному switch - на степерь вложенности вопросов-ответов в каждой ветке.
+            //для этого создать мапу или стэк, подумать...
+
+            switch(mode){
+                case SLEEP:
                     try {
                         Deal.dealer(BarracudaBotClient.this);
                     } catch (IOException e) {
@@ -79,7 +94,7 @@ public class BarracudaBotClient extends Client {
                         e.printStackTrace();
                     }
                     break;
-                case 2:
+                case GAME:
                     try {
                         Game.game001(BarracudaBotClient.this);
                     } catch (IOException e) {
@@ -88,37 +103,16 @@ public class BarracudaBotClient extends Client {
                         e.printStackTrace();
                     }
                     break;
-                case 3:
+                case FAIRYTALE:
                     //
                     break;
-                case 4:
+                case RIDDLE:
                     //
                     break;
-                case 5:
+                case EAT:
                     //
                     break;
             }
-
-//            if(text != null && name.equals("Andrey")) {          //<======= пока костыль, расхардкодить имя и заменить на client.getName();
-//                try {
-//                    BarracudaBotClient.messagesQueue.put(message);   //<========добавляем message, разделенный двоеточием с именем клиента!
-//                } catch (InterruptedException e) {
-//                    ConsoleHelper.writeMessage("Не удалось поместить сообщение в очередь бота.");
-//                    e.printStackTrace();
-//                }
-//                ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client, нить: " + Thread.currentThread().getName());
-//            }
-            //конец добавочки.
-
-//            Greeting.whatIsYourName(BarracudaBotClient.this);
-//            try {
-//                // Greeting.greeting(user);
-//                Deal.dealer(BarracudaBotClient.this);
-//                Util.exit("exit"); //по идее это должен быть выход из программы....
-//            } catch (IOException | InterruptedException e) {
-//                e.printStackTrace();
-//            }
-
         }
     }
 
@@ -135,6 +129,47 @@ public class BarracudaBotClient extends Client {
     @Override
     protected String getUserName(){
         return "barracuda_bot";
+    }
+
+    private Mode stringConverter(String s) throws InterruptedException, IOException{
+        ConsoleHelper.writeMessage("Выбирай, чем займемся?");
+        this.sendTextMessage("Выбирай, чем займемся?");
+
+        s = s.trim().toLowerCase();
+
+        if (s.contains("спать")){
+            return Mode.SLEEP;
+        }
+        else if(s.contains("есть") || s.contains("кушать")  || s.contains("жрать") || s.contains("мороженого") || s.contains("мороженое")){
+            return Mode.EAT;
+        }
+        else if(s.contains("играть") || s.contains("игру") || s.contains("игрой") || s.contains("игры") || s.contains("игр")){
+            return Mode.GAME;
+        }
+        else if(s.contains("анекдот") || s.contains("анегдот") || s.contains("анигдот") || s.contains("аникдот")|| s.contains("анек")) {
+            return Mode.ANECDOTE;
+        }
+        else if(s.contains("сказку") || s.contains("сказки") || s.contains("сказка") || s.contains("сказкой")){
+            return Mode.FAIRYTALE;
+        }
+        else if(s.contains("загадку") || s.contains("загадки") || s.contains("загадка") || s.contains("загадкой") || s.contains("Загадку") || s.contains("Загадки") || s.contains("Загадка") || s.contains("Загадкой")){
+            return Mode.RIDDLE;
+        }
+        else if(s.contains("не знаю") || s.contains("не решил") || s.contains("пофиг") || s.contains("фиг")){
+            return Mode.RIDDLE;
+        }
+        else if(s.contains("болтать") || s.contains("чат") || s.contains("разговор") || s.contains("говорить")|| s.contains("поболтать") || s.contains("поговорим") || s.contains("початимся")|| s.contains("поболтаем")|| s.contains("переписываемся")|| s.contains("переписываться")){
+            return Mode.CHAT;
+        }
+        else if (s.contains("англ") || s.contains("engl")||s.contains("ингл")){
+            return Mode.ENG;
+        }
+        else if(s.contains("exit") || s.contains("выключ") || s.contains("выход") || s.contains("надоел")){
+            return Mode.EXIT;
+        }
+        else{
+            return Mode.AGAIN;
+        }
     }
 
     public static void main(String[] args) {
