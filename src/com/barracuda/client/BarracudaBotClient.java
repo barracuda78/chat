@@ -67,6 +67,8 @@ public class BarracudaBotClient extends Client {
             }
 
             //глубина вхождения в методы...для интерпретации - к какому методу относится ответ пользователя.
+            //добавлять в стек строки - слова в зависимости от контекста. Возможно, LinkedHashMap вместо стека использовать.
+            //Чтобы определять в каком мы методе.
             switch(stack.size()){
                 case 1:
                     try {
@@ -78,7 +80,13 @@ public class BarracudaBotClient extends Client {
                     }
                     break;
                 case 2:
-                    ///
+                    try {
+                        Game.game001(BarracudaBotClient.this);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case 3:
                     //
