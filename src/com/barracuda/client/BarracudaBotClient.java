@@ -112,6 +112,27 @@ public class BarracudaBotClient extends Client {
                 case EAT:
                     //
                     break;
+                case ANECDOTE:
+                    //
+                    break;
+                case CHAT:
+                    //
+                    break;
+                case ENG:
+                    //
+                    break;
+                case AGAIN:
+                    //
+                    break;
+                case EXIT:
+                    //
+                    break;
+                    
+                    //    ANECDOTE,
+                //    CHAT,
+                //    ENG,
+                //    AGAIN,
+                //    EXIT
             }
         }
     }
