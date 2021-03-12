@@ -86,6 +86,8 @@ public class BarracudaBotClient extends Client {
 
             switch(mode){
                 case SLEEP:
+
+
                     try {
                         Deal.dealer(BarracudaBotClient.this);
                     } catch (IOException e) {
@@ -95,6 +97,15 @@ public class BarracudaBotClient extends Client {
                     }
                     break;
                 case GAME:
+
+                    String st = stack.pop();
+                    switch(st){
+                        case "1":
+                            //
+                            break;
+                        case "2":
+                            //break
+                    }
                     try {
                         Game.game001(BarracudaBotClient.this);
                     } catch (IOException e) {
@@ -127,7 +138,7 @@ public class BarracudaBotClient extends Client {
                 case EXIT:
                     //
                     break;
-                    
+
                     //    ANECDOTE,
                 //    CHAT,
                 //    ENG,
