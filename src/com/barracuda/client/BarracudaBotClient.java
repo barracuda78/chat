@@ -27,24 +27,25 @@ public class BarracudaBotClient extends Client {
         protected void botMainLoop() throws IOException, ClassNotFoundException{
             while(true) {
                 Message messageFromServer = connection.receive();
-                if (messageFromServer.getType() == MessageType.TEXT) {
-                    try {
-                        String text = messageFromServer.getData();
-                        messagesQueue.put(text);
-                        ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client, нить: " + Thread.currentThread().getName());
-                    } catch (InterruptedException e) {
-                        ConsoleHelper.writeMessage("Не удалось поместить сообщение в очередь бота.");
-                        e.printStackTrace();
-                    }
-                    processIncomingMessage(messageFromServer.getData());
-                    // processIncomingMessage(message);
-                } else if (messageFromServer.getType() == MessageType.USER_ADDED) {
-                    informAboutAddingNewUser(messageFromServer.getData());
-                } else if (messageFromServer.getType() == MessageType.USER_REMOVED) {
-                    informAboutDeletingNewUser(messageFromServer.getData());
-                } else {
-                    throw new IOException("Unexpected MessageType");
-                }
+//                if (messageFromServer.getType() == MessageType.TEXT) {
+//                    try {
+//                        String text = messageFromServer.getData();
+//                        messagesQueue.put(text);
+//                        ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client, нить: " + Thread.currentThread().getName());
+//                    } catch (InterruptedException e) {
+//                        ConsoleHelper.writeMessage("Не удалось поместить сообщение в очередь бота.");
+//                        e.printStackTrace();
+//                    }
+//
+//                    // processIncomingMessage(message);
+//                } else if (messageFromServer.getType() == MessageType.USER_ADDED) {
+//                    informAboutAddingNewUser(messageFromServer.getData());
+//                } else if (messageFromServer.getType() == MessageType.USER_REMOVED) {
+//                    informAboutDeletingNewUser(messageFromServer.getData());
+//                } else {
+//                    throw new IOException("Unexpected MessageType");
+//                }
+                processIncomingMessage(messageFromServer.getData());
             }
         }
 
@@ -86,8 +87,6 @@ public class BarracudaBotClient extends Client {
 
             switch(mode){
                 case SLEEP:
-
-
                     try {
                         Deal.dealer(BarracudaBotClient.this);
                     } catch (IOException e) {
@@ -104,7 +103,14 @@ public class BarracudaBotClient extends Client {
                             //
                             break;
                         case "2":
-                            //break
+                            //
+                            break;
+                        case "3":
+                            //
+                            break;
+                        case "4":
+                            //
+                            break;
                     }
                     try {
                         Game.game001(BarracudaBotClient.this);
