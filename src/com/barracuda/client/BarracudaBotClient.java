@@ -27,24 +27,6 @@ public class BarracudaBotClient extends Client {
         protected void botMainLoop() throws IOException, ClassNotFoundException{
             while(true) {
                 Message messageFromServer = connection.receive();
-//                if (messageFromServer.getType() == MessageType.TEXT) {
-//                    try {
-//                        String text = messageFromServer.getData();
-//                        messagesQueue.put(text);
-//                        ConsoleHelper.writeMessage("в очередь добавлено: " + text + " из класса Client, нить: " + Thread.currentThread().getName());
-//                    } catch (InterruptedException e) {
-//                        ConsoleHelper.writeMessage("Не удалось поместить сообщение в очередь бота.");
-//                        e.printStackTrace();
-//                    }
-//
-//                    // processIncomingMessage(message);
-//                } else if (messageFromServer.getType() == MessageType.USER_ADDED) {
-//                    informAboutAddingNewUser(messageFromServer.getData());
-//                } else if (messageFromServer.getType() == MessageType.USER_REMOVED) {
-//                    informAboutDeletingNewUser(messageFromServer.getData());
-//                } else {
-//                    throw new IOException("Unexpected MessageType");
-//                }
                 processIncomingMessage(messageFromServer.getData());
             }
         }
@@ -52,7 +34,6 @@ public class BarracudaBotClient extends Client {
         @Override
         public void processIncomingMessage(String message) {
 
-            //моя добавочка---для бота
             //String message = messageFromServer.getData();
             ConsoleHelper.writeMessage(message);
             stack.push(message); //запихали месседж в стек.
@@ -68,6 +49,7 @@ public class BarracudaBotClient extends Client {
             //глубина вхождения в методы...для интерпретации - к какому методу относится ответ пользователя.
             //добавлять в стек строки - слова в зависимости от контекста. Возможно, LinkedHashMap вместо стека использовать.
             //Чтобы определять в каком мы методе.
+            //когда входим в метод из классов пакета bot - тоже писать оттуда в другой стек.
 
             String s = stack.pop();
             //тут привести строку к одному слову типа "игра", "анекдот", "загадка" и прочим. Завести для этого приватный метод:
